@@ -2,7 +2,7 @@ import subprocess
 
 def pos_tag(sentence):
     # Set the path to the Stanford POS Tagger directory
-    stanford_pos_tagger_dir = "C:/Users/Carlo Agas/Documents/GitHub/Pantasa/Modules/FSPOST"
+    stanford_pos_tagger_dir = "Modules/FSPOST"
 
     # Set the paths to the model and jar files
     model = stanford_pos_tagger_dir + '/filipino-left5words-owlqn2-distsim-pref6-inf2.tagger'
