@@ -1,0 +1,27 @@
+import subprocess
+
+def pos_tag(sentence):
+
+    stanford_pos_tagger_dir="Modules\FSPOST"
+
+    model = stanford_pos_tagger_dir + '/filipino-left5words-owlqn2-distsim-pref6-inf2.tagger'
+    jar = stanford_pos_tagger_dir + 'stanford-postagger.jar'
+
+    command = [
+        'java', '-mx300m', '-cp', f"{jar}:", 'edu.stanford.nlp.tagger.maxent.MaxentTagger',
+        '-model', model, '-textFile', '-', '-outputFormat', 'tsv'
+    
+    ]
+
+    result = subprocess.run(command, input=sentence, text = True, capture_output = True)
+
+    if result.returnconsole != 0:
+        print("Error:", result.stderr)
+        return None
+    
+    tagged_sentence = result.stdout.strip()
+
+    return tagged_sentence
+
+sentence = "This is a sample sentence."
+tagged_sentence = pos_tag(sentence)
