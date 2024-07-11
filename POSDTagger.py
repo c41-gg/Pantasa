@@ -26,7 +26,4 @@ def pos_tag(sentence):
 
     return tagged_sentence
 
-# Example usage
-sentence = "Ang mga tao ay may iba't ibang wika at kultura. Ang BERT model ay ginagamit para sa natural language processing. Si Juan ay mahilig magbasa ng mga libro sa kanyang libreng oras. Ang Pilipinas ay isang arkipelago na matatagpuan sa Timog-Silangang Asya. Ang RoBERTa ay isang variant ng BERT na mas mahusay sa ilang mga task."
-tagged_sentence = pos_tag(sentence)
-print("Tagged Sentence:", tagged_sentence)
+
