@@ -16,8 +16,7 @@ def cluster_ngrams(tagged_sentences, min_n=4):
             clustered_ngrams[n].extend(ngrams)
     return clustered_ngrams
 
-#Example
-import csv
+
 from collections import defaultdict
 
 # Function to cluster n-grams
