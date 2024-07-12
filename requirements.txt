@@ -1,0 +1,15 @@
+import nltk
+from transformers import AutoTokenizer, AutoModelForMaskedLM
+from sklearn.cluster import KMeans
+from sklearn.feature_extraction.text import TfidfVectorizer
+from nltk.tokenize import sent_tokenize
+from nltk.tag import pos_tag
+from nltk.stem import WordNetLemmatizer
+import torch
+import numpy as np
+
+pip install transformers --user
+pip install nltk --user
+pip install scikit-learn --user
+pip install torch --user
+pip install numpy --user
