@@ -1,6 +1,6 @@
 from Tokenizer import tokenize
-from POSDTagger import pos_tag as pos_gtag
-from POSGTagger import pos_tag  as pos_dtag
+from POSDTagger import pos_tag as pos_dtag
+from POSRTagger import pos_tag  as pos_rtag
 
 def main():
     text = input("Input text here: ")
@@ -12,15 +12,13 @@ def main():
     
     print("\nGENERAL POS TAGGED VERSION!\n")
     for sentence in sentences:
-        tagged_sentence = pos_gtag(sentence)
+        tagged_sentence = pos_rtag(sentence)
         print(tagged_sentence)
-        print("\n")
 
     print("\nDETAILED POS TAGGED VERSION!\n")
     for sentence in sentences:
         tagged_sentence = pos_dtag(sentence)
         print(tagged_sentence)
-        print("\n")
     
 
 if __name__ == "__main__":
