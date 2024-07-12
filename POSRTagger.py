@@ -1,6 +1,6 @@
 import subprocess
 
-# Mapping of detailed POS tags to general POS tags
+# Mapping of detailed POS tags to rough POS tags
 tag_mapping = {
     "NNC": "NN.*", "NNP": "NN.*", "NNPA": "NN.*", "NNCA": "NN.*",
     "PRS": "PR.*", "PRP": "PR.*", "PRSP": "PR.*", "PRO": "PR.*",
@@ -52,19 +52,26 @@ def pos_tag(sentence):
         print("Error:", result.stderr)
         return None
 
-     # Process the output and map detailed tags to general tags
+    # Process the output and map detailed tags to general tags
     tagged_sentence = result.stdout.strip()
-    general_tagged_sentence = []
+    pos_tag_sequence = []
 
     for word_tag in tagged_sentence.split('\n'):
         try:
             word, tag = word_tag.split('\t')
             general_tag = map_tag(tag)  # Use the map_tag function to handle combined tags
-            general_tagged_sentence.append(f"{word}/{general_tag}")
+            pos_tag_sequence.append(general_tag)
         except ValueError:
             # Skip lines that do not have exactly two parts
             continue
 
-    return " ".join(general_tagged_sentence)
+    return " ".join(pos_tag_sequence)
+
+# Example usage
+if __name__ == "__main__":
+    sentence = "Ang mga tao ay may iba't ibang wika at kultura."
+    pos_tags = pos_tag(sentence)
+    if pos_tags:
+        print("POS Tag Sequence:", pos_tags)
 
 

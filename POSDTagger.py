@@ -22,8 +22,20 @@ def pos_tag(sentence):
         return None
 
     # Process the output
-    tagged_sentence = result.stdout.strip()
+    tagged_sentence = result.stdout.strip().split('\n')
+    words = []
+    pos_tags = []
 
-    return tagged_sentence
+    for word_tag in tagged_sentence:
+        try:
+            word, tag = word_tag.split('\t')
+            words.append(word)
+            pos_tags.append(tag)
+        except ValueError:
+            # Skip lines that do not have exactly two parts
+            continue
 
+    # Join POS tags into a single string similar to the input sentence
+    pos_tag_sequence = " ".join(pos_tags)
+    return pos_tag_sequence
 
