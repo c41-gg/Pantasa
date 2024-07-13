@@ -10,7 +10,7 @@ def main():
     for sentence in sentences:
         print(sentence)
     
-    print("\nGENERAL POS TAGGED VERSION!\n")
+    print("\nROUGH POS TAGGED VERSION!\n")
     for sentence in sentences:
         tagged_sentence = pos_rtag(sentence)
         print(tagged_sentence)

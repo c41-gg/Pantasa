@@ -2,8 +2,9 @@ import nltk
 from transformers import AutoTokenizer, AutoModelForMaskedLM
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
-from nltk.tokenize import sent_tokenize
-from nltk.tag import pos_tag
+from Tokenizer import tokenize
+from POSDTagger import pos_tag as pos_dtag
+from POSRTagger import pos_tag  as pos_rtag
 from nltk.stem import WordNetLemmatizer
 import torch
 import numpy as np
@@ -32,15 +33,18 @@ def load_dataset(file_path):
 
 # Sentence tokenization
 def tokenize_sentences(text):
-    return sent_tokenize(text)
+    return tokenize(text)
 
 # POS tagging and lemmatization
 def pos_tagging_and_lemmatization(sentences):
     lemmatizer = WordNetLemmatizer()
     pos_tagged_sentences = []
     for sentence in sentences:
-        pos_tagged = pos_tag(sentence.split())
+        pos_dtagged = pos_dtag(sentence.split())
+        pos_rtagged = pos_rtag(sentence.split())
         lemmatized = [(lemmatizer.lemmatize(word), tag) for word, tag in pos_tagged]
+        pos_tagged_sentences.append(pos_rtagged)
+        pos_tagged_sentences.append(pos_dtagged)
         pos_tagged_sentences.append(lemmatized)
     return pos_tagged_sentences
 
