@@ -1,3 +1,4 @@
+import pandas as pd
 from Tokenizer import tokenize
 from POSDTagger import pos_tag as pos_dtag
 from POSRTagger import pos_tag as pos_rtag
@@ -83,7 +84,9 @@ def main():
     # Clustering
     print("\nCLUSTERING BASED ON N-GRAMS!\n")
     clustered_ngrams = cluster_ngrams(lemmatized_sentences)
+    clustered_ngrams_str = {}
     for n in sorted(clustered_ngrams):
+        clustered_ngrams_str[n] = '\n'.join(clustered_ngrams[n])
         print(f"\nClustered {n}-grams:\n")
         for ngram in clustered_ngrams[n]:
             print(ngram)
@@ -97,6 +100,24 @@ def main():
     print("\nEXTRACTED PATTERNS!\n")
     for pattern in patterns:
         print(pattern)
+
+    # Save to Excel
+    results = {
+        "Sentences": sentences,
+        "General_POS_Tagged": general_pos_tagged_sentences,
+        "Detailed_POS_Tagged": detailed_pos_tagged_sentences,
+        "Lemmatized_Sentences": lemmatized_sentences,
+        "MLM_Scores_BERT": mlm_scores_bert,
+        "MPOSM_Scores_BERT": mposm_scores_bert,
+        "MLM_Scores_RoBERTa": mlm_scores_roberta,
+        "MPOSM_Scores_RoBERTa": mposm_scores_roberta,
+        "Patterns": patterns,
+        "Clustered_NGrams": [clustered_ngrams_str]
+    }
+
+    df = pd.DataFrame.from_dict(results, orient='index').transpose()
+    df.to_excel("results.xlsx", index=False)
+    print("Results saved to results.xlsx")
 
 if __name__ == "__main__":
     main()
