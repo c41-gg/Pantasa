@@ -20,9 +20,9 @@ roberta_model = AutoModelForMaskedLM.from_pretrained(tagalog_roberta_model)
 lemmatizer = WordNetLemmatizer()
 
 def load_dataset(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        data = file.readlines()
-    return data
+  with open(file_path, 'r', encoding='utf-8') as file:
+    data = [line.strip().split(',') for line in file.readlines()]  # Split by comma
+  return data
 
 def lemmatize_sentence(sentence):
     words = sentence.split()
@@ -34,26 +34,33 @@ def compute_mlm_and_mposm_scores(sentence, model, tokenizer):
     with torch.no_grad():
         outputs = model(**inputs, labels=inputs["input_ids"])
     mlm_loss = outputs.loss
-    mlm_score = torch.exp(mlm_loss).item()
+    mlm_scores = torch.exp(outputs.logits).squeeze().tolist()  # MLM scores for each token
 
     pos_masked_sentence = ' '.join(['[MASK]' if word != '[MASK]' else word for word in sentence.split()])
     inputs = tokenizer(pos_masked_sentence, return_tensors="pt")
     with torch.no_grad():
         outputs = model(**inputs, labels=inputs["input_ids"])
     mposm_loss = outputs.loss
-    mposm_score = torch.exp(mposm_loss).item()
+    mposm_scores = torch.exp(outputs.logits).squeeze().tolist()  # MPOSM scores for each token
 
-    return mlm_score, mposm_score
+    return mlm_scores, mposm_scores
 
-def extract_patterns(tagged_sentences, mlm_scores_bert, mposm_scores_bert, mlm_scores_roberta, mposm_scores_roberta, threshold=0.75):
+def extract_patterns(tagged_sentences, lemmatized_sentences, mlm_scores_bert, mposm_scores_bert, mlm_scores_roberta, mposm_scores_roberta, threshold=0.75):
     patterns = []
-    for sentence, mlm_score_bert, mposm_score_bert, mlm_score_roberta, mposm_score_roberta in zip(tagged_sentences, mlm_scores_bert, mposm_scores_bert, mlm_scores_roberta, mposm_scores_roberta):
-        if (mlm_score_bert >= threshold and mposm_score_bert >= threshold) or (mlm_score_roberta >= threshold and mposm_score_roberta >= threshold):
-            patterns.append(sentence)
+    for tagged_sentence, lemmatized_sentence, mlm_score_bert, mposm_score_bert, mlm_score_roberta, mposm_score_roberta in zip(tagged_sentences, lemmatized_sentences, mlm_scores_bert, mposm_scores_bert, mlm_scores_roberta, mposm_scores_roberta):
+        words = lemmatized_sentence.split()
+        tags = tagged_sentence.split()
+        new_pattern = []
+        for i, (word, tag, mlm_b, mposm_b, mlm_r, mposm_r) in enumerate(zip(words, tags, mlm_score_bert, mposm_score_bert, mlm_score_roberta, mposm_score_roberta)):
+            if (mlm_b >= threshold or mlm_r >= threshold):
+                new_pattern.append(word)
+            else:
+                new_pattern.append(tag)
+        patterns.append(' '.join(new_pattern))
     return patterns
 
 def main():
-    dataset = load_dataset("C:/Users/Jarlson/OneDrive/Documents/3rd AY/2nd sem/thesis/dataset.txt")
+    dataset = load_dataset("database/test-dataset.csv")
     text = ' '.join(dataset)
     
     sentences = tokenize(text)
@@ -93,7 +100,7 @@ def main():
     mlm_scores_roberta, mposm_scores_roberta = zip(*[compute_mlm_and_mposm_scores(sentence, roberta_model, roberta_tokenizer) for sentence in lemmatized_sentences])
 
     # Extract patterns
-    patterns = extract_patterns(lemmatized_sentences, mlm_scores_bert, mposm_scores_bert, mlm_scores_roberta, mposm_scores_roberta)
+    patterns = extract_patterns(detailed_pos_tagged_sentences, lemmatized_sentences, mlm_scores_bert, mposm_scores_bert, mlm_scores_roberta, mposm_scores_roberta)
     print("\nEXTRACTED PATTERNS!\n")
     for pattern in patterns:
         print(pattern)
