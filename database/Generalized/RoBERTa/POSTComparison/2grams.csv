@@ -1,5 +1,0 @@
-Pattern_ID,RoughPOS_N-Gram,RPOSN_Freq,DetailedPOS_N-Gram,DPOSN_Freq,Comparison_Replacement_Matrix,POS_N-Gram
-200001,DT.* JJ.*,3,,,,DT.* JJ.*
-200002,JJ.* NN.*,4,,,,JJ.* NN.*
-200003,,,DTC JJCS_JJD_CCP,2,,DTC JJCS_JJD_CCP
-200004,,,JJCS_JJD_CCP NNC,4,,JJCS_JJD_CCP NNC
