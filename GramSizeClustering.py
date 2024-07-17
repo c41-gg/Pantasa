@@ -1,49 +1,37 @@
 import csv
 from collections import defaultdict
 
-# Function to generate n-grams
-def generate_ngrams(tokens, n):
-    ngrams = [tokens[i:i+n] for i in range(len(tokens)-n+1)]
-    return [" ".join(ngram) for ngram in ngrams]
-
-# Function to cluster n-grams
-def cluster_ngrams(tagged_sentences, min_n=4):
+def cluster_ngrams_by_size(input_file):
     clustered_ngrams = defaultdict(list)
-    for sentence in tagged_sentences:
-        tokens = sentence.split()
-        for n in range(min_n, len(tokens) + 1):  # Generate n-grams from size min_n to the length of the tokens
-            ngrams = generate_ngrams(tokens, n)
-            clustered_ngrams[n].extend(ngrams)
-    return clustered_ngrams
-
-
-from collections import defaultdict
-
-# Function to cluster n-grams
-def cluster_ngrams(ngrams, min_n=4):
-    clustered_ngrams = defaultdict(list)
-    for ngram in ngrams:
-        tokens = ngram.split()
-        n = len(tokens)
-        if n >= min_n:
-            clustered_ngrams[n].append(ngram)
-    return clustered_ngrams
+    
+    with open(input_file, 'r', encoding='utf-8') as csv_file:
+        reader = csv.DictReader(csv_file)
+        
+        for row in reader:
+            ngram_size = int(row['N-Gram_Size'])
+            ngram_id = row['N-Gram_ID']
+            rough_pos_ngram = row['RoughPOS_N-Gram']
+            detailed_pos_ngram = row['DetailedPOS_N-Gram']
+            ngram = row['N-Gram']
+            lemma_ngram = row['Lemma_N-Gram']
+            
+            clustered_ngrams[ngram_size].append({
+                'N-Gram_ID': ngram_id,
+                'RoughPOS_N-Gram': rough_pos_ngram,
+                'DetailedPOS_N-Gram': detailed_pos_ngram,
+                'N-Gram': ngram,
+                'Lemma_N-Gram': lemma_ngram
+            })
+    
+    # Write results to separate CSV files for each n-gram size
+    for ngram_size, ngrams_list in clustered_ngrams.items():
+        output_file = f'database/GramSize/{ngram_size}grams.csv'
+        with open(output_file, 'w', newline='', encoding='utf-8') as out_file:
+            fieldnames = ['N-Gram_ID', 'RoughPOS_N-Gram', 'DetailedPOS_N-Gram', 'N-Gram', 'Lemma_N-Gram']
+            writer = csv.DictWriter(out_file, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(ngrams_list)
 
 # Example usage
-if __name__ == "__main__":
-    # Path to the CSV file containing the pre-generated n-grams
-    input_csv = "ngram_sentences.csv"
-
-    # Read n-grams from the CSV file
-    ngrams = ["Ang mga tao ay may iba't ibang wika at kultura" , "Ang BERT model ay ginagamit para sa natural language processing.", "Si Juan ay mahilig magbasa ng mga libro sa kanyang libreng oras.",  "Ang Pilipinas ay isang arkipelago na matatagpuan sa Timog-Silangang Asya.", "Ang RoBERTa ay isang variant ng BERT na mas mahusay sa ilang mga task."]
-
-
-    # Cluster n-grams
-    clustered_ngrams = cluster_ngrams(ngrams)
-
-    # Output the clusters to the terminal
-    for n in sorted(clustered_ngrams):
-        print(f"\nClustered {n}-grams:\n")
-        for ngram in clustered_ngrams[n]:
-            print(ngram)
- 
+input_csv = 'database/ngrams.csv'
+cluster_ngrams_by_size(input_csv)
