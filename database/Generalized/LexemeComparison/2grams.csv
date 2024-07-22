@@ -1,0 +1,5 @@
+Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Final_Hybrid_N-Gram
+200001,DT.* JJ.*,,[],,DT.* JJ.*
+200002,JJ.* NN.*,,[],,JJ.* NN.*
+200003,DTC JJCS_JJD_CCP,,[],,DTC JJCS_JJD_CCP
+200004,JJCS_JJD_CCP NNC,,[],,JJCS_JJD_CCP NNC
