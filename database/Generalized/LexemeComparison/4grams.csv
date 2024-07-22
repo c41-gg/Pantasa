@@ -22,7 +22,6 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400021,NN.* CC.* VB.* CC.*,,[],,NN.* CC.* VB.* CC.*
 400022,CC.* VB.* CC.* DT.*,,[],,CC.* VB.* CC.* DT.*
 400023,VB.* CC.* DT.* NN.*,,[],,VB.* CC.* DT.* NN.*
-400023,VB.* CC.* DT.* NN.*,pag-kakahiwahiwalay ng mga pulo,80.93045735537349,* * * *,VB.* CC.* DT.* NN.*
 400024,CC.* DT.* NN.* CC.*,,[],,CC.* DT.* NN.* CC.*
 400025,RB.* RB.* VB.* DT.*,,[],,RB.* RB.* VB.* DT.*
 400026,RB.* VB.* DT.* DT.*,,[],,RB.* VB.* DT.* DT.*
@@ -39,7 +38,6 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400037,RB.* RB.* CC.* PR.*,,[],,RB.* RB.* CC.* PR.*
 400038,RB.* CC.* PR.* NN.*,,[],,RB.* CC.* PR.* NN.*
 400039,DT.* VB.* CC.* DT.*,,[],,DT.* VB.* CC.* DT.*
-400039,DT.* VB.* CC.* DT.*,ang pag-kakahiwahiwalay ng mga,81.755254994435,* * * *,DT.* VB.* CC.* DT.*
 400040,CC.* DT.* NN.* LM,,[],,CC.* DT.* NN.* LM
 400041,CC.* VB.* PR.* PR.*,,[],,CC.* VB.* PR.* PR.*
 400042,CC.* PR.* DT.* NN.*,,[],,CC.* PR.* DT.* NN.*
@@ -102,7 +100,6 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400099,NN.* CC.* PR.* CC.*,,[],,NN.* CC.* PR.* CC.*
 400100,CC.* PR.* CC.* DT.*,,[],,CC.* PR.* CC.* DT.*
 400101,JJ.* CC.* VB.* PR.*,,[],,JJ.* CC.* VB.* PR.*
-400101,JJ.* CC.* VB.* PR.*,malayo na maetsapuwera sila,81.54543459727849,* * * *,JJ.* CC.* VB.* PR.*
 400102,RB.* VB.* DT.* NN.*,,[],,RB.* VB.* DT.* NN.*
 400103,VB.* PR.* VB.* PR.*,,[],,VB.* PR.* VB.* PR.*
 400104,NN.* CC.* RB.* VB.*,,[],,NN.* CC.* RB.* VB.*
@@ -163,7 +160,6 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400159,LM VB.* CC.* NN.*,,[],,LM VB.* CC.* NN.*
 400160,CC.* NN.* JJ.* CC.*,,[],,CC.* NN.* JJ.* CC.*
 400161,NN.* VB.* CC.* NN.*,,[],,NN.* VB.* CC.* NN.*
-400161,NN.* VB.* CC.* NN.*,Lalaki tinubuuan ng talbos,81.75657506202538,* * * *,NN.* VB.* CC.* NN.*
 400162,CC.* VB.* PR.* LM,,[],,CC.* VB.* PR.* LM
 400163,CC.* DT.* NN.* NN.*,,[],,CC.* DT.* NN.* NN.*
 400164,RB.* CC.* NN.* RB.*,,[],,RB.* CC.* NN.* RB.*
@@ -181,10 +177,8 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400176,RB.* VB.* DT.* FW,,[],,RB.* VB.* DT.* FW
 400177,DT.* JJ.* NN.* CC.*,,[],,DT.* JJ.* NN.* CC.*
 400178,JJ.* NN.* CC.* NN.*,,[],,JJ.* NN.* CC.* NN.*
-400178,JJ.* NN.* CC.* NN.*,pinaka-epektibong paggamot ng halamang-singaw,81.13724616876279,* * * *,JJ.* NN.* CC.* NN.*
 400179,CC.* VB.* CC.* PR.*,,[],,CC.* VB.* CC.* PR.*
 400180,VB.* CC.* PR.* JJ.*,,[],,VB.* CC.* PR.* JJ.*
-400180,VB.* CC.* PR.* JJ.*,pumili ng isang napaka-kumplikado,83.28862636010118,* * * *,VB.* CC.* PR.* JJ.*
 400181,CC.* PR.* JJ.* NN.*,,[],,CC.* PR.* JJ.* NN.*
 400182,RB.* PR.* VB.* DT.*,,[],,RB.* PR.* VB.* DT.*
 400183,DT.* NN.* DT.* NN.*,,[],,DT.* NN.* DT.* NN.*
@@ -221,7 +215,6 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400214,RBQ VBW DTC DTCP,,[],,RBQ VBW DTC DTCP
 400215,VBW DTC DTCP NNC,,[],,VBW DTC DTCP NNC
 400216,VBW CCB DTCP NNC,,[],,VBW CCB DTCP NNC
-400216,VBW CCB DTCP NNC,pag-kakahiwahiwalay ng mga pulo,80.93045735537349,* * * *,VBW CCB DTCP NNC
 400217,VBW DTC NNC CCB,,[],,VBW DTC NNC CCB
 400218,CCB NNC PRO CCT,,[],,CCB NNC PRO CCT
 400219,PRI PRO_CCP NNC CCP,,[],,PRI PRO_CCP NNC CCP
@@ -265,14 +258,12 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400257,CCB NNC CCT DTCP,,[],,CCB NNC CCT DTCP
 400258,JJD CCP NNC CCT,,[],,JJD CCP NNC CCT
 400259,JJCS_JJD_CCP NNC CCB NNC,,[],,JJCS_JJD_CCP NNC CCB NNC
-400259,JJCS_JJD_CCP NNC CCB NNC,pinaka-epektibong paggamot ng halamang-singaw,81.13724616876279,* * * *,JJCS_JJD_CCP NNC CCB NNC
 400260,VBOF DTC NNC CCT,,[],,VBOF DTC NNC CCT
 400261,DTP NNP DTC NNC,,[],,DTP NNP DTC NNC
 400262,DTCP NNC CCT PRSP_CCP,,[],,DTCP NNC CCT PRSP_CCP
 400263,NNC LM RBM VBW,,[],,NNC LM RBM VBW
 400264,NNC RBK RBQ DTC,,[],,NNC RBK RBQ DTC
 400265,JJD_CCP NNC CCT NNC,,[],,JJD_CCP NNC CCT NNC
-400265,JJD_CCP NNC CCT NNC,sariwang pananaw sa histograpiya,81.63808957364263,* * * *,JJD_CCP NNC CCT NNC
 400266,CCB PRI_CCP NNC CCP,,[],,CCB PRI_CCP NNC CCP
 400267,CCB VBW DTC JJCS_JJD,,[],,CCB VBW DTC JJCS_JJD
 400268,VBW DTC JJCS_JJD CCP,,[],,VBW DTC JJCS_JJD CCP
@@ -283,3 +274,4 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400273,NNC CCP VBAF CCT,,[],,NNC CCP VBAF CCT
 400274,VBH PRO_CCP DTCP NNC,,[],,VBH PRO_CCP DTCP NNC
 400275,PRO_CCP DTCP NNC CCP,,[],,PRO_CCP DTCP NNC CCP
+400315,CC.* VB.* RB.* DT.*,,[],,CC.* VB.* RB.* DT.*

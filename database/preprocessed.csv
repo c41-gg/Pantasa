@@ -1,20 +1,20 @@
 Sentences,General_POS_Tagged,Detailed_POS_Tagged,Lemmatized
-wala ako sa katinuan ngayon kasi para akong nakawalang sa hawla.,VB.* PR.* CC.* NN.* RB.* CC.* CC.* PR.* VB.* CC.* NN.* PM.*,VBN PRS CCT NNC RBW CCR CCT PRS_CCP VBTS CCT NNC PMP,wala ako sa tino gayon kasi para ako wala sa hawla
-Kung ano ang kapaligiran kadahilanan ay partikular na mahalaga para sa buhay ng mga parasito aalala tungkol sa mga uod sa gabi,RB.* RB.* DT.* NN.* NN.* LM JJ.* CC.* JJ.* CC.* CC.* NN.* CC.* DT.* NN.* VB.* RB.* CC.* DT.* NN.* CC.* RB.* PM.*,RBK RBQ DTC NNC NNC LM JJD CCP JJD CCT CCT NNC CCB DTCP NNC VBTR RBR CCT DTCP NNC CCT RBW PMC,kung ano ang ligid dahil ay partikular na halaga para sa buhay ng mga parasito alala tungkol sa mga uod sa gabi
+wala ako sa katinuan ngayon kasi para akong nakawalang sa hawla.,VB.* PR.* CC.* NN.* RB.* CC.* CC.* PR.* VB.* CC.* NN.* PM.*,VBN PRS CCT NNC RBW CCR CCT PRS_CCP VBTS CCT NNC PMP,wala ako sa tuan gayon kasi para ako wala sa hawla
+Kung ano ang kapaligiran kadahilanan ay partikular na mahalaga para sa buhay ng mga parasito aalala tungkol sa mga uod sa gabi,RB.* RB.* DT.* NN.* NN.* LM JJ.* CC.* JJ.* CC.* CC.* NN.* CC.* DT.* NN.* VB.* RB.* CC.* DT.* NN.* CC.* RB.* PM.*,RBK RBQ DTC NNC NNC LM JJD CCP JJD CCT CCT NNC CCB DTCP NNC VBTR RBR CCT DTCP NNC CCT RBW PMC,kung ano ang ligid dahil ay tikulad na halaga para sa buhay ng mga rasito alala tungkol sa mga uod sa gabi
 kaysa upang dalhin ang mga uod sa isang buntis na babae gamot sa atay parasitiko.,JJ.* CC.* VB.* DT.* DT.* NN.* CC.* PR.* NN.* CC.* NN.* NN.* CC.* NN.* NN.* PM.*,JJC CCB VBOF DTC DTCP NNC CCT PRI_CCP NNC CCP NNC NNC CCT NNC NNC PMP,kaysa upa dalhin ang mga uod sa isa buntis na babae gamot sa atay rasitiko
-bulating parasito atay sugat na pumapatay ng mga parasito sa loob ng tao.,NN.* JJ.* NN.* NN.* CC.* VB.* CC.* DT.* NN.* CC.* NN.* CC.* NN.* PM.*,NNC_CCP JJD NNC NNC CCP VBTR_VBAF CCB DTCP NNC CCT NNC CCB NNC PMP,bulate parasito patay sugat na patay ng mga parasito sa loob ng tao
-Kung paano makilala ang mga uod sa mga matatanda pagsubok para sa presensiya ng mga parasito,RB.* RB.* VB.* DT.* DT.* NN.* CC.* DT.* NN.* NN.* CC.* CC.* NN.* CC.* DT.* NN.* PM.*,RBK RBQ VBW DTC DTCP NNC CCT DTCP NNC NNC CCT CCT NNC CCB DTCP NNC PMC,kung paano kilala ang mga uod sa mga tanda subok para sa presensiya ng mga parasito
+bulating parasito atay sugat na pumapatay ng mga parasito sa loob ng tao.,NN.* JJ.* NN.* NN.* CC.* VB.* CC.* DT.* NN.* CC.* NN.* CC.* NN.* PM.*,NNC_CCP JJD NNC NNC CCP VBTR_VBAF CCB DTCP NNC CCT NNC CCB NNC PMP,bulating rasito atay sugat na patay ng mga rasito sa loob ng tao
+Kung paano makilala ang mga uod sa mga matatanda pagsubok para sa presensiya ng mga parasito,RB.* RB.* VB.* DT.* DT.* NN.* CC.* DT.* NN.* NN.* CC.* CC.* NN.* CC.* DT.* NN.* PM.*,RBK RBQ VBW DTC DTCP NNC CCT DTCP NNC NNC CCT CCT NNC CCB DTCP NNC PMC,kung paano kilala ang mga uod sa mga tanda subok para sa presensiya ng mga rasito
 lalo pag isa lang ang ginagawa,JJ.* CC.* PR.* RB.* DT.* VB.*,JJCC CCR PRI RBI DTC VBTR,lalo pag isa lang ang gawa
-Di kasi talaga matuto ang karamihan ng Pilipino na bumoto ng karapat dapat na mamuno kahit man lang sa kanilang baranggay.,RB.* CC.* RB.* VB.* DT.* PR.* CC.* NN.* CC.* VB.* CC.* JJ.* VB.* CC.* VB.* CC.* RB.* RB.* CC.* PR.* NN.* PM.*,RBF CCR RBT VBW DTC PRI CCB NNP CCP VBAF CCB JJN VBS CCP VBW CCT RBI RBI CCT PRSP_CCP NNC PMP,di kasi talaga tuto ang dami ng Pilipino na boto ng dapat dapat na muno kahit man lang sa nila baranggay
-Pero ang kawawang simpleng empleyado,CC.* DT.* NN.* JJ.* NN.* PM.*,CCT DTC NNC_CCP JJD_CCP NNC PMC,pero ang awa simple empleyado
-ang pag-kakahiwahiwalay ng mga pulo ay nakakapang pahina ng ating,DT.* VB.* CC.* DT.* NN.* LM LM VB.* NN.* CC.* PR.*,DTC VBW CCB DTCP NNC LM LM VBTR NNC CCB PRSP_CCP,ang hiwalay ng mga pulo ay hina ng atin
-mahihirapan tayong mag tipon tipon dahil hiwahiwalay nga ang mga,VB.* PR.* VB.* FW FW CC.* VB.* RB.* DT.* DT.*,VBTF PRP_CCP VBW FW FW CCR VBTR RBI DTC DTCP,hirap tayo tipon dahil hiwalay nga ang mga
-dahil kapag wala ito tayo magkagulo-gulo lalo na iyong mga taong salat sa edukasyon para magsalita ng salitang banyaga….,CC.* CC.* VB.* PR.* PR.* VB.* JJ.* CC.* PR.* DT.* NN.* JJ.* CC.* NN.* CC.* VB.* CC.* NN.* NN.* PM.*,CCR CCR VBN PRO PRP VBW JJCC CCP PRO_CCP DTCP NNC_CCP JJD CCT NNC CCT VBW CCB NNC_CCP NNC PMP,dahil kapag wala ito tayo gulo lalo na iyo mga tao salat sa edukasyon para salita ng salita banyaga
+Di kasi talaga matuto ang karamihan ng Pilipino na bumoto ng karapat dapat na mamuno kahit man lang sa kanilang baranggay.,RB.* CC.* RB.* VB.* DT.* PR.* CC.* NN.* CC.* VB.* CC.* JJ.* VB.* CC.* VB.* CC.* RB.* RB.* CC.* PR.* NN.* PM.*,RBF CCR RBT VBW DTC PRI CCB NNP CCP VBAF CCB JJN VBS CCP VBW CCT RBI RBI CCT PRSP_CCP NNC PMP,di kasi talaga tuto ang rami ng Pilipino na boto ng rapat dapat na muno kahit man lang sa nila baranggay
+Pero ang kawawang simpleng empleyado,CC.* DT.* NN.* JJ.* NN.* PM.*,CCT DTC NNC_CCP JJD_CCP NNC PMC,pero ang wang simple empleyado
+ang pag-kakahiwahiwalay ng mga pulo ay nakakapang pahina ng ating,DT.* VB.* CC.* DT.* NN.* LM LM VB.* NN.* CC.* PR.*,DTC VBW CCB DTCP NNC LM LM VBTR NNC CCB PRSP_CCP,ang hiwahiwalay ng mga pulo ay kapa hina ng atin
+mahihirapan tayong mag tipon tipon dahil hiwahiwalay nga ang mga,VB.* PR.* VB.* FW FW CC.* VB.* RB.* DT.* DT.*,VBTF PRP_CCP VBW FW FW CCR VBTR RBI DTC DTCP,mahihirapan tayo mag tipon tipon dahil hiwahiwalay nga ang mga
+dahil kapag wala ito tayo magkagulo-gulo lalo na iyong mga taong salat sa edukasyon para magsalita ng salitang banyaga….,CC.* CC.* VB.* PR.* PR.* VB.* JJ.* CC.* PR.* DT.* NN.* JJ.* CC.* NN.* CC.* VB.* CC.* NN.* NN.* PM.*,CCR CCR VBN PRO PRP VBW JJCC CCP PRO_CCP DTCP NNC_CCP JJD CCT NNC CCT VBW CCB NNC_CCP NNC PMP,dahil kapa wala ito tayo gulogulo lalo na iyo mga tao salat sa edukasyon para salita ng salita banyaga
 Tagalog ang pinagbatayan ng wikang pambansa,NN.* DT.* VB.* CC.* NN.* JJ.* PM.*,NNP DTC VBRF CCB NNC_CCP JJD PMC,tagalog ang batay ng wika bansa
-ito ay napakadaling matutunan ng sinuman.,PR.* LM RB.* VB.* CC.* PR.* PM.*,PRO LM RBD_CCP VBW CCB PRI PMP,ito ay dali tuto ng sino
+ito ay napakadaling matutunan ng sinuman.,PR.* LM RB.* VB.* CC.* PR.* PM.*,PRO LM RBD_CCP VBW CCB PRI PMP,ito ay dali tunan ng suman
 Ayon sa kanya,RB.* CC.* PR.* PM.*,RBR CCT PRSP PMC,ayon sa kanya
-kumpara sa 571 krimen na naitala noong Hunyo ng taong ito.,VB.* CC.* CD.* NN.* CC.* VB.* RB.* NN.* CC.* NN.* PR.* PM.*,VBAF CCT CDB NNC CCP VBTS RBW_CCP NNP CCB NNC_CCP PRO PMP,kumpara sa 570 kirmen na tala noon Hunyo ng taon ito
-Bumaba rin ang krimen ng 46 porsiyento kumpara sa naitalang 905 kaso noong Hulyo 2015,VB.* RB.* DT.* NN.* CC.* CD.* NN.* NN.* CC.* VB.* CD.* NN.* RB.* NN.* CD.* PM.*,VBAF RBI DTC NNC CCB CDB NNC NNC CCT VBTS_CCP CDB NNC RBW_CCP NNP CDB PMC,baba rin ang krimen ng 46 porsiyento kumpara sa tala 905 kaso noon Hulyo 2015
+kumpara sa 571 krimen na naitala noong Hunyo ng taong ito.,VB.* CC.* CD.* NN.* CC.* VB.* RB.* NN.* CC.* NN.* PR.* PM.*,VBAF CCT CDB NNC CCP VBTS RBW_CCP NNP CCB NNC_CCP PRO PMP,
+Bumaba rin ang krimen ng 46 porsiyento kumpara sa naitalang 905 kaso noong Hulyo 2015,VB.* RB.* DT.* NN.* CC.* CD.* NN.* NN.* CC.* VB.* CD.* NN.* RB.* NN.* CD.* PM.*,VBAF RBI DTC NNC CCB CDB NNC NNC CCT VBTS_CCP CDB NNC RBW_CCP NNP CDB PMC,
 "Ang pagbaba ng bilang ng krimen,",DT.* NN.* CC.* NN.* CC.* NN.* PM.*,DTC NNC CCB NNC CCB NNC PMC,ang baba ng bilang ng rimen
 "aniya,",NN.* PM.*,NNC PMC,aniya
 "ay dahil na rin sa pina-igting na kampanya laban sa kriminalidad,",LM CC.* RB.* RB.* CC.* JJ.* CC.* NN.* NN.* CC.* NN.* PM.*,LM CCR RBI RBI CCT JJN_CCP CCP NNC NNC CCT NNC PMC,ay dahil na rin sa igting na kampanya laban sa riminalidad
@@ -62,10 +62,10 @@ medyo mahirap para sa kanila.,JJ.* JJ.* CC.* CC.* PR.* PM.*,JJCC JJD CCT CCT PRS
 nasiyahan ako nang makita ko ung Gundam sa Odaiba.,VB.* PR.* RB.* VB.* PR.* PR.* NN.* CC.* NN.* PM.*,VBTS PRS RBW VBW PRS PRO_CCP NNP CCT NNP PMP,nasiyahan ako nang kita ko ung Gundam sa Odaiba
 akala ko talaga ay lilipad ito sa langit (tumawa).,VB.* PR.* RB.* LM VB.* PR.* CC.* NN.* NN.* VB.* NN.* PM.*,VBS PRS RBT LM VBTF PRO CCT NNC NNPA VBAF NNPA PMP,akala ko talaga ay lipad ito sa langit tawa
 hindi talaga kapani-paniwala.,RB.* RB.* JJ.* PM.*,RBF RBT JJD PMP,hindi talaga paniwala
-Narinig na namin ang lugar na ito sa mga taga-Japan,VB.* CC.* PR.* DT.* NN.* CC.* PR.* CC.* DT.* NN.* PM.*,VBTS CCP PRP DTC NNC CCP PRO CCT DTCP NNC PMC,rinig na namin ang lugar na ito sa mga Japan
+Narinig na namin ang lugar na ito sa mga taga-Japan,VB.* CC.* PR.* DT.* NN.* CC.* PR.* CC.* DT.* NN.* PM.*,VBTS CCP PRP DTC NNC CCP PRO CCT DTCP NNC PMC,rinig na namin ang lugad na ito sa mga apan
 nakakainggit.,VB.* PM.*,VBTR PMP,nakakainggit
 pero siyempre,CC.* RB.* PM.*,CCT RBT PMC,pero siyempre
-kaya magiging maganda kung masisiyahan kayo.,CC.* VB.* JJ.* CC.* VB.* PR.* PM.*,CCR VBTF JJD CCR VBTF PRP PMP,kaya igi ganda kung siya kayo
+kaya magiging maganda kung masisiyahan kayo.,CC.* VB.* JJ.* CC.* VB.* PR.* PM.*,CCR VBTF JJD CCR VBTF PRP PMP,kaya igi anda kung siya kayo
 kaya matutuwa kami kung makukuha niyong mahalin ang kantang ito.,CC.* VB.* PR.* CC.* VB.* RB.* VB.* DT.* NN.* PR.* PM.*,CCR VBTF PRP CCR VBTF RBD_CCP VBW DTC NNC_CCP PRO PMP,kaya tuwa kami kung kuha niyo halin ang kanta ito
 pero alam niyo ba na mas masayang makita kaming kantahin ito.,CC.* VB.* PR.* RB.* CC.* JJ.* JJ.* VB.* PR.* VB.* PR.* PM.*,CCT VBS PRP RBI CCP JJCC JJD_CCP VBW PRP_CCP VBOF PRO PMP,pero alam niyo ba na mas sayang kita kami tahin ito
 Kaya sana ay abangan niyo kami.,CC.* VB.* LM VB.* PR.* PR.* PM.*,CCR VBS LM VBTF PRP PRP PMP,kaya sana ay abang niyo kami
@@ -82,14 +82,14 @@ mahabagin,JJ.* PM.*,JJD PMC,mahabagin
 tumingin walang karagdagang!,VB.* VB.* JJ.* PM.*,VBAF VBN_CCP JJD_CCP PMQ,tumingin wala ragdaga
 Ako ay napaka,PR.* LM JJ.* PM.*,PRS LM JJCS PMC,ako ay paka
 Akala ko ito ay pagpunta sa maging lipas na sa panahon,VB.* PR.* PR.* LM VB.* CC.* VB.* JJ.* RB.* CC.* NN.* PM.*,VBS PRS PRO LM VBW CCT VBW JJD RBI CCT NNC PMC,akala ko ito ay punta sa maging lipas na sa ahon
-Sila ay ginawa sa akin pakiramdam bilang kung ako ay sa bahay.,PR.* LM VB.* CC.* PR.* NN.* CC.* CC.* PR.* LM CC.* NN.* PM.*,PRP LM VBTS CCT PRSP NNC CCT CCR PRS LM CCT NNC PMP,sila ay gawa sa akin ramdam bilang kung ako ay sa bahay
-Ang lokasyon na ito ay kahanga-hangang,PM.* DT.* NN.* CC.* PR.* LM JJ.*,PMS DTC NNC CCP PRO LM JJD_CCP,ang lokasyon na ito ay hanga
+Sila ay ginawa sa akin pakiramdam bilang kung ako ay sa bahay.,PR.* LM VB.* CC.* PR.* NN.* CC.* CC.* PR.* LM CC.* NN.* PM.*,PRP LM VBTS CCT PRSP NNC CCT CCR PRS LM CCT NNC PMP,sila ay gawa sa akin kiramdam bilang kung ako ay sa bahay
+Ang lokasyon na ito ay kahanga-hangang,PM.* DT.* NN.* CC.* PR.* LM JJ.*,PMS DTC NNC CCP PRO LM JJD_CCP,ang lokasyon na ito ay hangahanga
 lahat ng mga bagong!,PR.* CC.* DT.* JJ.* PM.*,PRI CCB DTCP JJD_CCP PMQ,lahat ng mga bago
-Nagkaroon kami ng lahat ng bagay na kailangan namin sa malapit na malapit,VB.* PR.* CC.* PR.* CC.* NN.* CC.* VB.* PR.* CC.* JJ.* CC.* JJ.* PM.*,VBTS PRP CCB PRI CCB NNC CCP VBS PRP CCT JJD CCP JJD PMC,mayroon kami ng lahat ng bagay na kailangan namin sa lapit na lapit
-mga lugar upang kumain,DT.* NN.* CC.* VB.* PM.*,DTCP NNC CCB VBAF PMC,mga lugar upang kain
-Kami ay magiging bumalik muli,PR.* LM VB.* VB.* RB.*,PRP LM VBTF VBAF RBW,kami ay magiging balik muli
-Ang ilang mga pagsubok ng dugo upang pumasa sa mga parasito - Nakukuha bulating parasito kung mula sa tao sa tao,DT.* PR.* DT.* NN.* CC.* NN.* CC.* VB.* CC.* DT.* NN.* PM.* VB.* NN.* NN.* CC.* RB.* CC.* NN.* CC.* NN.*,DTC PRQ_CCP DTCP NNC CCB NNC CCB VBAF CCT DTCP NNC PMS VBTR NNC_CCP NNC CCR RBL CCT NNC CCT NNC,ang ilang mga subok ng dugo upang pasa sa mga parasito kuha bulate parasito kung mula sa tao sa tao
-Ito ay ang proyektong dapat pagsasamahan nila ng kapatid niyang si Claudine Barretto,PR.* LM DT.* NN.* VB.* VB.* PR.* CC.* NN.* PR.* DT.* NN.* NN.* PM.*,PRO LM DTC NNC_CCP VBS VBW PRP CCB NNC PRS_CCP DTP NNP NNP PMC,ito ay ang proyekto dapat sama nila ng patid niya si Claudine Barretto
+Nagkaroon kami ng lahat ng bagay na kailangan namin sa malapit na malapit,VB.* PR.* CC.* PR.* CC.* NN.* CC.* VB.* PR.* CC.* JJ.* CC.* JJ.* PM.*,VBTS PRP CCB PRI CCB NNC CCP VBS PRP CCT JJD CCP JJD PMC,roon kami ng lahat ng bagay na kailangan namin sa lapit na lapit
+mga lugar upang kumain,DT.* NN.* CC.* VB.* PM.*,DTCP NNC CCB VBAF PMC,mga lugad upa kain
+Kami ay magiging bumalik muli,PR.* LM VB.* VB.* RB.*,PRP LM VBTF VBAF RBW,kami ay igi balik muli
+Ang ilang mga pagsubok ng dugo upang pumasa sa mga parasito - Nakukuha bulating parasito kung mula sa tao sa tao,DT.* PR.* DT.* NN.* CC.* NN.* CC.* VB.* CC.* DT.* NN.* PM.* VB.* NN.* NN.* CC.* RB.* CC.* NN.* CC.* NN.*,DTC PRQ_CCP DTCP NNC CCB NNC CCB VBAF CCT DTCP NNC PMS VBTR NNC_CCP NNC CCR RBL CCT NNC CCT NNC,
+Ito ay ang proyektong dapat pagsasamahan nila ng kapatid niyang si Claudine Barretto,PR.* LM DT.* NN.* VB.* VB.* PR.* CC.* NN.* PR.* DT.* NN.* NN.* PM.*,PRO LM DTC NNC_CCP VBS VBW PRP CCB NNC PRS_CCP DTP NNP NNP PMC,ito ay ang royekto dapat sama nila ng patid niya si Claudine Barretto
 pero hindi natuloy dahil lumipat na ng GMA-7 ang huli.,CC.* RB.* VB.* CC.* VB.* RB.* CC.* NN.* DT.* JJ.* PM.*,CCT RBF VBTS CCR VBAF RBI CCB NNP DTC JJD PMP,pero hindi tuloy dahil lipat na ng GMA ang huli
 inamin niyang nanghinayang siya na hindi natuloy ang pagsasama nilang magkapatid sa isang trabaho.,VB.* PR.* VB.* PR.* CC.* RB.* VB.* DT.* NN.* PR.* NN.* CC.* PR.* NN.* PM.*,VBOF PRS_CCP VBTS_CCP PRS CCP RBF VBTS DTC NNC PRP_CCP NNC CCT PRI_CCP NNC PMP,inamin niya hayan siya na hindi tuloy ang sama nila patid sa isa trabaho
 Pero sa kabila nito ay hindi raw siya nakaramdam ng kaba na baka hindi na matuloy ang nasabing proyekto.,CC.* CC.* CC.* PR.* LM RB.* RB.* PR.* VB.* CC.* NN.* CC.* RB.* RB.* CC.* VB.* DT.* VB.* NN.* PM.*,CCT CCT CCT PRO LM RBF RBI PRS VBTS CCB NNC CCP RBM RBF CCP VBW DTC VBTS_CCP NNC PMP,pero sa bila nito ay hindi raw siya ramdam ng kaba na baka hindi na tuloy ang sabi royekto
@@ -98,59 +98,59 @@ hindi ko naman siya iiwan,",RB.* PR.* RB.* PR.* VB.* PM.* PM.*",RBF PRS RBI PRS 
 "
 Nanghinayang ako na hindi na si Claud",PM.* VB.* PR.* CC.* RB.* RB.* DT.* NN.* PM.*,PMS VBTR_CCP PRS CCP RBF RBI DTP NNP PMC,\r\nNanghinayang ako na hindi na si Claud
 pero siyempre,CC.* RB.* PM.*,CCT RBT PMC,pero siyempre
-hindi naman ibig sabihin nun hindi na kami magkakatrabaho sa isang teleserye,RB.* RB.* VB.* VB.* FW RB.* CC.* PR.* VB.* CC.* PR.* NN.* PM.*,RBF RBI VBS VBOF FW RBF CCP PRP VBW CCT PRI_CCP NNC PMC,hindi naman ibig sabi nun hindi na kami trabaho sa isa teleserye
+hindi naman ibig sabihin nun hindi na kami magkakatrabaho sa isang teleserye,RB.* RB.* VB.* VB.* FW RB.* CC.* PR.* VB.* CC.* PR.* NN.* PM.*,RBF RBI VBS VBOF FW RBF CCP PRP VBW CCT PRI_CCP NNC PMC,hindi naman ibig sabi nun hindi na kami rabaho sa isa teleserye
 na hindi na magkikita.,CC.* RB.* CC.* VB.* PM.*,CCP RBF CCP VBTF PMP,na hindi na kita
 nirerespeto ko ang naging desisyon niya.,VB.* PR.* DT.* VB.* NN.* PR.* PM.*,VBTR PRS DTC VBTS NNC PRS PMP,nirerespeto ko ang naging desisyon niya
 Hindi kami nagkikita,RB.* PR.* VB.* PM.*,RBF PRP VBTS PMC,hindi kami kita
-tinatawagan ko ng ilang beses.,VB.* PR.* CC.* PR.* NN.* PM.*,VBTR PRS CCB PRQ_CCP NNC PMP,tawag ko ng ilang beses
-Mag-withdraw Deposito Paano Maglaro Lotto bonus Casino bonus Balita,VB.* NN.* NN.* NN.* NN.* FW NN.* FW NN.*,VBW NNP NNP NNP NNP FW NNP FW NNP,withdraw deposito paano maglaro Lotto bonus Casino bonus Balita
-NAKITA na natin ito sa isip pero hindi naman tayo natuwa na nagkatotoo ang ganitong senaryo �,NN.* CC.* PR.* PR.* CC.* NN.* CC.* RB.* RB.* PR.* VB.* CC.* VB.* DT.* PR.* NN.*,NNPA CCP PRP PRO CCT NNC CCT RBF RBI PRP VBTS CCP VBTS DTC PRC_CCP NNC,kita na natin ito sa isip pero hindi naman tayo tuwa na totoo o ang ganito senaryo
+tinatawagan ko ng ilang beses.,VB.* PR.* CC.* PR.* NN.* PM.*,VBTR PRS CCB PRQ_CCP NNC PMP,tinatawagan ko ng ilang beses
+Mag-withdraw Deposito Paano Maglaro Lotto bonus Casino bonus Balita,VB.* NN.* NN.* NN.* NN.* FW NN.* FW NN.*,VBW NNP NNP NNP NNP FW NNP FW NNP,withdraw Deposito Paano Maglaro Lotto bonos Casino bonos Balita
+NAKITA na natin ito sa isip pero hindi naman tayo natuwa na nagkatotoo ang ganitong senaryo �,NN.* CC.* PR.* PR.* CC.* NN.* CC.* RB.* RB.* PR.* VB.* CC.* VB.* DT.* PR.* NN.*,NNPA CCP PRP PRO CCT NNC CCT RBF RBI PRP VBTS CCP VBTS DTC PRC_CCP NNC,
 PAUNAWA:,NN.* PM.*,NNPA PMS,unawa
 Kung nagsasalita ka ng Tagalog,CC.* VB.* PR.* CC.* NN.* PM.*,CCR VBTR PRS CCB NNP PMC,kung salita ka ng Tagalog
 maaari kang gumamit ng mga serbisyo ng tulong sa wika nang walang bayad.,VB.* PR.* VB.* CC.* DT.* NN.* CC.* NN.* CC.* NN.* CC.* VB.* NN.* PM.*,VBS PRS_CCP VBAF CCB DTCP NNC CCB NNC CCT NNC CCB VBN_CCP NNC PMP,maaari kang gamit ng mga serbisyo ng tulong sa wika nang wala bayad
-Tumawag sa 1-844-820-7170.,VB.* CC.* CD.* PM.*,VBAF CCT CDB PMP,tumawag sa 1-844-820-7170
+Tumawag sa 1-844-820-7170.,VB.* CC.* CD.* PM.*,VBAF CCT CDB PMP,
 Gayunpaman,CC.* PM.*,CCB PMC,gayunpaman
 motorsiklo,NN.* PM.*,NNC PMC,motorsiklo
 bisikleta,NN.* PM.*,NNC PMC,bisikleta
-Traktora,NN.* PM.*,NNP PMC,traktora
-tumatakbo hindi lamang sa,VB.* RB.* RB.* CC.*,VBTR_VBAF RBF RBI CCT,takbo o hindi lamang sa
-ang modernong mga laro na ibinigay ng mga pagpipilian para sa mga batang,DT.* JJ.* DT.* NN.* CC.* VB.* CC.* DT.* NN.* CC.* CC.* DT.* JJ.*,DTC JJD_CCP DTCP NNC CCP VBOF CCB DTCP NNC CCT CCT DTCP JJD_CCP,ang moderno ng mga laro na bigay ng mga pili para sa mga bata
+Traktora,NN.* PM.*,NNP PMC,raktora
+tumatakbo hindi lamang sa,VB.* RB.* RB.* CC.*,VBTR_VBAF RBF RBI CCT,tumatakbo hindi lamang sa
+ang modernong mga laro na ibinigay ng mga pagpipilian para sa mga batang,DT.* JJ.* DT.* NN.* CC.* VB.* CC.* DT.* NN.* CC.* CC.* DT.* JJ.*,DTC JJD_CCP DTCP NNC CCP VBOF CCB DTCP NNC CCT CCT DTCP JJD_CCP,ang moderno mga laro na bigay ng mga pili para sa mga bata
 Pagkolekta ng mga ito,NN.* CC.* DT.* PR.* PM.*,NNC CCB DTCP PRO PMC,kolekta ng mga ito
 yumuko sa paligid matalim liko,VB.* CC.* JJ.* VB.* JJ.* PM.*,VBAF CCT JJD VBW JJD PMC,yumuko sa paligid talim liko
 dumating upang tapusin ang,VB.* CC.* VB.* DT.*,VBAF CCB VBOF DTC,dumating upa tapos ang
-Din ang mga lalaki ay maaaring lumahok sa mga karera,NN.* DT.* DT.* NN.* LM RB.* VB.* CC.* DT.* NN.* PM.*,NNP DTC DTCP NNC LM RBM VBAF CCT DTCP NNC PMC,din ang mga laki ay maaari lahok sa mga karera
-kabilang ang,CC.* DT.*,CCT DTC,bilang ang 
+Din ang mga lalaki ay maaaring lumahok sa mga karera,NN.* DT.* DT.* NN.* LM RB.* VB.* CC.* DT.* NN.* PM.*,NNP DTC DTCP NNC LM RBM VBAF CCT DTCP NNC PMC,din ang mga laki ay ari lahok sa mga karera
+kabilang ang,CC.* DT.*,CCT DTC,kabilang ang
 ngunit ang pag-na tumutulo bag,CC.* DT.* NN.* VB.* NN.* PM.*,CCT DTC NNC VBTR_VBAF NNCA PMC,ngunit ang pagna tulo bag
 pagmamaneho magparagos,NN.* VB.* PM.*,NNC VBW PMC,pagmamaneho ragos
-hindi sa huli upang ipagkaloob ang lahat ng mga,RB.* CC.* RB.* CC.* VB.* DT.* PR.* CC.* DT.* DT.*,RBF CCT RBW CCB VBOB DTC PRI CCB DTCP DTCP,hindi sa huli upang kaloon ang lahat ng mga
+hindi sa huli upang ipagkaloob ang lahat ng mga,RB.* CC.* RB.* CC.* VB.* DT.* PR.* CC.* DT.* DT.*,RBF CCT RBW CCB VBOB DTC PRI CCB DTCP DTCP,hindi sa huli upa ipagkaloob ang lahat ng mga
 kasama ng mga ito lahi ay hindi huling,CC.* CC.* DT.* PR.* NN.* LM RB.* JJ.*,CCB CCB DTCP PRO NNC LM RBF JJD_CCP,kasama ng mga ito lahi ay hindi huli
-paggupit,NN.*,NNC,gupit
+paggupit,NN.*,NNC,paggupit
 na dapat pindutin,CC.* VB.* VB.*,CCP VBS VBOF,na dapat pindot
-na kung saan ay kinakailangan upang maiwasan ang isang,CC.* RB.* RB.* LM VB.* CC.* VB.* DT.* PR.*,CCP RBK RBQ LM VBTR CCB VBW DTC PRI_CCP,na kung saan ay kailangan upang iwas ang isa
-masyadong maraming mga pagkakataon upang i-play sa,JJ.* PR.* DT.* NN.* CC.* VB.* CC.*,JJCS_CCP PRI_CCP DTCP NNC CCB VBOF CCT,masyado dami mga taon upang play sa
+na kung saan ay kinakailangan upang maiwasan ang isang,CC.* RB.* RB.* LM VB.* CC.* VB.* DT.* PR.*,CCP RBK RBQ LM VBTR CCB VBW DTC PRI_CCP,na kung saan ay kailangan upa wasan ang isa
+masyadong maraming mga pagkakataon upang i-play sa,JJ.* PR.* DT.* NN.* CC.* VB.* CC.*,JJCS_CCP PRI_CCP DTCP NNC CCB VBOF CCT,masyadong rami mga taon upa iplay sa
 Bangka,NN.* PM.*,NNP PMC,bangka
 bangka,NN.* PM.*,NNC PMC,bangka
-iba't iba - lahat ng ito ay maaaring na rin ay ang karera,PR.* PM.* NN.* PR.* PM.* PR.* CC.* PR.* LM RB.* CC.* RB.* LM DT.* NN.*,PRI PMS NNCA PRI PMS PRI CCB PRO LM RBM CCP RBI LM DTC NNC,iba lahat ng ito ay maari na rin ay ang karera
-ginawa nang maramihan,VB.* RB.* JJ.* PM.*,VBOF RBW JJD PMC,ginawa nang dami
+iba't iba - lahat ng ito ay maaaring na rin ay ang karera,PR.* PM.* NN.* PR.* PM.* PR.* CC.* PR.* LM RB.* CC.* RB.* LM DT.* NN.*,PRI PMS NNCA PRI PMS PRI CCB PRO LM RBM CCP RBI LM DTC NNC,
+ginawa nang maramihan,VB.* RB.* JJ.* PM.*,VBOF RBW JJD PMC,ginawa nang rami
 Isang mabagal na suso,PR.* JJ.* CC.* NN.* PM.*,PRI_CCP JJD CCP NNC PMC,isa bagal na suso
-na kahabaan ng kalsada,CC.* NN.* NN.* CC.* NN.*,CCP NNC NNC CCB NNC,na haba haba ng sada
-Ayusin ang isang lahi sa pagitan ng mga ito - na kung saan ang kailangan ugat ng,VB.* DT.* PR.* NN.* CC.* NN.* CC.* DT.* PR.* PM.* CC.* RB.* RB.* DT.* VB.* NN.* CC.*,VBOF DTC PRI_CCP NNC CCT NNC CCB DTCP PRO PMS CCP RBK RBQ DTC VBS NNC CCB,ayos and isa lahi sa pagitan ng gma ito na kung saan ang kailangan ugat ng
-Maaari mong patakbuhin ang ng taxi,VB.* PR.* VB.* DT.* CC.* NN.* PM.*,VBS PRS_CCP VBOF DTC CCB NNC PMC,maaari mong takbo ang ng taxi
-naglalakbay sa mga lansangan ng siyudad,VB.* CC.* DT.* NN.* CC.* NN.* PM.*,VBTR CCT DTCP NNC CCB NNC PMC,lakbayay sa mga lansangan ng siyudad
+na kahabaan ng kalsada,CC.* NN.* NN.* CC.* NN.*,CCP NNC NNC CCB NNC,na haba ng sada
+Ayusin ang isang lahi sa pagitan ng mga ito - na kung saan ang kailangan ugat ng,VB.* DT.* PR.* NN.* CC.* NN.* CC.* DT.* PR.* PM.* CC.* RB.* RB.* DT.* VB.* NN.* CC.*,VBOF DTC PRI_CCP NNC CCT NNC CCB DTCP PRO PMS CCP RBK RBQ DTC VBS NNC CCB,
+Maaari mong patakbuhin ang ng taxi,VB.* PR.* VB.* DT.* CC.* NN.* PM.*,VBS PRS_CCP VBOF DTC CCB NNC PMC,ari mong takbo ang ng taxi
+naglalakbay sa mga lansangan ng siyudad,VB.* CC.* DT.* NN.* CC.* NN.* PM.*,VBTR CCT DTCP NNC CCB NNC PMC,naglalakbay sa mga lansangan ng siyudad
 ang tunay na layunin ibang,DT.* JJ.* CC.* NN.* PR.* PM.*,DTC JJD CCP NNC PRI_CCP PMC,ang tunay na layon iba
-ngunit ang proseso ay nangangailangan ng kasanayan mataas na,CC.* DT.* NN.* LM VB.* CC.* NN.* JJ.* CC.*,CCT DTC NNC LM VBTR CCB NNC JJD CCP,ngunit ang proseso ay kailangan ng sanay taas na
+ngunit ang proseso ay nangangailangan ng kasanayan mataas na,CC.* DT.* NN.* LM VB.* CC.* NN.* JJ.* CC.*,CCT DTC NNC LM VBTR CCB NNC JJD CCP,ngunit ang roseso ay angaila ng sanay taas na
 Siya lang naman ang hinihintay ko,PR.* RB.* RB.* DT.* VB.* PR.* PM.*,PRS RBI RBI DTC VBTR PRS PMC,siya lang naman ang hintay ko
-gustong gusto ko na bumisita sa Japan,VB.* VB.* PR.* CC.* VB.* CC.* NN.* PM.*,VBS_CCP VBS PRS CCP VBAF CCT NNP PMC,gusto gusto ko na bisita sa Japan
-Lalaki tinubuuan ng talbos sa ngipin dahil hindi nag sisipilyo —,NN.* VB.* CC.* NN.* CC.* NN.* CC.* RB.* VB.* NN.*,NNP VBOF CCB NNC CCT NNC CCR RBF VBTS NNC,lalaki tubo ng talkbos sa ngipin dahil hindi sipilyo
-Sa ngayon ay nasa,CC.* RB.* LM RB.*,CCT RBW LM RBL,sa ngayon ay nasa
-Alam naman ng marami kung gaano kagaling si Coco Martin pagdating sa pag-arte kahit na noon pa man na nagsisimula ito ay nakitaan na,VB.* RB.* CC.* PR.* RB.* RB.* NN.* DT.* NN.* NN.* VB.* CC.* NN.* CC.* CC.* RB.* RB.* RB.* CC.* VB.* PR.* LM VB.* CC.*,VBS RBI CCB PRI RBK RBQ NNC_CCP DTP NNP NNP VBW CCT NNC CCT CCP RBW RBI RBI CCP VBTR PRO LM VBTS CCP,alam naman ng dami kung gaano galing si Coco Martin dati sa arte kahit na noon pa man na simula ito ay kita na
+gustong gusto ko na bumisita sa Japan,VB.* VB.* PR.* CC.* VB.* CC.* NN.* PM.*,VBS_CCP VBS PRS CCP VBAF CCT NNP PMC,gustong gusto ko na bisita sa Japan
+Lalaki tinubuuan ng talbos sa ngipin dahil hindi nag sisipilyo —,NN.* VB.* CC.* NN.* CC.* NN.* CC.* RB.* VB.* NN.*,NNP VBOF CCB NNC CCT NNC CCR RBF VBTS NNC,
+Sa ngayon ay nasa,CC.* RB.* LM RB.*,CCT RBW LM RBL,sa gayon ay nasa
+Alam naman ng marami kung gaano kagaling si Coco Martin pagdating sa pag-arte kahit na noon pa man na nagsisimula ito ay nakitaan na,VB.* RB.* CC.* PR.* RB.* RB.* NN.* DT.* NN.* NN.* VB.* CC.* NN.* CC.* CC.* RB.* RB.* RB.* CC.* VB.* PR.* LM VB.* CC.*,VBS RBI CCB PRI RBK RBQ NNC_CCP DTP NNP NNP VBW CCT NNC CCT CCP RBW RBI RBI CCP VBTR PRO LM VBTS CCP,alam naman ng rami kung gaano galing si Coco Martin dati sa arte kahit na noon pa man na simula ito ay kita na
 Pangasinan,NN.*,NNP,asin
 Ito ay magaan dalhin,PR.* LM JJ.* VB.* PM.*,PRO LM JJD VBOF PMC,ito ay an dalhin
 Isang Pelikula,PR.* NN.* PM.*,PRI_CCP NNP PMC,isa Pelikula
 Tungkol sa mga Larawan ng mga Lumang Bulalakaw,RB.* CC.* DT.* NN.* CC.* DT.* NN.* NN.* PM.*,RBR CCT DTCP NNP CCB DTCP NNP_CCP NNP PMC,tungkol sa mga Larawan ng mga Lumang Bulalakaw
 Sa totoo lang,CC.* RB.* RB.* PM.*,CCT RBT RBI PMC,sa totoo lang
 Malamang galing sa ating,RB.* RB.* CC.* PR.*,RBI RBL CCT PRSP_CCP,lamang galing sa atin
-paggamot ng kuko mula sa pagbabalat kung paano ituring ang mga halamang-singaw sa mga paa ng mga doktor ng payo.,VB.* CC.* NN.* RB.* CC.* NN.* RB.* RB.* VB.* DT.* DT.* NN.* CC.* DT.* NN.* CC.* DT.* NN.* CC.* NN.* PM.*,VBW CCB NNC RBL CCT NNC RBK RBQ VBOF DTC DTCP NNC CCT DTCP NNC CCB DTCP NNC CCB NNC PMP,gamott ng kuko mula sa balat kung paano turing ang mga halaman singaw sa mga paa ng mga doktor ng payo
+paggamot ng kuko mula sa pagbabalat kung paano ituring ang mga halamang-singaw sa mga paa ng mga doktor ng payo.,VB.* CC.* NN.* RB.* CC.* NN.* RB.* RB.* VB.* DT.* DT.* NN.* CC.* DT.* NN.* CC.* DT.* NN.* CC.* NN.* PM.*,VBW CCB NNC RBL CCT NNC RBK RBQ VBOF DTC DTCP NNC CCT DTCP NNC CCB DTCP NNC CCB NNC PMP,paggamot ng kuko mula sa balat kung paano turing ang mga halamangsingaw sa mga paa ng mga doktor ng payo
 kung paano sa singaw ang kuko sa paa halamang-singaw ang pinakamahusay na paraan upang gamutin ang kuko halamang-singaw sa aking mga paa.,RB.* RB.* CC.* NN.* DT.* NN.* CC.* NN.* NN.* DT.* JJ.* CC.* NN.* CC.* VB.* DT.* NN.* NN.* CC.* PR.* DT.* NN.* PM.*,RBK RBQ CCT NNC DTC NNC CCT NNC NNC DTC JJCS_JJD CCP NNC CCB VBOF DTC NNC NNC CCT PRSP_CCP DTCP NNC PMP,kung paano sa singaw ang kuko sa paa halamangsingaw ang husay na paraan upa gamot ang kuko halamangsingaw sa akin mga paa
 ang pinakamahusay na lunas para sa mga halamang-singaw sa pagitan ng mga daliri sa kamay paano mag-apply pamahid ekzoderil.,DT.* JJ.* CC.* NN.* CC.* CC.* DT.* NN.* CC.* NN.* CC.* DT.* NN.* CC.* NN.* PR.* VB.* NN.* NN.* PM.*,DTC JJCS_JJD CCP NNC CCT CCT DTCP NNC CCT NNC CCB DTCP NNC CCT NNC PRQ VBW NNC NNC PMP,ang husay na lunas para sa mga halamangsingaw sa pagitan ng mga daliri sa kamay paano magapply ahid ekzoderil
 alak ng halamang-singaw sa mga kuko ng mga kamay kuko halamang-singaw sa iyong mga paa kaysa sa paggamot sa murang.,NN.* CC.* NN.* CC.* DT.* NN.* CC.* DT.* NN.* NN.* NN.* CC.* PR.* DT.* NN.* JJ.* CC.* VB.* CC.* JJ.* PM.*,NNC CCB NNC CCT DTCP NNC CCB DTCP NNC NNC NNC CCT PRSP_CCP DTCP NNC JJC CCT VBW CCT JJD_CCP PMP,alak ng halamangsingaw sa mga kuko ng mga kamay kuko halamangsingaw sa iyo mga paa kaysa sa gamot sa mura
@@ -280,6 +280,6 @@ Kung nagsasalita ka ng Tagalog,CC.* VB.* PR.* CC.* NN.* PM.*,CCR VBTR PRS CCB NN
 maaari kang gumamit ng mga serbisyo ng tulong sa wika nang walang bayad.,VB.* PR.* VB.* CC.* DT.* NN.* CC.* NN.* CC.* NN.* CC.* VB.* NN.* PM.*,VBS PRS_CCP VBAF CCB DTCP NNC CCB NNC CCT NNC CCB VBN_CCP NNC PMP,maaari kang gamit ng mga serbisyo ng tulong sa wika nang wala bayad
 Tumawag sa 1-888-392-8886.,VB.* CC.* CD.* PM.*,VBAF CCT CDB PMP,
 Dalawa:,CD.* PM.*,CDB PMS,dalawa
-Huwag mag-alala,RB.* VB.* PM.*,RBF VBW PMC,huwa alala
+Huwag mag-alala,RB.* VB.* PM.*,RBF VBW PMC,huwag alala
 "magpapadala kami ng isang dokumento na tinatawag na:""",VB.* PR.* CC.* PR.* NN.* CC.* VB.* CC.* PM.* PM.*,VBTF_VBAF PRP CCB PRI_CCP NNC CCP VBTR CCP PMS PMS,magpapadala kami ng isa dokumento na tawag na
 "Hindi Pinirmahang Pahayag ng Balota"" na humihingi ng iyong lagda.",RB.* NN.* NN.* CC.* NN.* PM.* CC.* VB.* CC.* PR.* NN.* PM.*,RBF NNP_CCP NNP CCB NNP PMS CCP VBTR_VBAF CCB PRSP_CCP NNC PMP,hindi Pinirmahang Pahayag ng Balota na hingi ng iyo lagda

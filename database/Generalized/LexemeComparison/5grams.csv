@@ -17,14 +17,11 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500016,DT.* NN.* CC.* NN.* CC.*,,[],,DT.* NN.* CC.* NN.* CC.*
 500017,RB.* RB.* VB.* DT.* DT.*,,[],,RB.* RB.* VB.* DT.* DT.*
 500018,RB.* VB.* DT.* DT.* NN.*,,[],,RB.* VB.* DT.* DT.* NN.*
-500018,RB.* VB.* DT.* DT.* NN.*,biglang naglipana ang mga singkit,81.75770016456804,* * * * *,RB.* VB.* DT.* DT.* NN.*
 500019,DT.* DT.* NN.* CC.* DT.*,,[],,DT.* DT.* NN.* CC.* DT.*
 500020,PR.* CC.* NN.* CC.* VB.*,,[],,PR.* CC.* NN.* CC.* VB.*
 500021,CC.* NN.* CC.* VB.* CC.*,,[],,CC.* NN.* CC.* VB.* CC.*
 500022,DT.* VB.* CC.* DT.* NN.*,,[],,DT.* VB.* CC.* DT.* NN.*
-500022,DT.* VB.* CC.* DT.* NN.*,ang pag-kakahiwahiwalay ng mga pulo,82.43141322326044,* * * * *,DT.* VB.* CC.* DT.* NN.*
 500023,VB.* CC.* DT.* NN.* LM,,[],,VB.* CC.* DT.* NN.* LM
-500023,VB.* CC.* DT.* NN.* LM,pag-kakahiwahiwalay ng mga pulo ay,82.36288338366468,* * * * *,VB.* CC.* DT.* NN.* LM
 500024,CC.* PR.* DT.* NN.* JJ.*,,[],,CC.* PR.* DT.* NN.* JJ.*
 500025,PR.* DT.* NN.* JJ.* CC.*,,[],,PR.* DT.* NN.* JJ.* CC.*
 500026,JJ.* CC.* NN.* CC.* VB.*,,[],,JJ.* CC.* NN.* CC.* VB.*
@@ -63,7 +60,6 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500059,CC.* NN.* PR.* CC.* NN.*,,[],,CC.* NN.* PR.* CC.* NN.*
 500060,CC.* RB.* VB.* CC.* PR.*,,[],,CC.* RB.* VB.* CC.* PR.*
 500061,VB.* PR.* CC.* NN.* PR.*,,[],,VB.* PR.* CC.* NN.* PR.*
-500061,VB.* PR.* CC.* NN.* PR.*,nakadama siya ng simpatya rito.,81.76682728725415,* * * * *,VB.* PR.* CC.* NN.* PR.*
 500062,CC.* PR.* LM VB.* RB.*,,[],,CC.* PR.* LM VB.* RB.*
 500063,RB.* RB.* CC.* VB.* CC.*,,[],,RB.* RB.* CC.* VB.* CC.*
 500064,VB.* CC.* PR.* NN.* CC.*,,[],,VB.* CC.* PR.* NN.* CC.*
@@ -99,7 +95,6 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500094,CC.* DT.* NN.* LM VB.*,,[],,CC.* DT.* NN.* LM VB.*
 500095,DT.* NN.* LM VB.* CC.*,,[],,DT.* NN.* LM VB.* CC.*
 500096,NN.* VB.* CC.* NN.* CC.*,,[],,NN.* VB.* CC.* NN.* CC.*
-500096,NN.* VB.* CC.* NN.* CC.*,Lalaki tinubuuan ng talbos sa,82.8650381878691,* * * * *,NN.* VB.* CC.* NN.* CC.*
 500097,VB.* CC.* NN.* CC.* NN.*,,[],,VB.* CC.* NN.* CC.* NN.*
 500098,CC.* VB.* PR.* LM VB.*,,[],,CC.* VB.* PR.* LM VB.*
 500099,VB.* PR.* LM VB.* CC.*,,[],,VB.* PR.* LM VB.* CC.*
@@ -108,18 +103,14 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500102,CC.* NN.* RB.* RB.* VB.*,,[],,CC.* NN.* RB.* RB.* VB.*
 500103,NN.* RB.* RB.* VB.* DT.*,,[],,NN.* RB.* RB.* VB.* DT.*
 500104,NN.* CC.* DT.* NN.* CC.*,,[],,NN.* CC.* DT.* NN.* CC.*
-500104,NN.* CC.* DT.* NN.* CC.*,pribilehiyo sa mga tsekwa na,81.76319815752403,* * * * *,NN.* CC.* DT.* NN.* CC.*
 500105,RB.* RB.* CC.* NN.* DT.*,,[],,RB.* RB.* CC.* NN.* DT.*
 500106,RB.* CC.* NN.* DT.* NN.*,,[],,RB.* CC.* NN.* DT.* NN.*
 500107,DT.* JJ.* CC.* NN.* CC.*,,[],,DT.* JJ.* CC.* NN.* CC.*
 500108,NN.* CC.* VB.* DT.* NN.*,,[],,NN.* CC.* VB.* DT.* NN.*
-500108,NN.* CC.* VB.* DT.* NN.*,kakayahan na malabanan ang araw-,80.61189541656194,* * * * *,NN.* CC.* VB.* DT.* NN.*
 500109,NN.* NN.* CC.* PR.* DT.*,,[],,NN.* NN.* CC.* PR.* DT.*
 500110,NN.* CC.* PR.* DT.* NN.*,,[],,NN.* CC.* PR.* DT.* NN.*
-500110,NN.* CC.* PR.* DT.* NN.*,halamang-singaw sa aking mga paa.,81.71321206372517,* * * * *,NN.* CC.* PR.* DT.* NN.*
 500111,JJ.* CC.* NN.* CC.* CC.*,,[],,JJ.* CC.* NN.* CC.* CC.*
 500112,NN.* CC.* NN.* CC.* PR.*,,[],,NN.* CC.* NN.* CC.* PR.*
-500112,NN.* CC.* NN.* CC.* PR.*,pamamagitan ng pakikipag-usap sa kanila,81.77963121875138,* * * * *,NN.* CC.* NN.* CC.* PR.*
 500113,DT.* JJ.* NN.* CC.* NN.*,,[],,DT.* JJ.* NN.* CC.* NN.*
 500114,CC.* NN.* CC.* NN.* RB.*,,[],,CC.* NN.* CC.* NN.* RB.*
 500115,NN.* CC.* NN.* RB.* RB.*,,[],,NN.* CC.* NN.* RB.* RB.*
@@ -137,20 +128,16 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500127,VB.* DT.* JJ.* CC.* VB.*,,[],,VB.* DT.* JJ.* CC.* VB.*
 500128,DT.* JJ.* CC.* VB.* CC.*,,[],,DT.* JJ.* CC.* VB.* CC.*
 500129,JJ.* CC.* VB.* CC.* NN.*,,[],,JJ.* CC.* VB.* CC.* NN.*
-500129,JJ.* CC.* VB.* CC.* NN.*,pinakamataas na magkasanib na densidad,80.61539335666471,* * * * *,JJ.* CC.* VB.* CC.* NN.*
 500130,CC.* VB.* DT.* NN.* CC.*,,[],,CC.* VB.* DT.* NN.* CC.*
 500131,CC.* DT.* NN.* CC.* PR.*,,[],,CC.* DT.* NN.* CC.* PR.*
 500132,PR.* JJ.* NN.* DT.* VB.*,,[],,PR.* JJ.* NN.* DT.* VB.*
 500133,JJ.* NN.* DT.* VB.* CC.*,,[],,JJ.* NN.* DT.* VB.* CC.*
 500134,NN.* DT.* VB.* CC.* PR.*,,[],,NN.* DT.* VB.* CC.* PR.*
-500134,NN.* DT.* VB.* CC.* PR.*,sagabal ang pumigil sa kanila.,81.56481890051155,* * * * *,NN.* DT.* VB.* CC.* PR.*
 500135,RB.* VB.* CC.* PR.* JJ.*,,[],,RB.* VB.* CC.* PR.* JJ.*
-500135,RB.* VB.* CC.* PR.* JJ.*,Huwag pumili ng isang napaka-kumplikado,81.8016729429733,* * * * *,RB.* VB.* CC.* PR.* JJ.*
 500136,CC.* CC.* VB.* DT.* NN.*,,[],,CC.* CC.* VB.* DT.* NN.*
 500137,VB.* PR.* DT.* NN.* CC.*,,[],,VB.* PR.* DT.* NN.* CC.*
 500138,DT.* NN.* DT.* NN.* PR.*,,[],,DT.* NN.* DT.* NN.* PR.*
 500139,PR.* LM VB.* CC.* NN.*,,[],,PR.* LM VB.* CC.* NN.*
-500139,PR.* LM VB.* CC.* NN.*,niya ay idinidikta ng ama.,81.626416585849,* * * * *,PR.* LM VB.* CC.* NN.*
 500140,CC.* FW CC.* VB.* PR.*,,[],,CC.* FW CC.* VB.* PR.*
 500141,CCT CCT NNC CCB DTCP,,[],,CCT CCT NNC CCB DTCP
 500142,CCT NNC CCB DTCP NNC,,[],,CCT NNC CCB DTCP NNC
@@ -180,7 +167,6 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500166,CCT DTCP NNC CCB DTCP,,[],,CCT DTCP NNC CCB DTCP
 500167,NNC NNC CCT PRSP_CCP DTCP,,[],,NNC NNC CCT PRSP_CCP DTCP
 500168,NNC CCT PRSP_CCP DTCP NNC,,[],,NNC CCT PRSP_CCP DTCP NNC
-500168,NNC CCT PRSP_CCP DTCP NNC,halamang-singaw sa aking mga paa.,81.71321206372517,* * * * *,NNC CCT PRSP_CCP DTCP NNC
 500169,NNC CCB NNC CCT DTCP,,[],,NNC CCB NNC CCT DTCP
 500170,CCB NNC CCT DTCP NNC,,[],,CCB NNC CCT DTCP NNC
 500171,JJD CCP NNC CCT CCT,,[],,JJD CCP NNC CCT CCT
@@ -191,5 +177,4 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500176,VBW DTC JJCS_JJD CCP VBAF,,[],,VBW DTC JJCS_JJD CCP VBAF
 500177,DTC JJCS_JJD CCP VBAF CCP,,[],,DTC JJCS_JJD CCP VBAF CCP
 500178,JJCS_JJD CCP VBAF CCP NNC,,[],,JJCS_JJD CCP VBAF CCP NNC
-500178,JJCS_JJD CCP VBAF CCP NNC,pinakamataas na magkasanib na densidad,80.61539335666471,* * * * *,JJCS_JJD CCP VBAF CCP NNC
 500179,VBH PRO_CCP DTCP NNC CCP,,[],,VBH PRO_CCP DTCP NNC CCP
