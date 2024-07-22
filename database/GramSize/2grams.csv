@@ -1,0 +1,11 @@
+N-Gram_ID,RoughPOS_N-Gram,DetailedPOS_N-Gram,N-Gram,Lemma_N-Gram
+002249,DT.* JJ.*,DTC JJCS_JJD_CCP,ang pinaka-epektibong,ang epektibo
+002250,JJ.* DT.*,JJCS_JJD_CCP DTCP,pinaka-epektibong mga,epektibo mga
+002276,DT.* JJ.*,DTC JJCS_JJD_CCP,ang pinaka-epektibong,ang epektibo
+002277,JJ.* NN.*,JJCS_JJD_CCP NNC,pinaka-epektibong paggamot,epektibo gamot
+002358,JJ.* NN.*,JJCS_JJD_CCP NNC,Pinakamalalang kaso,lang kaso
+002943,JJ.* NN.*,JJCS_JJD_CCP NNC,Pinakamalalang kaso,lang kaso
+003274,DT.* JJ.*,DTCP JJCS_JJD_CCP,mga pinaka-magkakaibang,mga kaiba
+003275,JJ.* NN.*,JJCS_JJD_CCP NNC,pinaka-magkakaibang materyales,kaiba materyales
+003346,PR.* JJ.*,PRI_CCP JJCS_JJD,isang napaka-kumplikado,isa kumplikado
+003944,PR.* VB.*,PRSP_CCP VBTS_VBOF,kanyang hinangaan,kanya hanga
