@@ -1,4 +1,12 @@
 import csv
+from collections import Counter
+from transformers import AutoTokenizer, AutoModelForMaskedLM
+import torch
+
+# Define the models
+tagalog_roberta_model = "jcblaise/roberta-tagalog-base"
+roberta_tokenizer = AutoTokenizer.from_pretrained(tagalog_roberta_model)
+roberta_model = AutoModelForMaskedLM.from_pretrained(tagalog_roberta_model)
 
 def load_csv(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -6,34 +14,58 @@ def load_csv(file_path):
         data = [row for row in reader]
     return data
 
-def compare_pos_sequences(rough_pos, detailed_pos, rough_freq, detailed_freq, threshold=0.80):
+def compute_mposm_scores(sentence, model, tokenizer):
+    inputs = tokenizer(sentence, return_tensors="pt")
+    with torch.no_grad():
+        outputs = model(**inputs, labels=inputs["input_ids"])
+    mposm_scores = torch.exp(outputs.logits).squeeze().tolist()  # MPoSM scores for each token
+    # Flatten the list if it's nested
+    if isinstance(mposm_scores[0], list):
+        mposm_scores = [score for sublist in mposm_scores for score in sublist]
+    return mposm_scores
+
+def compare_pos_sequences(rough_pos, detailed_pos, model, tokenizer, threshold=0.80):
     rough_tokens = rough_pos.split()
     detailed_tokens = detailed_pos.split()
     
     if len(rough_tokens) != len(detailed_tokens):
         print(f"Length mismatch: {len(rough_tokens)} (rough) vs {len(detailed_tokens)} (detailed)")
-        return None, None  # Cannot compare sequences of different lengths
+        return None, None, None, None  # Cannot compare sequences of different lengths
+
+    rough_scores = compute_mposm_scores(' '.join(rough_tokens), model, tokenizer)
+    detailed_scores = compute_mposm_scores(' '.join(detailed_tokens), model, tokenizer)
 
     comparison_matrix = []
-    new_pattern = []
+    new_pattern = detailed_tokens.copy()  # Start with the detailed pattern
 
-    for i in range(len(rough_tokens)):
+    # Ensure rough_scores and detailed_scores are lists
+    if not isinstance(rough_scores, list):
+        rough_scores = [rough_scores] * len(rough_tokens)
+    if not isinstance(detailed_scores, list):
+        detailed_scores = [detailed_scores] * len(detailed_tokens)
+
+    for i in range(len(detailed_tokens)):
         rough_token = rough_tokens[i]
         detailed_token = detailed_tokens[i]
+        rough_score = rough_scores[i]
+        detailed_score = detailed_scores[i]
 
-        if detailed_freq / rough_freq >= threshold:
-            new_pattern.append(detailed_token)
+        if rough_score != 0 and detailed_score / rough_score >= threshold:
+            # Replace "*" with the detailed token in the comparison matrix
             comparison_matrix.append(detailed_token)
         else:
-            new_pattern.append(rough_token)
+            # Keep "*" indicating no change
             comparison_matrix.append('*')
 
+    # Format comparison matrix as a string
     comparison_matrix_str = ' '.join(comparison_matrix)
-    new_pattern_str = ' '.join(new_pattern)
 
-    return comparison_matrix_str, new_pattern_str
+    return rough_scores, detailed_scores, comparison_matrix_str, ' '.join(new_pattern)
 
-def process_pos_patterns(pos_patterns_file, generated_ngrams_file, output_file, threshold=0.80):
+def generate_pattern_id(ngram_size, counter):
+    return f"{ngram_size}{counter:05d}"
+
+def process_pos_patterns(pos_patterns_file, generated_ngrams_file, output_file, model, tokenizer, threshold=0.80):
     pos_patterns = load_csv(pos_patterns_file)
     generated_ngrams = load_csv(generated_ngrams_file)
     
@@ -47,73 +79,87 @@ def process_pos_patterns(pos_patterns_file, generated_ngrams_file, output_file, 
         pattern_id = pattern['Pattern_ID']
         rough_pos = pattern['RoughPOS_N-Gram']
         detailed_pos = pattern['DetailedPOS_N-Gram']
-        frequency = int(pattern['Frequency'])
         id_array = pattern['ID_Array'].split(',') if pattern['ID_Array'] else []
 
-        if rough_pos and id_array:
+        if rough_pos:
             # Process as a rough POS pattern
-            for ngram_id in id_array:
-                instance = next((ngram for ngram in generated_ngrams if ngram['N-Gram_ID'] == ngram_id), None)
-                if instance:
-                    detailed_pos_instance = instance['DetailedPOS_N-Gram']
-                    detailed_freq = int(pattern['Frequency'])
-                    if detailed_pos_instance:
-                        comparison_matrix, new_pattern = compare_pos_sequences(rough_pos, detailed_pos_instance, frequency, detailed_freq, threshold)
-                        pos_comparison_results.append({
-                            'Pattern_ID': pattern_id,
-                            'RoughPOS_N-Gram': rough_pos,
-                            'RPOSN_Freq': frequency,
-                            'DetailedPOS_N-Gram': detailed_pos_instance,
-                            'DPOSN_Freq': detailed_freq,
-                            'Comparison_Replacement_Matrix': comparison_matrix,
-                            'POS_N-Gram': new_pattern
-                        })
-                        print(f"Comparison made: Rough POS - {rough_pos}, Detailed POS - {detailed_pos_instance}")
+            instances = [ngram for ngram in generated_ngrams if ngram['N-Gram_ID'] in id_array]
+            for instance in instances:
+                detailed_pos_instance = instance['DetailedPOS_N-Gram']
+                if detailed_pos_instance:
+                    rough_scores, detailed_scores, comparison_matrix, new_pattern = compare_pos_sequences(rough_pos, detailed_pos_instance, model, tokenizer, threshold)
+                    if rough_scores and detailed_scores:
+                        new_pattern_id = generate_pattern_id(len(rough_pos.split()), pattern_counter)
+                        pattern_counter += 1
+                        # Check if pattern_id already exists in pos_comparison_results
+                        if not any(result['Pattern_ID'] == pattern_id for result in pos_comparison_results):
+                            pos_comparison_results.append({
+                                'Pattern_ID': pattern_id,
+                                'RoughPOS_N-Gram': rough_pos,
+                                'RPOSN_Freq': None,
+                                'DetailedPOS_N-Gram': detailed_pos_instance,
+                                'DPOSN_Freq': None,
+                                'Comparison_Replacement_Matrix': comparison_matrix,
+                                'POS_N-Gram': new_pattern
+                            })
+                            print(f"Comparison made: Rough POS - {rough_pos}, Detailed POS - {detailed_pos_instance}")
+                        else:
+                            print(f"Pattern ID {pattern_id} already exists in results, skipping.")
                     else:
-                        print(f"No detailed POS instance found for Rough POS - {rough_pos}")
+                        print(f"Failed comparison: Rough POS - {rough_pos}, Detailed POS - {detailed_pos_instance}")
+                else:
+                    print(f"No detailed POS instance found for Rough POS - {rough_pos}")
 
             # Append the original rough POS pattern if it doesn't exist in results
             if not any(result['Pattern_ID'] == pattern_id for result in pos_comparison_results):
                 pos_comparison_results.append({
                     'Pattern_ID': pattern_id,
                     'RoughPOS_N-Gram': rough_pos,
-                    'RPOSN_Freq': frequency,
+                    'RPOSN_Freq': None,
                     'DetailedPOS_N-Gram': None,
                     'DPOSN_Freq': None,
                     'Comparison_Replacement_Matrix': None,
                     'POS_N-Gram': rough_pos
                 })
         
-        elif detailed_pos and id_array:
+        elif detailed_pos:
             # Process as a detailed POS pattern
-            for ngram_id in id_array:
-                instance = next((ngram for ngram in generated_ngrams if ngram['N-Gram_ID'] == ngram_id), None)
-                if instance:
-                    overlap_rough_pos = instance['RoughPOS_N-Gram']
-                    rough_freq = int(pattern['Frequency'])
-                    if overlap_rough_pos:
-                        comparison_matrix, new_pattern = compare_pos_sequences(overlap_rough_pos, detailed_pos, rough_freq, frequency, threshold)
-                        pos_comparison_results.append({
-                            'Pattern_ID': pattern_id,
-                            'RoughPOS_N-Gram': overlap_rough_pos,
-                            'RPOSN_Freq': rough_freq,
-                            'DetailedPOS_N-Gram': detailed_pos,
-                            'DPOSN_Freq': frequency,
-                            'Comparison_Replacement_Matrix': comparison_matrix,
-                            'POS_N-Gram': new_pattern
-                        })
-                        print(f"Comparison made: Rough POS - {overlap_rough_pos}, Detailed POS - {detailed_pos}")
+            overlap_patterns = [p for p in pos_patterns if p['Pattern_ID'] != pattern_id and any(id in id_array for id in p['ID_Array'].split(','))]
+            for overlap_pattern in overlap_patterns:
+                overlap_rough_pos = overlap_pattern['RoughPOS_N-Gram']
+                if overlap_rough_pos:
+                    rough_scores, detailed_scores, comparison_matrix, new_pattern = compare_pos_sequences(overlap_rough_pos, detailed_pos, model, tokenizer, threshold)
+                    if rough_scores and detailed_scores:
+                        new_pattern_id = generate_pattern_id(len(detailed_pos.split()), pattern_counter)
+                        pattern_counter += 1
+                        # Check if overlap_pattern['Pattern_ID'] already exists in pos_comparison_results
+                        if not any(result['Pattern_ID'] == overlap_pattern['Pattern_ID'] for result in pos_comparison_results):
+                            pos_comparison_results.append({
+                                'Pattern_ID': overlap_pattern['Pattern_ID'],
+                                'RoughPOS_N-Gram': overlap_rough_pos,
+                                'RPOSN_Freq': None,
+                                'DetailedPOS_N-Gram': detailed_pos,
+                                'DPOSN_Freq': None,
+                                'Comparison_Replacement_Matrix': comparison_matrix,
+                                'POS_N-Gram': new_pattern
+                            })
+                            print(f"Comparison made: Rough POS - {overlap_rough_pos}, Detailed POS - {detailed_pos}")
+                        else:
+                            print(f"Pattern ID {overlap_pattern['Pattern_ID']} already exists in results, skipping.")
+                    else:
+                        print(f"Failed comparison: Rough POS - {overlap_rough_pos}, Detailed POS - {detailed_pos}")
 
-            # Append the detailed POS pattern directly to results
-            pos_comparison_results.append({
-                'Pattern_ID': pattern_id,
-                'RoughPOS_N-Gram': None,
-                'RPOSN_Freq': None,
-                'DetailedPOS_N-Gram': detailed_pos,
-                'DPOSN_Freq': frequency,
-                'Comparison_Replacement_Matrix': None,
-                'POS_N-Gram': detailed_pos
-            })
+            # Append the detailed POS pattern directly to results if not already present
+            if not any(result['Pattern_ID'] == pattern_id for result in pos_comparison_results):
+                pos_comparison_results.append({
+                    'Pattern_ID': pattern_id,
+                    'RoughPOS_N-Gram': None,
+                    'RPOSN_Freq': None,
+                    'DetailedPOS_N-Gram': detailed_pos,
+                    'DPOSN_Freq': None,
+                    'Comparison_Replacement_Matrix': None,
+                    'POS_N-Gram': detailed_pos
+                })
 
     if not pos_comparison_results:
         print("No comparison results were generated.")
@@ -129,6 +175,6 @@ def process_pos_patterns(pos_patterns_file, generated_ngrams_file, output_file, 
 for n in range(2, 8):
     ngram_csv = 'database/ngrams.csv'
     pattern_csv = f'database/POS/{n}grams.csv'
-    output_csv = f'database/Generalized/RoBERTa/POSTComparison/{n}grams.csv'
+    output_csv = f'database/Generalized/POSTComparison/{n}grams.csv'
 
-    process_pos_patterns(pattern_csv, ngram_csv, output_csv)
+    process_pos_patterns(pattern_csv, ngram_csv, output_csv, roberta_model, roberta_tokenizer)
