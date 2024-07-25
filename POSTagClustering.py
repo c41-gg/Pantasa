@@ -45,6 +45,28 @@ def process_clustered_ngrams(input_file, output_file, ngram_size):
         print(f"Error reading input file: {e}")
         return
     
+    # Load existing patterns from the output file to avoid duplicates
+    existing_patterns = {}
+    try:
+        with open(output_file, 'r', encoding='utf-8') as out_file:
+            reader = csv.DictReader(out_file)
+            for row in reader:
+                pattern_id = row['Pattern_ID']
+                rough_pos = row['RoughPOS_N-Gram']
+                detailed_pos = row['DetailedPOS_N-Gram']
+                frequency = int(row['Frequency'])
+                id_array = row['ID_Array'].strip('[]').replace('\'', '').split(', ')
+                
+                existing_patterns[(rough_pos, detailed_pos)] = {
+                    'Pattern_ID': pattern_id,
+                    'Frequency': frequency,
+                    'ID_Array': id_array
+                }
+    except FileNotFoundError:
+        pass
+    except Exception as e:
+        print(f"Error reading output file: {e}")
+    
     # Count the frequency of each pattern
     rough_pos_frequency = {key: len(ids) for key, ids in rough_pos_patterns.items() if len(ids) > 1}
     detailed_pos_frequency = {key: len(ids) for key, ids in detailed_pos_patterns.items() if len(ids) > 1}
@@ -61,28 +83,54 @@ def process_clustered_ngrams(input_file, output_file, ngram_size):
             # Write rough POS patterns
             for rough_pos, ids in rough_pos_patterns.items():
                 if rough_pos in rough_pos_frequency:
-                    pattern_id = generate_pattern_id(ngram_size, max_pattern_id + 1)
-                    max_pattern_id += 1
-                    writer.writerow({
-                        'Pattern_ID': pattern_id,
-                        'RoughPOS_N-Gram': rough_pos,
-                        'DetailedPOS_N-Gram': '',
-                        'Frequency': rough_pos_frequency[rough_pos],
-                        'ID_Array': [id[0] for id in ids]  # Array of all IDs
-                    })
+                    existing = existing_patterns.get((rough_pos, ''))
+                    if existing:
+                        # Update existing pattern
+                        existing['Frequency'] += rough_pos_frequency[rough_pos]
+                        existing['ID_Array'].extend(id[0] for id in ids)
+                    else:
+                        # New pattern
+                        pattern_id = generate_pattern_id(ngram_size, max_pattern_id + 1)
+                        max_pattern_id += 1
+                        writer.writerow({
+                            'Pattern_ID': pattern_id,
+                            'RoughPOS_N-Gram': rough_pos,
+                            'DetailedPOS_N-Gram': '',
+                            'Frequency': rough_pos_frequency[rough_pos],
+                            'ID_Array': [id[0] for id in ids]
+                        })
             
             # Write detailed POS patterns
             for detailed_pos, ids in detailed_pos_patterns.items():
                 if detailed_pos in detailed_pos_frequency:
-                    pattern_id = generate_pattern_id(ngram_size, max_pattern_id + 1)
-                    max_pattern_id += 1
+                    existing = existing_patterns.get(('', detailed_pos))
+                    if existing:
+                        # Update existing pattern
+                        existing['Frequency'] += detailed_pos_frequency[detailed_pos]
+                        existing['ID_Array'].extend(id[0] for id in ids)
+                    else:
+                        # New pattern
+                        pattern_id = generate_pattern_id(ngram_size, max_pattern_id + 1)
+                        max_pattern_id += 1
+                        writer.writerow({
+                            'Pattern_ID': pattern_id,
+                            'RoughPOS_N-Gram': '',
+                            'DetailedPOS_N-Gram': detailed_pos,
+                            'Frequency': detailed_pos_frequency[detailed_pos],
+                            'ID_Array': [id[0] for id in ids]
+                        })
+            
+            # Write updated patterns
+            for key, value in existing_patterns.items():
+                if value['Pattern_ID']:
                     writer.writerow({
-                        'Pattern_ID': pattern_id,
-                        'RoughPOS_N-Gram': '',
-                        'DetailedPOS_N-Gram': detailed_pos,
-                        'Frequency': detailed_pos_frequency[detailed_pos],
-                        'ID_Array': [id[0] for id in ids]  # Array of all IDs
+                        'Pattern_ID': value['Pattern_ID'],
+                        'RoughPOS_N-Gram': key[0],
+                        'DetailedPOS_N-Gram': key[1],
+                        'Frequency': value['Frequency'],
+                        'ID_Array': value['ID_Array']
                     })
+                
     except Exception as e:
         print(f"Error writing output file: {e}")
 

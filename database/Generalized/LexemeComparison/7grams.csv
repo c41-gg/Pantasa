@@ -1,39 +1,67 @@
 Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Final_Hybrid_N-Gram
 700001,VB.* DT.* DT.* NN.* CC.* PR.* NN.*,,[],,VB.* DT.* DT.* NN.* CC.* PR.* NN.*
+700061,VB.* DT.* DT.* NN.* CC.* PR.* NN.*,lipana ang mga singkit sa nila lugad,83.99337484913978,* ang mga singkit sa kanilang lugar!,VB.* ang mga singkit sa kanilang lugar!
 700002,DT.* NN.* CC.* PR.* NN.* CC.* NN.*,,[],,DT.* NN.* CC.* PR.* NN.* CC.* NN.*
 700003,NN.* CC.* VB.* CC.* DT.* NN.* CC.*,,[],,NN.* CC.* VB.* CC.* DT.* NN.* CC.*
 700004,VB.* CC.* DT.* NN.* CC.* NN.* CC.*,,[],,VB.* CC.* DT.* NN.* CC.* NN.* CC.*
+700062,VB.* CC.* DT.* NN.* CC.* NN.* CC.*,patay ng mga rasito sa loob ng,81.55867783773402,* ng mga * sa loob ng,VB.* ng mga NN.* sa loob ng
+700063,VB.* CC.* DT.* NN.* CC.* NN.* CC.*,makipagugnay sa mga tao sa amagit ng,83.21332733663783,* sa mga tao sa * ng,VB.* sa mga tao sa NN.* ng
 700005,CC.* DT.* NN.* CC.* NN.* CC.* NN.*,,[],,CC.* DT.* NN.* CC.* NN.* CC.* NN.*
+700064,CC.* DT.* NN.* CC.* NN.* CC.* NN.*,ng mga rasito sa loob ng tao,81.49156138014433,* mga rasito sa loob * tao,CC.* mga rasito sa loob CC.* tao
+700065,CC.* DT.* NN.* CC.* NN.* CC.* NN.*,sa mga tao sa amagit ng usap,81.7984418571428,* mga tao * * ng pakikipag-usap,CC.* mga tao CC.* NN.* ng pakikipag-usap
 700006,RB.* RB.* VB.* DT.* DT.* NN.* CC.*,,[],,RB.* RB.* VB.* DT.* DT.* NN.* CC.*
 700007,RB.* VB.* DT.* DT.* NN.* CC.* DT.*,,[],,RB.* VB.* DT.* DT.* NN.* CC.* DT.*
 700008,VB.* DT.* DT.* NN.* CC.* DT.* NN.*,,[],,VB.* DT.* DT.* NN.* CC.* DT.* NN.*
+700066,VB.* DT.* DT.* NN.* CC.* DT.* NN.*,turing ang mga halamangsingaw sa mga paa,80.47852138359143,* ang mga halamangsingaw sa mga *,VB.* ang mga halamangsingaw sa mga NN.*
 700009,NN.* CC.* CC.* NN.* CC.* DT.* NN.*,,[],,NN.* CC.* CC.* NN.* CC.* DT.* NN.*
+700067,NN.* CC.* CC.* NN.* CC.* DT.* NN.*,subok para sa presensiya ng mga rasito,81.64132834747521,* para sa * ng mga rasito,NN.* para sa NN.* ng mga rasito
+700068,NN.* CC.* CC.* NN.* CC.* DT.* NN.*,teryal para sa tayo ng mga bahay,81.77161921523731,* para sa * ng mga bahay,NN.* para sa NN.* ng mga bahay
 700010,JJ.* CC.* NN.* CC.* VB.* CC.* NN.*,,[],,JJ.* CC.* NN.* CC.* VB.* CC.* NN.*
+700069,JJ.* CC.* NN.* CC.* VB.* CC.* NN.*,pinakamabilis na paraan upa walan ng timbang,81.73382336513507,* na * upang * ng *,JJ.* na NN.* upang VB.* ng NN.*
 700011,DT.* NN.* CC.* NN.* PR.* CC.* NN.*,,[],,DT.* NN.* CC.* NN.* PR.* CC.* NN.*
+700070,DT.* NN.* CC.* NN.* PR.* CC.* NN.*,ang iba ng mahe ko sa entablado,81.71752638094779,* pag-iiba ng * ko sa *,DT.* pag-iiba ng NN.* ko sa NN.*
+700071,DT.* NN.* CC.* NN.* PR.* CC.* NN.*,ang tupad ng tupad natin sa arap,82.1487829204583,* tupad ng tupad * sa *,DT.* tupad ng tupad PR.* sa NN.*
 700012,CC.* CC.* PR.* LM RB.* RB.* PR.*,,[],,CC.* CC.* PR.* LM RB.* RB.* PR.*
 700013,CC.* PR.* LM RB.* RB.* PR.* VB.*,,[],,CC.* PR.* LM RB.* RB.* PR.* VB.*
 700014,VB.* PR.* VB.* CC.* DT.* NN.* CC.*,,[],,VB.* PR.* VB.* CC.* DT.* NN.* CC.*
 700015,PR.* VB.* CC.* DT.* NN.* CC.* NN.*,,[],,PR.* VB.* CC.* DT.* NN.* CC.* NN.*
 700016,DT.* NN.* CC.* NN.* CC.* NN.* CC.*,,[],,DT.* NN.* CC.* NN.* CC.* NN.* CC.*
+700072,DT.* NN.* CC.* NN.* CC.* NN.* CC.*,mga tao sa amagit ng usap sa,81.78619366607315,* tao sa * ng pakikipag-usap sa,DT.* tao sa NN.* ng pakikipag-usap sa
 700017,NN.* CC.* NN.* CC.* NN.* CC.* VB.*,,[],,NN.* CC.* NN.* CC.* NN.* CC.* VB.*
 700018,CC.* NN.* CC.* NN.* CC.* VB.* NN.*,,[],,CC.* NN.* CC.* NN.* CC.* VB.* NN.*
 700019,DT.* NN.* CC.* VB.* CC.* DT.* NN.*,,[],,DT.* NN.* CC.* VB.* CC.* DT.* NN.*
+700073,DT.* NN.* CC.* VB.* CC.* DT.* NN.*,mga alon na dugtong ng mga yari,81.56955079895596,* alon na nagdudugtong ng * pangyayari.,DT.* alon na nagdudugtong ng DT.* pangyayari.
 700020,CC.* DT.* NN.* CC.* DT.* NN.* NN.*,,[],,CC.* DT.* NN.* CC.* DT.* NN.* NN.*
+700074,CC.* DT.* NN.* CC.* DT.* NN.* NN.*,sa mga Larawan ng mga Lumang Bulalakaw,80.05783125795989,* mga Larawan ng mga * Bulalakaw,CC.* mga Larawan ng mga NN.* Bulalakaw
 700021,CC.* NN.* RB.* RB.* VB.* DT.* DT.*,,[],,CC.* NN.* RB.* RB.* VB.* DT.* DT.*
 700022,NN.* RB.* RB.* VB.* DT.* DT.* NN.*,,[],,NN.* RB.* RB.* VB.* DT.* DT.* NN.*
+700075,NN.* RB.* RB.* VB.* DT.* DT.* NN.*,balat kung paano turing ang mga halamangsingaw,84.59861875598496,* kung paano * ang mga halamang-singaw,NN.* kung paano VB.* ang mga halamang-singaw
+700076,NN.* RB.* RB.* VB.* DT.* DT.* NN.*,tainga kung paano puksa ang mga halamangsingaw,80.52919805769959,* kung paano puksa ang mga halamangsingaw,NN.* kung paano puksa ang mga halamangsingaw
 700023,NN.* CC.* DT.* NN.* CC.* DT.* NN.*,,[],,NN.* CC.* DT.* NN.* CC.* DT.* NN.*
+700077,NN.* CC.* DT.* NN.* CC.* DT.* NN.*,halamangsingaw sa mga paa ng mga doktor,83.01035912746558,* sa mga * ng mga *,NN.* sa mga NN.* ng mga NN.*
+700078,NN.* CC.* DT.* NN.* CC.* DT.* NN.*,halamangsingaw sa mga kuko ng mga kamay,83.3005537807677,* sa mga * ng mga kamay,NN.* sa mga NN.* ng mga kamay
 700024,NN.* CC.* NN.* CC.* DT.* NN.* CC.*,,[],,NN.* CC.* NN.* CC.* DT.* NN.* CC.*
+700079,NN.* CC.* NN.* CC.* DT.* NN.* CC.*,halamangsingaw sa pagitan ng mga daliri sa,81.96438158220175,* sa * ng mga * sa,NN.* sa NN.* ng mga NN.* sa
 700025,JJ.* CC.* NN.* CC.* CC.* NN.* CC.*,,[],,JJ.* CC.* NN.* CC.* CC.* NN.* CC.*
+700080,JJ.* CC.* NN.* CC.* CC.* NN.* CC.*,tradisyunal na teryal para sa tayo ng,80.95485514519818,* na * para sa * ng,JJ.* na NN.* para sa NN.* ng
 700026,CC.* NN.* CC.* NN.* RB.* RB.* VB.*,,[],,CC.* NN.* CC.* NN.* RB.* RB.* VB.*
+700081,CC.* NN.* CC.* NN.* RB.* RB.* VB.*,ng halamangsingaw sa kuko kung paano gamot,80.58835160831694,* halamang-singaw sa * kung paano *,CC.* halamang-singaw sa NN.* kung paano VB.*
 700027,NN.* CC.* NN.* RB.* RB.* VB.* DT.*,,[],,NN.* CC.* NN.* RB.* RB.* VB.* DT.*
+700082,NN.* CC.* NN.* RB.* RB.* VB.* DT.*,halamangsingaw sa kuko kung paano gamot ang,82.61823307719428,* sa * kung paano * ang,NN.* sa NN.* kung paano VB.* ang
 700028,VB.* CC.* DT.* NN.* CC.* VB.* DT.*,,[],,VB.* CC.* DT.* NN.* CC.* VB.* DT.*
 700029,CC.* DT.* NN.* CC.* VB.* DT.* NN.*,,[],,CC.* DT.* NN.* CC.* VB.* DT.* NN.*
 700030,CC.* VB.* DT.* JJ.* CC.* VB.* CC.*,,[],,CC.* VB.* DT.* JJ.* CC.* VB.* CC.*
 700031,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*,,[],,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*
+700083,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*,kamit ang taas na sanib na densidad,81.42014594551084,* ang * * * * densidad,VB.* ang JJ.* CC.* VB.* CC.* densidad
+700084,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*,kamit ang taas na sanib na densidad,83.15740689493784,* ang taas na * na densidad,VB.* ang taas na VB.* na densidad
 700032,PR.* JJ.* NN.* DT.* VB.* CC.* PR.*,,[],,PR.* JJ.* NN.* DT.* VB.* CC.* PR.*
 700033,VB.* PR.* DT.* NN.* CC.* VB.* CC.*,,[],,VB.* PR.* DT.* NN.* CC.* VB.* CC.*
+700085,VB.* PR.* DT.* NN.* CC.* VB.* CC.*,meron ito mga alon na dugtong ng,81.64164369954108,* itong mga alon na nagdudugtong ng,VB.* itong mga alon na nagdudugtong ng
+700086,VB.* PR.* DT.* NN.* CC.* VB.* CC.*,meron ito mga alon na dugtong ng,80.80117107053593,* ito mga alon na * ng,VB.* ito mga alon na VB.* ng
 700034,RBK RBQ VBW DTC DTCP NNC CCT,,[],,RBK RBQ VBW DTC DTCP NNC CCT
 700035,NNC CCT CCT NNC CCB DTCP NNC,,[],,NNC CCT CCT NNC CCB DTCP NNC
+700087,NNC CCT CCT NNC CCB DTCP NNC,subok para sa presensiya ng mga rasito,81.64132834747521,* para sa * ng mga rasito,NNC para sa NNC ng mga rasito
+700088,NNC CCT CCT NNC CCB DTCP NNC,teryal para sa tayo ng mga bahay,81.77161921523731,* para sa * ng mga bahay,NNC para sa NNC ng mga bahay
 700036,VBS PRS_CCP VBAF CCB DTCP NNC CCB,,[],,VBS PRS_CCP VBAF CCB DTCP NNC CCB
 700037,PRS_CCP VBAF CCB DTCP NNC CCB NNC,,[],,PRS_CCP VBAF CCB DTCP NNC CCB NNC
 700038,VBAF CCB DTCP NNC CCB NNC CCT,,[],,VBAF CCB DTCP NNC CCB NNC CCT
@@ -42,6 +70,30 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 700041,NNC CCB NNC CCT NNC CCB VBN_CCP,,[],,NNC CCB NNC CCT NNC CCB VBN_CCP
 700042,CCB NNC CCT NNC CCB VBN_CCP NNC,,[],,CCB NNC CCT NNC CCB VBN_CCP NNC
 700043,NNC CCT DTCP NNC CCB DTCP NNC,,[],,NNC CCT DTCP NNC CCB DTCP NNC
+700089,NNC CCT DTCP NNC CCB DTCP NNC,halamangsingaw sa mga paa ng mga doktor,83.01035912746558,* sa mga * ng mga *,NNC sa mga NNC ng mga NNC
+700090,NNC CCT DTCP NNC CCB DTCP NNC,halamangsingaw sa mga kuko ng mga kamay,83.3005537807677,* sa mga * ng mga kamay,NNC sa mga NNC ng mga kamay
 700044,JJD CCP NNC CCT CCT NNC CCB,,[],,JJD CCP NNC CCT CCT NNC CCB
+700091,JJD CCP NNC CCT CCT NNC CCB,tradisyunal na teryal para sa tayo ng,80.95485514519818,* na * para sa * ng,JJD na NNC para sa NNC ng
 700045,CCB VBW DTC JJCS_JJD CCP VBAF CCP,,[],,CCB VBW DTC JJCS_JJD CCP VBAF CCP
 700046,VBW DTC JJCS_JJD CCP VBAF CCP NNC,,[],,VBW DTC JJCS_JJD CCP VBAF CCP NNC
+700092,VBW DTC JJCS_JJD CCP VBAF CCP NNC,kamit ang taas na sanib na densidad,81.42014594551084,* ang * * * * densidad,VBW ang JJCS_JJD CCP VBAF CCP densidad
+700093,VBW DTC JJCS_JJD CCP VBAF CCP NNC,kamit ang taas na sanib na densidad,83.15740689493784,* ang taas na * na densidad,VBW ang taas na VBAF na densidad
+700047,RB.* RB.* VBW DTC DTCP NN.* CC.*,,[],,RB.* RB.* VBW DTC DTCP NN.* CC.*
+700048,NN.* CC.* CCT NNC CCB DT.* NN.*,,[],,NN.* CC.* CCT NNC CCB DT.* NN.*
+700094,NN.* CC.* CCT NNC CCB DT.* NN.*,subok para sa presensiya ng mga rasito,81.64132834747521,* para sa * ng mga rasito,NN.* para sa NNC ng mga rasito
+700095,NN.* CC.* CCT NNC CCB DT.* NN.*,teryal para sa tayo ng mga bahay,81.77161921523731,* para sa * ng mga bahay,NN.* para sa NNC ng mga bahay
+700049,VB.* PR.* VBAF CCB DTCP NN.* CC.*,,[],,VB.* PR.* VBAF CCB DTCP NN.* CC.*
+700050,PR.* VB.* CCB DTCP NNC CC.* NN.*,,[],,PR.* VB.* CCB DTCP NNC CC.* NN.*
+700051,VB.* CC.* DTCP NNC CCB NN.* CC.*,,[],,VB.* CC.* DTCP NNC CCB NN.* CC.*
+700052,CC.* DT.* NNC CCB NNC CC.* NN.*,,[],,CC.* DT.* NNC CCB NNC CC.* NN.*
+700053,DT.* NN.* CCB NNC CCT NN.* CC.*,,[],,DT.* NN.* CCB NNC CCT NN.* CC.*
+700054,NN.* CC.* NNC CCT NNC CC.* VB.*,,[],,NN.* CC.* NNC CCT NNC CC.* VB.*
+700055,CC.* NN.* CCT NN.* CCB VBN_CCP NN.*,,[],,CC.* NN.* CCT NN.* CCB VBN_CCP NN.*
+700056,NN.* CC.* DTCP NNC CCB DT.* NN.*,,[],,NN.* CC.* DTCP NNC CCB DT.* NN.*
+700096,NN.* CC.* DTCP NNC CCB DT.* NN.*,halamangsingaw sa mga paa ng mga doktor,83.01035912746558,* sa mga * ng mga *,NN.* sa mga NNC ng mga NN.*
+700097,NN.* CC.* DTCP NNC CCB DT.* NN.*,halamangsingaw sa mga kuko ng mga kamay,83.3005537807677,* sa mga * ng mga kamay,NN.* sa mga NNC ng mga kamay
+700057,JJ.* CC.* NNC CCT CCT NN.* CC.*,,[],,JJ.* CC.* NNC CCT CCT NN.* CC.*
+700098,JJ.* CC.* NNC CCT CCT NN.* CC.*,tradisyunal na teryal para sa tayo ng,80.95485514519818,* na * para sa * ng,JJ.* na NNC para sa NN.* ng
+700058,CCB VBW DTC JJCS_JJD CCP VB.* CC.*,,[],,CCB VBW DTC JJCS_JJD CCP VB.* CC.*
+700059,VBW DTC JJCS_JJD CCP VBAF CC.* NN.*,,[],,VBW DTC JJCS_JJD CCP VBAF CC.* NN.*
+700099,VBW DTC JJCS_JJD CCP VBAF CC.* NN.*,kamit ang taas na sanib na densidad,81.42014594551084,* ang * * * * densidad,VBW ang JJCS_JJD CCP VBAF CC.* densidad
