@@ -35,9 +35,9 @@ def process_clustered_ngrams(input_file, output_file, ngram_size):
                 detailed_pos = row['DetailedPOS_N-Gram']
                 
                 if rough_pos:
-                    rough_pos_patterns[rough_pos].append((ngram_id, detailed_pos))
+                    rough_pos_patterns[rough_pos].append(ngram_id)
                 if detailed_pos:
-                    detailed_pos_patterns[detailed_pos].append((ngram_id, rough_pos))
+                    detailed_pos_patterns[detailed_pos].append(ngram_id)
     except FileNotFoundError:
         print(f"File not found: {input_file}")
         return
@@ -67,10 +67,6 @@ def process_clustered_ngrams(input_file, output_file, ngram_size):
     except Exception as e:
         print(f"Error reading output file: {e}")
     
-    # Count the frequency of each pattern
-    rough_pos_frequency = {key: len(ids) for key, ids in rough_pos_patterns.items() if len(ids) > 1}
-    detailed_pos_frequency = {key: len(ids) for key, ids in detailed_pos_patterns.items() if len(ids) > 1}
-    
     # Write the results to the output CSV file
     try:
         with open(output_file, 'a', newline='', encoding='utf-8') as out_file:
@@ -82,12 +78,12 @@ def process_clustered_ngrams(input_file, output_file, ngram_size):
             
             # Write rough POS patterns
             for rough_pos, ids in rough_pos_patterns.items():
-                if rough_pos in rough_pos_frequency:
+                if len(ids) > 1:  # Only include patterns with two or more occurrences
                     existing = existing_patterns.get((rough_pos, ''))
                     if existing:
                         # Update existing pattern
-                        existing['Frequency'] += rough_pos_frequency[rough_pos]
-                        existing['ID_Array'].extend(id[0] for id in ids)
+                        existing['Frequency'] += len(ids)
+                        existing['ID_Array'].extend(ids)
                     else:
                         # New pattern
                         pattern_id = generate_pattern_id(ngram_size, max_pattern_id + 1)
@@ -96,18 +92,18 @@ def process_clustered_ngrams(input_file, output_file, ngram_size):
                             'Pattern_ID': pattern_id,
                             'RoughPOS_N-Gram': rough_pos,
                             'DetailedPOS_N-Gram': '',
-                            'Frequency': rough_pos_frequency[rough_pos],
-                            'ID_Array': [id[0] for id in ids]
+                            'Frequency': len(ids),
+                            'ID_Array': ids
                         })
             
             # Write detailed POS patterns
             for detailed_pos, ids in detailed_pos_patterns.items():
-                if detailed_pos in detailed_pos_frequency:
+                if len(ids) > 1:  # Only include patterns with two or more occurrences
                     existing = existing_patterns.get(('', detailed_pos))
                     if existing:
                         # Update existing pattern
-                        existing['Frequency'] += detailed_pos_frequency[detailed_pos]
-                        existing['ID_Array'].extend(id[0] for id in ids)
+                        existing['Frequency'] += len(ids)
+                        existing['ID_Array'].extend(ids)
                     else:
                         # New pattern
                         pattern_id = generate_pattern_id(ngram_size, max_pattern_id + 1)
@@ -116,13 +112,13 @@ def process_clustered_ngrams(input_file, output_file, ngram_size):
                             'Pattern_ID': pattern_id,
                             'RoughPOS_N-Gram': '',
                             'DetailedPOS_N-Gram': detailed_pos,
-                            'Frequency': detailed_pos_frequency[detailed_pos],
-                            'ID_Array': [id[0] for id in ids]
+                            'Frequency': len(ids),
+                            'ID_Array': ids
                         })
             
             # Write updated patterns
             for key, value in existing_patterns.items():
-                if value['Pattern_ID']:
+                if value['Frequency'] > 1:  # Ensure patterns have at least two occurrences
                     writer.writerow({
                         'Pattern_ID': value['Pattern_ID'],
                         'RoughPOS_N-Gram': key[0],

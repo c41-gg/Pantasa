@@ -22,14 +22,17 @@ def load_csv(file_path):
     return data
 
 def convert_id_array(id_array_str):
+    if id_array_str is None:
+        return []  # Return an empty list or handle it accordingly
     return id_array_str.strip("[]'").replace("'", "").split(', ')
 
 def load_and_convert_csv(file_path):
     data = load_csv(file_path)
     for entry in data:
-        entry['ID_Array'] = convert_id_array(entry['ID_Array'])
+        # Debugging print statement
+        print(f"Processing entry: {entry}")
+        entry['ID_Array'] = convert_id_array(entry.get('ID_Array', ''))
     return data
-
 def print_tokenization(sentence, tokenizer):
     tokens = tokenizer.tokenize(sentence)
     print(f"Sentence: {sentence}")

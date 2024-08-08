@@ -2,12 +2,12 @@ import pandas as pd
 from Tokenizer import tokenize
 from POSDTagger import pos_tag as pos_dtag
 from POSRTagger import pos_tag as pos_rtag
+from Lemmatizer import lemmatize_sentence  # Import your lemmatizer function
 import os
 import sys
 
 # Set the JVM options to increase the heap size
 os.environ['JVM_OPTS'] = '-Xmx2g'
-
 
 def load_dataset(file_path):
     df = pd.read_csv(file_path)
@@ -23,6 +23,7 @@ def preprocess_text(input_file, tokenized_file, output_file, batch_size=300):
     tokenized_sentences = []
     general_pos_tagged_sentences = []
     detailed_pos_tagged_sentences = []
+    lemmatized_sentences = []
 
     with open(tokenized_file, 'w', encoding='utf-8') as token_file:
         for text in dataset:
@@ -37,23 +38,30 @@ def preprocess_text(input_file, tokenized_file, output_file, batch_size=300):
 
             general_pos_tagged_batch = []
             detailed_pos_tagged_batch = []
+            lemmatized_batch = []
 
             for sentence in batch:
                 if sentence:
                     general_pos_tagged_batch.append(pos_rtag(sentence))
                     detailed_pos_tagged_batch.append(pos_dtag(sentence))
+                    lemmatized_batch.append(lemmatize_sentence(sentence))
                 else:
                     general_pos_tagged_batch.append('')
                     detailed_pos_tagged_batch.append('')
+                    lemmatized_batch.append('')
 
             # Append batch results to output file immediately
-            for tok_sentence, gen_pos, det_pos in zip(batch, general_pos_tagged_batch, detailed_pos_tagged_batch):
-                output.write(f"{tok_sentence},{gen_pos},{det_pos},\n")
+            for tok_sentence, gen_pos, det_pos, lemma in zip(batch, general_pos_tagged_batch, detailed_pos_tagged_batch, lemmatized_batch):
+                # Add single quotes around sentences ending with a comma
+                if ',' in tok_sentence:
+                    tok_sentence = f'"{tok_sentence}"'
+                output.write(f"{tok_sentence},{gen_pos},{det_pos},{lemma},\n")
 
             # Clear lists after each batch to avoid memory issues
             tokenized_sentences.clear()
             general_pos_tagged_sentences.clear()
             detailed_pos_tagged_sentences.clear()
+            lemmatized_sentences.clear()
 
     print(f"Preprocessed data saved to {output_file}")
 
@@ -70,3 +78,6 @@ if __name__ == "__main__":
     output_csv = sys.argv[3]
 
     main(input_csv, tokenized_txt, output_csv)
+
+
+#enter this in cmd to run the program "python Preprocessing.py database\dataset.csv database\tokenized.txt database\preprocessed.csv"
