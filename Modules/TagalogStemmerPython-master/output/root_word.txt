@@ -2,9 +2,9 @@ Hindi : hindi
 Pinirmahang : Pinirmahang
 Pahayag : Pahayag
 ng : ng
-Balota : Balota
+Balota" : Balota"
 na : na
 humihingi : hingi
 ng : ng
 iyong : iyo
-lagda : lagda
+lagda. : lagda
