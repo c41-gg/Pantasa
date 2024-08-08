@@ -2,9 +2,9 @@
 {'word': 'Pinirmahang', 'root': 'Pinirmahang', 'prefix': '[]', 'infix': '[]', 'suffix': '[]', 'repeat': '[]', 'dupli': '[]', 'clean': '[]'}
 {'word': 'Pahayag', 'root': 'Pahayag', 'prefix': '[]', 'infix': '[]', 'suffix': '[]', 'repeat': '[]', 'dupli': '[]', 'clean': '[]'}
 {'word': 'ng', 'root': 'ng', 'prefix': [], 'infix': [], 'suffix': [], 'repeat': [], 'dupli': [], 'clean': []}
-{'word': 'Balota', 'root': 'Balota', 'prefix': '[]', 'infix': '[]', 'suffix': '[]', 'repeat': '[]', 'dupli': '[]', 'clean': '[]'}
-{'word': 'na', 'root': 'na', 'prefix': [], 'infix': [], 'suffix': [], 'repeat': [], 'dupli': [], 'clean': []}
+{'word': 'Balota"', 'root': 'Balota"', 'prefix': '[]', 'infix': '[]', 'suffix': '[]', 'repeat': '[]', 'dupli': '[]', 'clean': '[]'}
+{'word': 'na', 'root': 'na', 'prefix': [], 'infix': [], 'suffix': [], 'repeat': [], 'dupli': [], 'clean': ['"']}
 {'word': 'humihingi', 'root': 'hingi', 'prefix': [], 'infix': ['um'], 'suffix': [], 'repeat': ['hi'], 'dupli': [], 'clean': []}
 {'word': 'ng', 'root': 'ng', 'prefix': [], 'infix': [], 'suffix': [], 'repeat': [], 'dupli': [], 'clean': []}
 {'word': 'iyong', 'root': 'iyo', 'prefix': [], 'infix': [], 'suffix': ['ng'], 'repeat': [], 'dupli': [], 'clean': []}
-{'word': 'lagda', 'root': 'lagda', 'prefix': [], 'infix': [], 'suffix': [], 'repeat': [], 'dupli': [], 'clean': []}
+{'word': 'lagda.', 'root': 'lagda', 'prefix': [], 'infix': [], 'suffix': [], 'repeat': [], 'dupli': [], 'clean': ['.']}
