@@ -209,8 +209,7 @@ def process_pos_patterns(pos_patterns_file, generated_ngrams_file, pattern_file,
     with open(output_file, 'w', newline='', encoding='utf-8') as file:
         fieldnames = ['Pattern_ID', 'RoughPOS_N-Gram', 'RPOSN_Freq', 'DetailedPOS_N-Gram', 'DPOSN_Freq', 'Comparison_Replacement_Matrix', 'POS_N-Gram']
         writer = csv.DictWriter(file, fieldnames=fieldnames)
-        writer.writeheader(\
-           \ 
+        writer.writeheader()
         for result in existing_data + pos_comparison_results:
             writer.writerow(result)
 
