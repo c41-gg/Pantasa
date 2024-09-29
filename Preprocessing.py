@@ -18,7 +18,7 @@ def save_text_file(text_data, file_path):
         for line in text_data:
             f.write(line + "\n")
 
-def preprocess_text(input_file, tokenized_file, output_file, batch_size=300):
+def preprocess_text(input_file, tokenized_file, output_file, batch_size=700):
     dataset = load_dataset(input_file)
     tokenized_sentences = []
     general_pos_tagged_sentences = []
@@ -31,6 +31,22 @@ def preprocess_text(input_file, tokenized_file, output_file, batch_size=300):
             token_file.write("\n".join(sentences) + "\n")
             tokenized_sentences.extend(sentences)
         print(f"Sentences tokenized to {tokenized_file}")
+    
+    with open(input_file, "r+", encoding='utf-8') as f:
+        d = f.readlines()
+        f.seek(0)
+        for i in d:
+            if i != "\n":
+                f.write(i)
+        f.truncate()
+
+    seen_lines = set()
+    with open(tokenized_file, 'r+', encoding='utf-8') as file:
+        lines = file.readlines()
+        for line in lines:
+            if line not in seen_lines:  # If the line hasn't been seen before
+                file.write(line)
+                seen_lines.add(line)
 
     with open(output_file, 'a', encoding='utf-8') as output:
         for i in range(0, len(tokenized_sentences), batch_size):
