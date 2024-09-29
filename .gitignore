@@ -1,2 +1,6 @@
 
 tl_dedup.txt.gz
+dnnl.lib 
+torch_cpu.dll
+newsph/
+
