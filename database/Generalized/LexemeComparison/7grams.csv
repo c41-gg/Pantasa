@@ -1,91 +1,71 @@
 Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Final_Hybrid_N-Gram
 700001,NN.* CC.* VB.* CC.* DT.* NN.* CC.*,,[],,NN.* CC.* VB.* CC.* DT.* NN.* CC.*
 700002,VB.* CC.* DT.* NN.* CC.* NN.* CC.*,,[],,VB.* CC.* DT.* NN.* CC.* NN.* CC.*
-700096,VB.* CC.* DT.* NN.* CC.* NN.* CC.*,pumapatay ng mga parasito sa loob ng,81.55867783773402,* ng mga * sa loob ng,VB.* ng mga NN.* sa loob ng
+700129,VB.* CC.* DT.* NN.* CC.* NN.* CC.*,pumapatay ng mga parasito sa loob ng,81.55867892145487,* * * * * * *,VB.* CC.* DT.* NN.* CC.* NN.* CC.*
 700003,CC.* CC.* PR.* LM RB.* RB.* PR.*,,[],,CC.* CC.* PR.* LM RB.* RB.* PR.*
 700004,VB.* PR.* VB.* CC.* DT.* NN.* CC.*,,[],,VB.* PR.* VB.* CC.* DT.* NN.* CC.*
 700005,PR.* VB.* CC.* DT.* NN.* CC.* NN.*,,[],,PR.* VB.* CC.* DT.* NN.* CC.* NN.*
 700006,CC.* DT.* NN.* CC.* NN.* CC.* NN.*,,[],,CC.* DT.* NN.* CC.* NN.* CC.* NN.*
-700097,CC.* DT.* NN.* CC.* NN.* CC.* NN.*,tao sa pamamagitan ng pakikipag-usap sa kanila,81.53229411625378,* sa * ng pakikipag-usap sa *,CC.* sa NN.* ng pakikipag-usap sa NN.*
+700130,CC.* DT.* NN.* CC.* NN.* CC.* NN.*,tao sa pamamagitan ng pakikipag-usap sa kanila,81.53229303253295,* * * * * * *,CC.* DT.* NN.* CC.* NN.* CC.* NN.*
 700007,DT.* NN.* CC.* NN.* CC.* NN.* CC.*,,[],,DT.* NN.* CC.* NN.* CC.* NN.* CC.*
 700008,NN.* CC.* NN.* CC.* NN.* CC.* VB.*,,[],,NN.* CC.* NN.* CC.* NN.* CC.* VB.*
 700009,CC.* NN.* CC.* NN.* CC.* VB.* NN.*_PM.*,,[],,CC.* NN.* CC.* NN.* CC.* VB.* NN.*_PM.*
 700010,CC.* DT.* NN.* CC.* DT.* NN.* NN.*_PM.*,,[],,CC.* DT.* NN.* CC.* DT.* NN.* NN.*_PM.*
-700098,CC.* DT.* NN.* CC.* DT.* NN.* NN.*_PM.*,sa mga Larawan ng mga Lumang Bulalakaw,81.11230235716668,"* mga Larawan * mga * Bulalakaw,","CC.* mga Larawan CC.* mga NN.* Bulalakaw,"
-700099,CC.* DT.* NN.* CC.* DT.* NN.* NN.*_PM.*,sa mga Larawan ng mga Lumang Bulalakaw,80.05783125795989,* mga Larawan ng mga * Bulalakaw,CC.* mga Larawan ng mga NN.* Bulalakaw
+700131,CC.* DT.* NN.* CC.* DT.* NN.* NN.*_PM.*,sa mga Larawan ng mga Lumang Bulalakaw,81.11230484069355,* * * * * * *,CC.* DT.* NN.* CC.* DT.* NN.* NN.*_PM.*
 700011,CC.* NN.* RB.* RB.* VB.* DT.* DT.*,,[],,CC.* NN.* RB.* RB.* VB.* DT.* DT.*
 700012,NN.* RB.* RB.* VB.* DT.* DT.* NN.*,,[],,NN.* RB.* RB.* VB.* DT.* DT.* NN.*
-700100,NN.* RB.* RB.* VB.* DT.* DT.* NN.*,pagbabalat kung paano ituring ang mga halamang-singaw,84.59861875598496,* kung paano * ang mga halamang-singaw,NN.* kung paano VB.* ang mga halamang-singaw
-700101,NN.* RB.* RB.* VB.* DT.* DT.* NN.*,paano mapupuksa ang mga halamang-singaw sa kuko,80.30474728480894,* * ang mga halamang-singaw sa *,NN.* RB.* ang mga halamang-singaw sa NN.*
+700132,NN.* RB.* RB.* VB.* DT.* DT.* NN.*,pagbabalat kung paano ituring ang mga halamang-singaw,84.59861875598492,* * * * * * *,NN.* RB.* RB.* VB.* DT.* DT.* NN.*
 700013,RB.* RB.* VB.* DT.* DT.* NN.* PM.*,,[],,RB.* RB.* VB.* DT.* DT.* NN.* PM.*
-700102,RB.* RB.* VB.* DT.* DT.* NN.* PM.*,mapupuksa ang mga halamang-singaw sa kuko forum,83.04582665457713,"* ang mga halamang-singaw sa * forum,","RB.* ang mga halamang-singaw sa NN.* forum,"
-700103,RB.* RB.* VB.* DT.* DT.* NN.* PM.*,mapupuksa ang mga halamang-singaw sa kuko forum,82.50960891678888,* ang mga halamang-singaw sa * *,RB.* ang mga halamang-singaw sa NN.* PM.*
+700133,RB.* RB.* VB.* DT.* DT.* NN.* PM.*,mapupuksa ang mga halamang-singaw sa kuko forum,83.04582111986008,* * * * * * *,RB.* RB.* VB.* DT.* DT.* NN.* PM.*
 700014,NN.* PM.* NN.* CC.* DT.* NN.* CC.*,,[],,NN.* PM.* NN.* CC.* DT.* NN.* CC.*
-700104,NN.* PM.* NN.* CC.* DT.* NN.* CC.*,halamang-singaw sa mga paa ng mga doktor,83.01035912746558,* sa mga * ng mga *,NN.* sa mga CC.* ng mga CC.*
-700105,NN.* PM.* NN.* CC.* DT.* NN.* CC.*,halamang-singaw sa mga kuko ng mga kamay,83.3005537807677,* sa mga * ng mga kamay,NN.* sa mga CC.* ng mga kamay
+700134,NN.* PM.* NN.* CC.* DT.* NN.* CC.*,halamang-singaw sa mga paa ng mga doktor,83.01035912746558,* * * * * * *,NN.* PM.* NN.* CC.* DT.* NN.* CC.*
 700015,PM.* NN.* CC.* DT.* NN.* CC.* DT.*,,[],,PM.* NN.* CC.* DT.* NN.* CC.* DT.*
 700016,NN.* CC.* DT.* NN.* CC.* DT.* NN.*,,[],,NN.* CC.* DT.* NN.* CC.* DT.* NN.*
-700106,NN.* CC.* DT.* NN.* CC.* DT.* NN.*,mga kuko ng mga kamay kuko halamang-singaw,81.66494262376155,* * ng * kamay * halamang-singaw,NN.* CC.* ng NN.* kamay DT.* halamang-singaw
+700135,NN.* CC.* DT.* NN.* CC.* DT.* NN.*,mga kuko ng mga kamay kuko halamang-singaw,81.66494262376155,* * * * * * *,NN.* CC.* DT.* NN.* CC.* DT.* NN.*
 700017,VB.* PR.* PR.* NN.* NN.* PM.* NN.*,,[],,VB.* PR.* PR.* NN.* NN.* PM.* NN.*
-700107,VB.* PR.* PR.* NN.* NN.* PM.* NN.*,isang kuko halamang-singaw ay para lamang sa,80.6645176843626,* * halamang-singaw ay para lamang sa,VB.* PR.* halamang-singaw ay para lamang sa
+700136,VB.* PR.* PR.* NN.* NN.* PM.* NN.*,isang kuko halamang-singaw ay para lamang sa,80.6645176843626,* * * * * * *,VB.* PR.* PR.* NN.* NN.* PM.* NN.*
 700018,NN.* NN.* PM.* NN.* CC.* PR.* DT.*,,[],,NN.* NN.* PM.* NN.* CC.* PR.* DT.*
 700019,NN.* PM.* NN.* CC.* PR.* DT.* NN.*,,[],,NN.* PM.* NN.* CC.* PR.* DT.* NN.*
-700108,NN.* PM.* NN.* CC.* PR.* DT.* NN.*,halamang-singaw sa aking mga paa Mayroon akong,83.25716259870546,* sa aking mga * Mayroon akong,NN.* sa aking mga PR.* Mayroon akong
-700109,NN.* PM.* NN.* CC.* PR.* DT.* NN.*,halamang-singaw sa kanyang mga paa ekzoderil presyo,83.07217659961329,* sa kanyang mga * * presyo,NN.* sa kanyang mga PR.* DT.* presyo
+700137,NN.* PM.* NN.* CC.* PR.* DT.* NN.*,halamang-singaw sa aking mga paa Mayroon akong,83.25716259870552,* * * * * * *,NN.* PM.* NN.* CC.* PR.* DT.* NN.*
 700020,NN.* CC.* NN.* PM.* NN.* CC.* DT.*,,[],,NN.* CC.* NN.* PM.* NN.* CC.* DT.*
-700110,NN.* CC.* NN.* PM.* NN.* CC.* DT.*,paggamot ng halamang-singaw sa mga kamay kuko,83.3267977049694,* ng halamang-singaw sa mga kamay *,NN.* ng halamang-singaw sa mga kamay DT.*
+700138,NN.* CC.* NN.* PM.* NN.* CC.* DT.*,paggamot ng halamang-singaw sa mga kamay kuko,83.32679770496942,* * * * * * *,NN.* CC.* NN.* PM.* NN.* CC.* DT.*
 700021,CC.* NN.* PM.* NN.* CC.* DT.* NN.*,,[],,CC.* NN.* PM.* NN.* CC.* DT.* NN.*
-700111,CC.* NN.* PM.* NN.* CC.* DT.* NN.*,ng halamang-singaw sa mga kamay kuko halamang-singaw,82.55125607171058,* halamang-singaw sa mga kamay * halamang-singaw,CC.* halamang-singaw sa mga kamay DT.* halamang-singaw
+700139,CC.* NN.* PM.* NN.* CC.* DT.* NN.*,ng halamang-singaw sa mga kamay kuko halamang-singaw,82.55125286222966,* * * * * * *,CC.* NN.* PM.* NN.* CC.* DT.* NN.*
 700022,NN.* CC.* DT.* NN.* NN.* NN.* PM.*,,[],,NN.* CC.* DT.* NN.* NN.* NN.* PM.*
-700112,NN.* CC.* DT.* NN.* NN.* NN.* PM.*,mga kamay kuko halamang-singaw sa iyong mga,81.56088429977359,* kamay * halamang-singaw sa iyong *,NN.* kamay DT.* halamang-singaw sa iyong PM.*
-700113,NN.* CC.* DT.* NN.* NN.* NN.* PM.*,mga kamay kuko halamang-singaw litrato paa sintomas,81.33865270490571,* kamay * halamang-singaw * * *,NN.* kamay DT.* halamang-singaw NN.* NN.* PM.*
+700140,NN.* CC.* DT.* NN.* NN.* NN.* PM.*,mga kamay kuko halamang-singaw sa iyong mga,81.56088429977363,* * * * * * *,NN.* CC.* DT.* NN.* NN.* NN.* PM.*
 700023,CC.* DT.* NN.* NN.* NN.* PM.* NN.*,,[],,CC.* DT.* NN.* NN.* NN.* PM.* NN.*
-700114,CC.* DT.* NN.* NN.* NN.* PM.* NN.*,kamay kuko halamang-singaw litrato paa sintomas Paggamot.,81.82448943737019,* * halamang-singaw * * * Paggamot.,CC.* DT.* halamang-singaw NN.* NN.* PM.* Paggamot.
+700141,CC.* DT.* NN.* NN.* NN.* PM.* NN.*,kamay kuko halamang-singaw litrato paa sintomas Paggamot.,81.82448496702185,* * * * * * *,CC.* DT.* NN.* NN.* NN.* PM.* NN.*
 700024,JJ.* CC.* NN.* CC.* CC.* NN.* CC.*,,[],,JJ.* CC.* NN.* CC.* CC.* NN.* CC.*
-700115,JJ.* CC.* NN.* CC.* CC.* NN.* CC.*,tradisyunal na materyal para sa pagtatayo ng,80.95485514519818,* na * para sa * ng,JJ.* na NN.* para sa NN.* ng
+700142,JJ.* CC.* NN.* CC.* CC.* NN.* CC.*,tradisyunal na materyal para sa pagtatayo ng,80.95485351961696,* * * * * * *,JJ.* CC.* NN.* CC.* CC.* NN.* CC.*
 700025,CC.* NN.* CC.* NN.* PM.* NN.* CC.*,,[],,CC.* NN.* CC.* NN.* PM.* NN.* CC.*
-700116,CC.* NN.* CC.* NN.* PM.* NN.* CC.*,sa paggamot ng halamang-singaw sa mga kamay,81.67872484658048,* * ng halamang-singaw * mga kamay,CC.* NN.* ng halamang-singaw PM.* mga kamay
-700117,CC.* NN.* CC.* NN.* PM.* NN.* CC.*,ng pakikipag-usap sa kanila ng mga tanong,80.6283100150884,* pakikipag-usap sa * * mga tanong,CC.* pakikipag-usap sa NN.* PM.* mga tanong
+700143,CC.* NN.* CC.* NN.* PM.* NN.* CC.*,sa paggamot ng halamang-singaw sa mga kamay,81.67872484658045,* * * * * * *,CC.* NN.* CC.* NN.* PM.* NN.* CC.*
 700026,CC.* NN.* PM.* NN.* CC.* NN.* RB.*,,[],,CC.* NN.* PM.* NN.* CC.* NN.* RB.*
-700118,CC.* NN.* PM.* NN.* CC.* NN.* RB.*,ng halamang-singaw sa tainga kung paano mapupuksa,81.3620952097013,* halamang-singaw sa * kung paano *,CC.* halamang-singaw sa NN.* kung paano RB.*
+700144,CC.* NN.* PM.* NN.* CC.* NN.* RB.*,ng halamang-singaw sa tainga kung paano mapupuksa,81.36209412598049,* * * * * * *,CC.* NN.* PM.* NN.* CC.* NN.* RB.*
 700027,NN.* PM.* NN.* CC.* NN.* RB.* RB.*,,[],,NN.* PM.* NN.* CC.* NN.* RB.* RB.*
-700119,NN.* PM.* NN.* CC.* NN.* RB.* RB.*,kuko kung paano gamutin ang isang kuba,80.99748495935837,* kung paano * ang isang *,NN.* kung paano CC.* ang isang RB.*
-700120,NN.* PM.* NN.* CC.* NN.* RB.* RB.*,halamang-singaw sa tainga kung paano mapupuksa ang,83.27176224089206,* sa * kung paano * ang,NN.* sa NN.* kung paano RB.* ang
+700145,NN.* PM.* NN.* CC.* NN.* RB.* RB.*,kuko kung paano gamutin ang isang kuba,80.99748495935833,* * * * * * *,NN.* PM.* NN.* CC.* NN.* RB.* RB.*
 700028,PM.* NN.* CC.* NN.* RB.* RB.* VB.*,,[],,PM.* NN.* CC.* NN.* RB.* RB.* VB.*
-700121,PM.* NN.* CC.* NN.* RB.* RB.* VB.*,kung paano gamutin ang isang kuba kuko.,80.5342446840857,* paano * ang isang kuba kuko.,PM.* paano CC.* ang isang kuba kuko.
+700146,PM.* NN.* CC.* NN.* RB.* RB.* VB.*,kung paano gamutin ang isang kuba kuko.,80.53424793524815,* * * * * * *,PM.* NN.* CC.* NN.* RB.* RB.* VB.*
 700029,VB.* CC.* DT.* NN.* CC.* VB.* DT.*,,[],,VB.* CC.* DT.* NN.* CC.* VB.* DT.*
 700030,CC.* DT.* NN.* CC.* VB.* DT.* NN.*,,[],,CC.* DT.* NN.* CC.* VB.* DT.* NN.*
 700031,CC.* VB.* DT.* JJ.* CC.* VB.* CC.*,,[],,CC.* VB.* DT.* JJ.* CC.* VB.* CC.*
 700032,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*,,[],,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*
-700122,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*,makamit ang pinakamataas na magkasanib na densidad,83.18608726343132,"* ang * na * na densidad,","VB.* ang JJ.* na VB.* na densidad,"
-700123,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*,makamit ang pinakamataas na magkasanib na densidad,81.42014594551084,* ang * * * * densidad,VB.* ang JJ.* CC.* VB.* CC.* densidad
+700147,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*,makamit ang pinakamataas na magkasanib na densidad,83.18608267845859,* * * * * * *,VB.* DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*
 700033,VB.* PR.* DT.* NN.* CC.* VB.* CC.*,,[],,VB.* PR.* DT.* NN.* CC.* VB.* CC.*
-700124,VB.* PR.* DT.* NN.* CC.* VB.* CC.*,meron itong mga alon na nagdudugtong ng,81.64164369954108,* itong mga alon na nagdudugtong ng,VB.* itong mga alon na nagdudugtong ng
+700148,VB.* PR.* DT.* NN.* CC.* VB.* CC.*,meron itong mga alon na nagdudugtong ng,81.64164261582026,* * * * * * *,VB.* PR.* DT.* NN.* CC.* VB.* CC.*
 700034,NN.* CD.* NN.* DT.* NN.* CC.* NN.*,,[],,NN.* CD.* NN.* DT.* NN.* CC.* NN.*
-700125,NN.* CD.* NN.* DT.* NN.* CC.* NN.*,(5) mga halimbawa ng sanaysay (5) mga,84.4552159319661,* mga halimbawa ng * * mga,NN.* mga halimbawa ng NN.* CC.* mga
-700126,NN.* CD.* NN.* DT.* NN.* CC.* NN.*,halimbawa ng talambuhay (5) mga halimbawa ng,81.19243654394921,* ng * (5) mga * ng,NN.* ng NN.* (5) mga CC.* ng
-700127,NN.* CD.* NN.* DT.* NN.* CC.* NN.*,talumpati (5) mga halimbawa ng tula (8),85.36276136356426,* (5) mga halimbawa ng * (8),NN.* (5) mga halimbawa ng CC.* (8)
-700128,NN.* CD.* NN.* DT.* NN.* CC.* NN.*,pagsasanay (1) paksa (24) pambansang sagisag (1.,86.38271304124147,* (1) * (24) * * (1.,NN.* (1) NN.* (24) NN.* CC.* (1.
+700149,NN.* CD.* NN.* DT.* NN.* CC.* NN.*,(5) mga halimbawa ng sanaysay (5) mga,84.4552159319661,* * * * * * *,NN.* CD.* NN.* DT.* NN.* CC.* NN.*
 700035,CD.* NN.* DT.* NN.* CC.* NN.* NN.*,,[],,CD.* NN.* DT.* NN.* CC.* NN.* NN.*
-700129,CD.* NN.* DT.* NN.* CC.* NN.* NN.*,mga halimbawa ng sanaysay (5) mga halimbawa,81.77389394202325,* halimbawa ng * (5) * halimbawa,CD.* halimbawa ng NN.* (5) NN.* halimbawa
-700130,CD.* NN.* DT.* NN.* CC.* NN.* NN.*,ng talambuhay (5) mga halimbawa ng talumpati,81.46273493837735,* * (5) mga halimbawa * *,CD.* NN.* (5) mga halimbawa NN.* NN.*
+700150,CD.* NN.* DT.* NN.* CC.* NN.* NN.*,mga halimbawa ng sanaysay (5) mga halimbawa,81.77389394202325,* * * * * * *,CD.* NN.* DT.* NN.* CC.* NN.* NN.*
 700036,NN.* DT.* NN.* CC.* NN.* NN.* CD.*,,[],,NN.* DT.* NN.* CC.* NN.* NN.* CD.*
-700131,NN.* DT.* NN.* CC.* NN.* NN.* CD.*,halimbawa ng sanaysay (5) mga halimbawa ng,81.08504739711961,* ng * (5) mga * ng,NN.* ng NN.* (5) mga NN.* ng
-700132,NN.* DT.* NN.* CC.* NN.* NN.* CD.*,talambuhay (5) mga halimbawa ng talumpati (5),83.52017164342114,* (5) mga halimbawa ng * (5),NN.* (5) mga halimbawa ng NN.* (5)
-700133,NN.* DT.* NN.* CC.* NN.* NN.* CD.*,mga halimbawa ng tula (8) pagsasanay (1),80.81015944690584,* halimbawa ng * (8) * (1),NN.* halimbawa ng CC.* (8) NN.* (1)
+700151,NN.* DT.* NN.* CC.* NN.* NN.* CD.*,halimbawa ng sanaysay (5) mga halimbawa ng,81.08504685525921,* * * * * * *,NN.* DT.* NN.* CC.* NN.* NN.* CD.*
 700037,DT.* NN.* CC.* NN.* NN.* CD.* NN.*,,[],,DT.* NN.* CC.* NN.* NN.* CD.* NN.*
-700134,DT.* NN.* CC.* NN.* NN.* CD.* NN.*,ng sanaysay (5) mga halimbawa ng talambuhay,81.46442608448203,* * (5) mga halimbawa * *,DT.* NN.* (5) mga halimbawa CD.* NN.*
-700135,DT.* NN.* CC.* NN.* NN.* CD.* NN.*,(5) mga halimbawa ng talumpati (5) mga,83.96533727820784,* mga halimbawa ng * * mga,DT.* mga halimbawa ng NN.* CD.* mga
+700152,DT.* NN.* CC.* NN.* NN.* CD.* NN.*,ng sanaysay (5) mga halimbawa ng talambuhay,81.46442554262163,* * * * * * *,DT.* NN.* CC.* NN.* NN.* CD.* NN.*
 700038,NN.* CC.* NN.* NN.* CD.* NN.* DT.*,,[],,NN.* CC.* NN.* NN.* CD.* NN.* DT.*
-700136,NN.* CC.* NN.* NN.* CD.* NN.* DT.*,mga halimbawa ng talumpati (5) mga halimbawa,81.75192963092535,* halimbawa ng * (5) * halimbawa,NN.* halimbawa ng NN.* (5) NN.* halimbawa
-700137,NN.* CC.* NN.* NN.* CD.* NN.* DT.*,ng tula (8) pagsasanay (1) paksa (24),82.7207386544779,* * (8) * (1) * (24),NN.* CC.* (8) NN.* (1) NN.* (24)
+700153,NN.* CC.* NN.* NN.* CD.* NN.* DT.*,sanaysay (5) mga halimbawa ng talambuhay (5),86.52022203053042,* * * * * * *,NN.* CC.* NN.* NN.* CD.* NN.* DT.*
 700039,CC.* NN.* NN.* CD.* NN.* DT.* NN.*,,[],,CC.* NN.* NN.* CD.* NN.* DT.* NN.*
-700138,CC.* NN.* NN.* CD.* NN.* DT.* NN.*,(5) mga halimbawa ng talambuhay (5) mga,83.41752657738506,* mga halimbawa ng * * mga,CC.* mga halimbawa ng NN.* DT.* mga
-700139,CC.* NN.* NN.* CD.* NN.* DT.* NN.*,halimbawa ng talumpati (5) mga halimbawa ng,80.73478937213767,* ng * (5) mga * ng,CC.* ng NN.* (5) mga DT.* ng
-700140,CC.* NN.* NN.* CD.* NN.* DT.* NN.*,tula (8) pagsasanay (1) paksa (24) pambansang,84.89815966035552,* (8) * (1) * (24) *,CC.* (8) NN.* (1) NN.* (24) NN.*
+700154,CC.* NN.* NN.* CD.* NN.* DT.* NN.*,(5) mga halimbawa ng talambuhay (5) mga,83.41752611888779,* * * * * * *,CC.* NN.* NN.* CD.* NN.* DT.* NN.*
 700040,NN.* NN.* CD.* NN.* DT.* NN.* CC.*,,[],,NN.* NN.* CD.* NN.* DT.* NN.* CC.*
-700141,NN.* NN.* CD.* NN.* DT.* NN.* CC.*,ng talumpati (5) mga halimbawa ng tula,81.70544396795908,* * (5) mga halimbawa * *,NN.* NN.* (5) mga halimbawa NN.* CC.*
-700142,NN.* NN.* CD.* NN.* DT.* NN.* CC.*,(8) pagsasanay (1) paksa (24) pambansang sagisag,82.84829855436868,* * * * * * *,NN.* NN.* CD.* NN.* DT.* NN.* CC.*
+700155,NN.* NN.* CD.* NN.* DT.* NN.* CC.*,mga halimbawa ng talambuhay (5) mga halimbawa,81.56866214590687,* * * * * * *,NN.* NN.* CD.* NN.* DT.* NN.* CC.*
 700041,VBS PRS_CCP VBAF CCB DTCP NNC CCB,,[],,VBS PRS_CCP VBAF CCB DTCP NNC CCB
 700042,PRS_CCP VBAF CCB DTCP NNC CCB NNC,,[],,PRS_CCP VBAF CCB DTCP NNC CCB NNC
 700043,VBAF CCB DTCP NNC CCB NNC CCT,,[],,VBAF CCB DTCP NNC CCB NNC CCT
@@ -94,105 +74,60 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 700046,NNC CCB NNC CCT NNC CCB VBN_CCP,,[],,NNC CCB NNC CCT NNC CCB VBN_CCP
 700047,CCB NNC CCT NNC CCB VBN_CCP NNC_PMP,,[],,CCB NNC CCT NNC CCB VBN_CCP NNC_PMP
 700048,NNC_CCP PMS NNC CCT DTCP NNC CCB,,[],,NNC_CCP PMS NNC CCT DTCP NNC CCB
-700143,NNC_CCP PMS NNC CCT DTCP NNC CCB,halamang-singaw sa mga paa ng mga doktor,83.01035912746558,* sa mga * ng mga *,NNC_CCP sa mga CCT ng mga CCB
-700144,NNC_CCP PMS NNC CCT DTCP NNC CCB,halamang-singaw sa mga kuko ng mga kamay,83.3005537807677,* sa mga * ng mga kamay,NNC_CCP sa mga CCT ng mga kamay
+700156,NNC_CCP PMS NNC CCT DTCP NNC CCB,halamang-singaw sa mga paa ng mga doktor,83.01035912746558,* * * * * * *,NNC_CCP PMS NNC CCT DTCP NNC CCB
 700049,PMS NNC CCT DTCP NNC CCB DTCP,,[],,PMS NNC CCT DTCP NNC CCB DTCP
 700050,NNC CCT DTCP NNC CCB DTCP NNC,,[],,NNC CCT DTCP NNC CCB DTCP NNC
-700145,NNC CCT DTCP NNC CCB DTCP NNC,mga kuko ng mga kamay kuko halamang-singaw,81.66494262376155,* * ng * kamay * halamang-singaw,NNC CCT ng NNC kamay DTCP halamang-singaw
+700157,NNC CCT DTCP NNC CCB DTCP NNC,mga kuko ng mga kamay kuko halamang-singaw,81.66494262376155,* * * * * * *,NNC CCT DTCP NNC CCB DTCP NNC
 700051,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC,,[],,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC
-700146,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC,isang kuko halamang-singaw ay para lamang sa,80.6645176843626,* * halamang-singaw ay para lamang sa,VBH PRS_CCP halamang-singaw ay para lamang sa
+700158,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC,isang kuko halamang-singaw ay para lamang sa,80.6645176843626,* * * * * * *,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC
 700052,NNC NNC_CCP PMS NNC CCT PRSP_CCP DTCP,,[],,NNC NNC_CCP PMS NNC CCT PRSP_CCP DTCP
 700053,NNC_CCP PMS NNC CCT PRSP_CCP DTCP NNC,,[],,NNC_CCP PMS NNC CCT PRSP_CCP DTCP NNC
-700147,NNC_CCP PMS NNC CCT PRSP_CCP DTCP NNC,halamang-singaw sa aking mga paa Mayroon akong,83.25716259870546,* sa aking mga * Mayroon akong,NNC_CCP sa aking mga PRSP_CCP Mayroon akong
-700148,NNC_CCP PMS NNC CCT PRSP_CCP DTCP NNC,halamang-singaw sa kanyang mga paa ekzoderil presyo,83.07217659961329,* sa kanyang mga * * presyo,NNC_CCP sa kanyang mga PRSP_CCP DTCP presyo
+700159,NNC_CCP PMS NNC CCT PRSP_CCP DTCP NNC,halamang-singaw sa aking mga paa Mayroon akong,83.25716259870552,* * * * * * *,NNC_CCP PMS NNC CCT PRSP_CCP DTCP NNC
 700054,NNC CCB NNC_CCP PMS NNC CCT DTCP,,[],,NNC CCB NNC_CCP PMS NNC CCT DTCP
-700149,NNC CCB NNC_CCP PMS NNC CCT DTCP,paggamot ng halamang-singaw sa mga kamay kuko,83.3267977049694,* ng halamang-singaw sa mga kamay *,NNC ng halamang-singaw sa mga kamay DTCP
+700160,NNC CCB NNC_CCP PMS NNC CCT DTCP,paggamot ng halamang-singaw sa mga kamay kuko,83.32679770496942,* * * * * * *,NNC CCB NNC_CCP PMS NNC CCT DTCP
 700055,CCB NNC_CCP PMS NNC CCT DTCP NNC,,[],,CCB NNC_CCP PMS NNC CCT DTCP NNC
-700150,CCB NNC_CCP PMS NNC CCT DTCP NNC,ng halamang-singaw sa mga kamay kuko halamang-singaw,82.55125607171058,* halamang-singaw sa mga kamay * halamang-singaw,CCB halamang-singaw sa mga kamay DTCP halamang-singaw
+700161,CCB NNC_CCP PMS NNC CCT DTCP NNC,ng halamang-singaw sa mga kamay kuko halamang-singaw,82.55125286222966,* * * * * * *,CCB NNC_CCP PMS NNC CCT DTCP NNC
 700056,JJD CCP NNC CCT CCT NNC CCB,,[],,JJD CCP NNC CCT CCT NNC CCB
-700151,JJD CCP NNC CCT CCT NNC CCB,tradisyunal na materyal para sa pagtatayo ng,80.95485514519818,* na * para sa * ng,JJD na NNC para sa NNC ng
+700162,JJD CCP NNC CCT CCT NNC CCB,tradisyunal na materyal para sa pagtatayo ng,80.95485351961696,* * * * * * *,JJD CCP NNC CCT CCT NNC CCB
 700057,CCB NNC_CCP PMS NNC CCT NNC RBK,,[],,CCB NNC_CCP PMS NNC CCT NNC RBK
-700152,CCB NNC_CCP PMS NNC CCT NNC RBK,ng halamang-singaw sa tainga kung paano mapupuksa,81.3620952097013,* halamang-singaw sa * kung paano *,CCB halamang-singaw sa NNC kung paano RBK
+700163,CCB NNC_CCP PMS NNC CCT NNC RBK,ng halamang-singaw sa tainga kung paano mapupuksa,81.36209412598049,* * * * * * *,CCB NNC_CCP PMS NNC CCT NNC RBK
 700058,NNC_CCP PMS NNC CCT NNC RBK RBQ,,[],,NNC_CCP PMS NNC CCT NNC RBK RBQ
-700153,NNC_CCP PMS NNC CCT NNC RBK RBQ,kuko kung paano gamutin ang isang kuba,80.99748495935837,* kung paano * ang isang *,NNC_CCP kung paano CCT ang isang RBQ
-700154,NNC_CCP PMS NNC CCT NNC RBK RBQ,halamang-singaw sa tainga kung paano mapupuksa ang,83.27176224089206,* sa * kung paano * ang,NNC_CCP sa NNC kung paano RBK ang
+700164,NNC_CCP PMS NNC CCT NNC RBK RBQ,kuko kung paano gamutin ang isang kuba,80.99748495935833,* * * * * * *,NNC_CCP PMS NNC CCT NNC RBK RBQ
 700059,CCB VBW DTC JJCS_JJD CCP VBAF CCP,,[],,CCB VBW DTC JJCS_JJD CCP VBAF CCP
 700060,VBW DTC JJCS_JJD CCP VBAF CCP NNC_PMC,,[],,VBW DTC JJCS_JJD CCP VBAF CCP NNC_PMC
-700155,VBW DTC JJCS_JJD CCP VBAF CCP NNC_PMC,makamit ang pinakamataas na magkasanib na densidad,83.18608726343132,"* ang * na * na densidad,","VBW ang JJCS_JJD na VBAF na densidad,"
-700156,VBW DTC JJCS_JJD CCP VBAF CCP NNC_PMC,makamit ang pinakamataas na magkasanib na densidad,81.42014594551084,* ang * * * * densidad,VBW ang JJCS_JJD CCP VBAF CCP densidad
+700165,VBW DTC JJCS_JJD CCP VBAF CCP NNC_PMC,makamit ang pinakamataas na magkasanib na densidad,83.18608267845859,* * * * * * *,VBW DTC JJCS_JJD CCP VBAF CCP NNC_PMC
 700061,NNPA CDB NNPA DTCP NNC CCB NNC,,[],,NNPA CDB NNPA DTCP NNC CCB NNC
-700157,NNPA CDB NNPA DTCP NNC CCB NNC,(5) mga halimbawa ng sanaysay (5) mga,84.4552159319661,* mga halimbawa ng * * mga,NNPA mga halimbawa ng NNC CCB mga
-700158,NNPA CDB NNPA DTCP NNC CCB NNC,halimbawa ng talambuhay (5) mga halimbawa ng,81.19243654394921,* ng * (5) mga * ng,NNPA ng NNPA (5) mga CCB ng
-700159,NNPA CDB NNPA DTCP NNC CCB NNC,talumpati (5) mga halimbawa ng tula (8),85.36276136356426,* (5) mga halimbawa ng * (8),NNPA (5) mga halimbawa ng CCB (8)
-700160,NNPA CDB NNPA DTCP NNC CCB NNC,pagsasanay (1) paksa (24) pambansang sagisag (1.,86.38271304124147,* (1) * (24) * * (1.,NNPA (1) NNPA (24) NNC CCB (1.
+700166,NNPA CDB NNPA DTCP NNC CCB NNC,(5) mga halimbawa ng sanaysay (5) mga,84.4552159319661,* * * * * * *,NNPA CDB NNPA DTCP NNC CCB NNC
 700062,CDB NNPA DTCP NNC CCB NNC NNPA,,[],,CDB NNPA DTCP NNC CCB NNC NNPA
-700161,CDB NNPA DTCP NNC CCB NNC NNPA,mga halimbawa ng sanaysay (5) mga halimbawa,81.77389394202325,* halimbawa ng * (5) * halimbawa,CDB halimbawa ng NNC (5) NNC halimbawa
-700162,CDB NNPA DTCP NNC CCB NNC NNPA,ng talambuhay (5) mga halimbawa ng talumpati,81.46273493837735,* * (5) mga halimbawa * *,CDB NNPA (5) mga halimbawa NNC NNPA
+700167,CDB NNPA DTCP NNC CCB NNC NNPA,mga halimbawa ng sanaysay (5) mga halimbawa,81.77389394202325,* * * * * * *,CDB NNPA DTCP NNC CCB NNC NNPA
 700063,NNPA DTCP NNC CCB NNC NNPA CDB,,[],,NNPA DTCP NNC CCB NNC NNPA CDB
-700163,NNPA DTCP NNC CCB NNC NNPA CDB,halimbawa ng sanaysay (5) mga halimbawa ng,81.08504739711961,* ng * (5) mga * ng,NNPA ng NNC (5) mga NNPA ng
-700164,NNPA DTCP NNC CCB NNC NNPA CDB,talambuhay (5) mga halimbawa ng talumpati (5),83.52017164342114,* (5) mga halimbawa ng * (5),NNPA (5) mga halimbawa ng NNPA (5)
-700165,NNPA DTCP NNC CCB NNC NNPA CDB,mga halimbawa ng tula (8) pagsasanay (1),80.81015944690584,* halimbawa ng * (8) * (1),NNPA halimbawa ng CCB (8) NNPA (1)
+700168,NNPA DTCP NNC CCB NNC NNPA CDB,halimbawa ng sanaysay (5) mga halimbawa ng,81.08504685525921,* * * * * * *,NNPA DTCP NNC CCB NNC NNPA CDB
 700064,DTCP NNC CCB NNC NNPA CDB NNPA,,[],,DTCP NNC CCB NNC NNPA CDB NNPA
-700166,DTCP NNC CCB NNC NNPA CDB NNPA,ng sanaysay (5) mga halimbawa ng talambuhay,81.46442608448203,* * (5) mga halimbawa * *,DTCP NNC (5) mga halimbawa CDB NNPA
-700167,DTCP NNC CCB NNC NNPA CDB NNPA,(5) mga halimbawa ng talumpati (5) mga,83.96533727820784,* mga halimbawa ng * * mga,DTCP mga halimbawa ng NNPA CDB mga
+700169,DTCP NNC CCB NNC NNPA CDB NNPA,ng sanaysay (5) mga halimbawa ng talambuhay,81.46442554262163,* * * * * * *,DTCP NNC CCB NNC NNPA CDB NNPA
 700065,NNC CCB NNC NNPA CDB NNPA DTCP,,[],,NNC CCB NNC NNPA CDB NNPA DTCP
-700168,NNC CCB NNC NNPA CDB NNPA DTCP,sanaysay (5) mga halimbawa ng talambuhay (5),86.5202220305304,* (5) mga halimbawa ng * (5),NNC (5) mga halimbawa ng NNPA (5)
-700169,NNC CCB NNC NNPA CDB NNPA DTCP,mga halimbawa ng talumpati (5) mga halimbawa,81.75192963092535,* halimbawa ng * (5) * halimbawa,NNC halimbawa ng NNPA (5) NNPA halimbawa
-700170,NNC CCB NNC NNPA CDB NNPA DTCP,ng tula (8) pagsasanay (1) paksa (24),82.7207386544779,* * (8) * (1) * (24),NNC CCB (8) NNPA (1) NNPA (24)
+700170,NNC CCB NNC NNPA CDB NNPA DTCP,sanaysay (5) mga halimbawa ng talambuhay (5),86.52022203053042,* * * * * * *,NNC CCB NNC NNPA CDB NNPA DTCP
 700066,CCB NNC NNPA CDB NNPA DTCP NNC,,[],,CCB NNC NNPA CDB NNPA DTCP NNC
-700171,CCB NNC NNPA CDB NNPA DTCP NNC,(5) mga halimbawa ng talambuhay (5) mga,83.41752657738506,* mga halimbawa ng * * mga,CCB mga halimbawa ng NNPA DTCP mga
-700172,CCB NNC NNPA CDB NNPA DTCP NNC,halimbawa ng talumpati (5) mga halimbawa ng,80.73478937213767,* ng * (5) mga * ng,CCB ng NNPA (5) mga DTCP ng
-700173,CCB NNC NNPA CDB NNPA DTCP NNC,tula (8) pagsasanay (1) paksa (24) pambansang,84.89815966035552,* (8) * (1) * (24) *,CCB (8) NNPA (1) NNPA (24) NNC
+700171,CCB NNC NNPA CDB NNPA DTCP NNC,(5) mga halimbawa ng talambuhay (5) mga,83.41752611888779,* * * * * * *,CCB NNC NNPA CDB NNPA DTCP NNC
 700067,NNC NNPA CDB NNPA DTCP NNC CCB,,[],,NNC NNPA CDB NNPA DTCP NNC CCB
-700174,NNC NNPA CDB NNPA DTCP NNC CCB,mga halimbawa ng talambuhay (5) mga halimbawa,81.56866214590687,* halimbawa ng * (5) * halimbawa,NNC halimbawa ng NNPA (5) NNC halimbawa
-700175,NNC NNPA CDB NNPA DTCP NNC CCB,ng talumpati (5) mga halimbawa ng tula,81.70544396795908,* * (5) mga halimbawa * *,NNC NNPA (5) mga halimbawa NNC CCB
-700176,NNC NNPA CDB NNPA DTCP NNC CCB,(8) pagsasanay (1) paksa (24) pambansang sagisag,82.84829855436868,* * * * * * *,NNC NNPA CDB NNPA DTCP NNC CCB
-700068,VB.* PR.* VBAF CCB DTCP NN.* CC.*,,[],,VB.* PR.* VBAF CCB DTCP NN.* CC.*
-700069,PR.* VB.* CCB DTCP NNC CC.* NN.*,,[],,PR.* VB.* CCB DTCP NNC CC.* NN.*
-700070,VB.* CC.* DTCP NNC CCB NN.* CC.*,,[],,VB.* CC.* DTCP NNC CCB NN.* CC.*
-700071,CC.* DT.* NNC CCB NNC CC.* NN.*,,[],,CC.* DT.* NNC CCB NNC CC.* NN.*
-700072,DT.* NN.* CCB NNC CCT NN.* CC.*,,[],,DT.* NN.* CCB NNC CCT NN.* CC.*
-700073,NN.* CC.* NNC CCT NNC CC.* VB.*,,[],,NN.* CC.* NNC CCT NNC CC.* VB.*
-700074,CC.* NN.* CCT NNC CCB VB.* NN.*_PM.*,,[],,CC.* NN.* CCT NNC CCB VB.* NN.*_PM.*
-700075,NN.* PM.* NNC CCT DTCP NN.* CC.*,,[],,NN.* PM.* NNC CCT DTCP NN.* CC.*
-700177,NN.* PM.* NNC CCT DTCP NN.* CC.*,halamang-singaw sa mga paa ng mga doktor,83.01035912746558,* sa mga * ng mga *,NN.* sa mga CCT ng mga CC.*
-700178,NN.* PM.* NNC CCT DTCP NN.* CC.*,halamang-singaw sa mga kuko ng mga kamay,83.3005537807677,* sa mga * ng mga kamay,NN.* sa mga CCT ng mga kamay
-700076,PM.* NN.* CCT DTCP NNC CC.* DT.*,,[],,PM.* NN.* CCT DTCP NNC CC.* DT.*
-700077,NN.* CC.* DTCP NNC CCB DT.* NN.*,,[],,NN.* CC.* DTCP NNC CCB DT.* NN.*
-700179,NN.* CC.* DTCP NNC CCB DT.* NN.*,mga kuko ng mga kamay kuko halamang-singaw,81.66494262376155,* * ng * kamay * halamang-singaw,NN.* CC.* ng NNC kamay DT.* halamang-singaw
-700078,VB.* PR.* PRI_CCP NNC NNC_CCP PMS NN.*,,[],,VB.* PR.* PRI_CCP NNC NNC_CCP PMS NN.*
-700079,NN.* NN.* PMS NNC CCT PRSP_CCP DT.*,,[],,NN.* NN.* PMS NNC CCT PRSP_CCP DT.*
-700080,NN.* PM.* NNC CCT PRSP_CCP DTCP NN.*,,[],,NN.* PM.* NNC CCT PRSP_CCP DTCP NN.*
-700180,NN.* PM.* NNC CCT PRSP_CCP DTCP NN.*,halamang-singaw sa aking mga paa Mayroon akong,83.25716259870546,* sa aking mga * Mayroon akong,NN.* sa aking mga PRSP_CCP Mayroon akong
-700181,NN.* PM.* NNC CCT PRSP_CCP DTCP NN.*,halamang-singaw sa kanyang mga paa ekzoderil presyo,83.07217659961329,* sa kanyang mga * * presyo,NN.* sa kanyang mga PRSP_CCP DTCP presyo
-700081,NN.* CC.* NNC_CCP PMS NNC CC.* DT.*,,[],,NN.* CC.* NNC_CCP PMS NNC CC.* DT.*
-700082,CC.* NN.* PMS NN.* CCT DTCP NN.*,,[],,CC.* NN.* PMS NN.* CCT DTCP NN.*
-700182,CC.* NN.* PMS NN.* CCT DTCP NN.*,ng halamang-singaw sa mga kamay kuko halamang-singaw,82.55125607171058,* halamang-singaw sa mga kamay * halamang-singaw,CC.* halamang-singaw sa mga kamay DTCP halamang-singaw
-700083,JJ.* CC.* NNC CCT CCT NN.* CC.*,,[],,JJ.* CC.* NNC CCT CCT NN.* CC.*
-700183,JJ.* CC.* NNC CCT CCT NN.* CC.*,tradisyunal na materyal para sa pagtatayo ng,80.95485514519818,* na * para sa * ng,JJ.* na NNC para sa NN.* ng
-700084,CC.* NN.* PMS NN.* CCT NNC RB.*,,[],,CC.* NN.* PMS NN.* CCT NNC RB.*
-700085,NN.* PM.* NNC CCT NNC RB.* RB.*,,[],,NN.* PM.* NNC CCT NNC RB.* RB.*
-700184,NN.* PM.* NNC CCT NNC RB.* RB.*,kuko kung paano gamutin ang isang kuba,80.99748495935837,* kung paano * ang isang *,NN.* kung paano CCT ang isang RB.*
-700185,NN.* PM.* NNC CCT NNC RB.* RB.*,halamang-singaw sa tainga kung paano mapupuksa ang,83.27176224089206,* sa * kung paano * ang,NN.* sa NNC kung paano RB.* ang
-700086,CCB VBW DTC JJCS_JJD CCP VB.* CC.*,,[],,CCB VBW DTC JJCS_JJD CCP VB.* CC.*
-700087,VBW DTC JJCS_JJD CCP VBAF CC.* NN.*_PM.*,,[],,VBW DTC JJCS_JJD CCP VBAF CC.* NN.*_PM.*
-700186,VBW DTC JJCS_JJD CCP VBAF CC.* NN.*_PM.*,makamit ang pinakamataas na magkasanib na densidad,81.42014594551084,* ang * * * * densidad,VBW ang JJCS_JJD CCP VBAF CC.* densidad
-700088,NN.* CD.* NNPA DTCP NNC CC.* NN.*,,[],,NN.* CD.* NNPA DTCP NNC CC.* NN.*
-700187,NN.* CD.* NNPA DTCP NNC CC.* NN.*,(5) mga halimbawa ng sanaysay (5) mga,84.4552159319661,* mga halimbawa ng * * mga,NN.* mga halimbawa ng NNC CC.* mga
-700188,NN.* CD.* NNPA DTCP NNC CC.* NN.*,halimbawa ng talambuhay (5) mga halimbawa ng,81.19243654394921,* ng * (5) mga * ng,NN.* ng NNPA (5) mga CC.* ng
-700189,NN.* CD.* NNPA DTCP NNC CC.* NN.*,pagsasanay (1) paksa (24) pambansang sagisag (1.,86.38271304124147,* (1) * (24) * * (1.,NN.* (1) NNPA (24) NNC CC.* (1.
-700089,CD.* NN.* DTCP NNC CCB NN.* NN.*,,[],,CD.* NN.* DTCP NNC CCB NN.* NN.*
-700190,CD.* NN.* DTCP NNC CCB NN.* NN.*,mga halimbawa ng sanaysay (5) mga halimbawa,81.77389394202325,* halimbawa ng * (5) * halimbawa,CD.* halimbawa ng NNC (5) NN.* halimbawa
-700090,NN.* DT.* NNC CCB NNC NN.* CD.*,,[],,NN.* DT.* NNC CCB NNC NN.* CD.*
-700191,NN.* DT.* NNC CCB NNC NN.* CD.*,halimbawa ng sanaysay (5) mga halimbawa ng,81.08504739711961,* ng * (5) mga * ng,NN.* ng NNC (5) mga NN.* ng
-700192,NN.* DT.* NNC CCB NNC NN.* CD.*,mga halimbawa ng tula (8) pagsasanay (1),80.81015944690584,* halimbawa ng * (8) * (1),NN.* halimbawa ng CCB (8) NN.* (1)
-700091,DT.* NN.* CCB NNC NNPA CD.* NN.*,,[],,DT.* NN.* CCB NNC NNPA CD.* NN.*
-700193,DT.* NN.* CCB NNC NNPA CD.* NN.*,(5) mga halimbawa ng talumpati (5) mga,83.96533727820784,* mga halimbawa ng * * mga,DT.* mga halimbawa ng NNPA CD.* mga
-700092,NN.* CC.* NNC NNPA CDB NN.* DT.*,,[],,NN.* CC.* NNC NNPA CDB NN.* DT.*
-700194,NN.* CC.* NNC NNPA CDB NN.* DT.*,mga halimbawa ng talumpati (5) mga halimbawa,81.75192963092535,* halimbawa ng * (5) * halimbawa,NN.* halimbawa ng NNPA (5) NN.* halimbawa
-700195,NN.* CC.* NNC NNPA CDB NN.* DT.*,ng tula (8) pagsasanay (1) paksa (24),82.7207386544779,* * (8) * (1) * (24),NN.* CC.* (8) NNPA (1) NN.* (24)
-700093,CC.* NN.* NN.* CDB NNPA DT.* NN.*,,[],,CC.* NN.* NN.* CDB NNPA DT.* NN.*
-700196,CC.* NN.* NN.* CDB NNPA DT.* NN.*,(5) mga halimbawa ng talambuhay (5) mga,83.41752657738506,* mga halimbawa ng * * mga,CC.* mga halimbawa ng NNPA DT.* mga
-700197,CC.* NN.* NN.* CDB NNPA DT.* NN.*,tula (8) pagsasanay (1) paksa (24) pambansang,84.89815966035552,* (8) * (1) * (24) *,CC.* (8) NN.* (1) NNPA (24) NN.*
-700094,NN.* NN.* CDB NNPA DTCP NN.* CC.*,,[],,NN.* NN.* CDB NNPA DTCP NN.* CC.*
-700198,NN.* NN.* CDB NNPA DTCP NN.* CC.*,(8) pagsasanay (1) paksa (24) pambansang sagisag,82.84829855436868,* * * * * * *,NN.* NN.* CDB NNPA DTCP NN.* CC.*
+700172,NNC NNPA CDB NNPA DTCP NNC CCB,mga halimbawa ng talambuhay (5) mga halimbawa,81.56866214590687,* * * * * * *,NNC NNPA CDB NNPA DTCP NNC CCB
+700117,VBAF CC.* DT.* NN.* CC.* NN.* CC.*,,[],,VBAF CC.* DT.* NN.* CC.* NN.* CC.*
+700118,NNC_CCP PM.* NN.* CC.* DT.* NN.* CC.*,,[],,NNC_CCP PM.* NN.* CC.* DT.* NN.* CC.*
+700173,NNC_CCP PM.* NN.* CC.* DT.* NN.* CC.*,halamang-singaw sa mga paa ng mga doktor,83.01035912746558,* * * * * * *,NNC_CCP PM.* NN.* CC.* DT.* NN.* CC.*
+700119,VBH PR.* PR.* NN.* NN.* PM.* NN.*,,[],,VBH PR.* PR.* NN.* NN.* PM.* NN.*
+700174,VBH PR.* PR.* NN.* NN.* PM.* NN.*,isang kuko halamang-singaw ay para lamang sa,80.6645176843626,* * * * * * *,VBH PR.* PR.* NN.* NN.* PM.* NN.*
+700120,NNC_CCP PM.* NN.* CC.* PR.* DT.* NN.*,,[],,NNC_CCP PM.* NN.* CC.* PR.* DT.* NN.*
+700175,NNC_CCP PM.* NN.* CC.* PR.* DT.* NN.*,halamang-singaw sa aking mga paa Mayroon akong,83.25716259870552,* * * * * * *,NNC_CCP PM.* NN.* CC.* PR.* DT.* NN.*
+700121,JJD CC.* NN.* CC.* CC.* NN.* CC.*,,[],,JJD CC.* NN.* CC.* CC.* NN.* CC.*
+700176,JJD CC.* NN.* CC.* CC.* NN.* CC.*,tradisyunal na materyal para sa pagtatayo ng,80.95485351961696,* * * * * * *,JJD CC.* NN.* CC.* CC.* NN.* CC.*
+700122,NNC_CCP PM.* NN.* CC.* NN.* RB.* RB.*,,[],,NNC_CCP PM.* NN.* CC.* NN.* RB.* RB.*
+700177,NNC_CCP PM.* NN.* CC.* NN.* RB.* RB.*,kuko kung paano gamutin ang isang kuba,80.99748495935833,* * * * * * *,NNC_CCP PM.* NN.* CC.* NN.* RB.* RB.*
+700123,VBW DTC JJ.* CC.* VB.* CC.* NN.*_PM.*,,[],,VBW DTC JJ.* CC.* VB.* CC.* NN.*_PM.*
+700178,VBW DTC JJ.* CC.* VB.* CC.* NN.*_PM.*,makamit ang pinakamataas na magkasanib na densidad,83.18608267845859,* * * * * * *,VBW DTC JJ.* CC.* VB.* CC.* NN.*_PM.*
+700124,NN.* CDB NNPA DTCP NNC CC.* NN.*,,[],,NN.* CDB NNPA DTCP NNC CC.* NN.*
+700179,NN.* CDB NNPA DTCP NNC CC.* NN.*,(5) mga halimbawa ng sanaysay (5) mga,84.4552159319661,* * * * * * *,NN.* CDB NNPA DTCP NNC CC.* NN.*
+700125,CDB NNPA DT.* NN.* CC.* NN.* NN.*,,[],,CDB NNPA DT.* NN.* CC.* NN.* NN.*
+700180,CDB NNPA DT.* NN.* CC.* NN.* NN.*,mga halimbawa ng sanaysay (5) mga halimbawa,81.77389394202325,* * * * * * *,CDB NNPA DT.* NN.* CC.* NN.* NN.*
+700126,CC.* NN.* NNPA CD.* NNPA DT.* NN.*,,[],,CC.* NN.* NNPA CD.* NNPA DT.* NN.*
+700181,CC.* NN.* NNPA CD.* NNPA DT.* NN.*,(5) mga halimbawa ng talambuhay (5) mga,83.41752611888779,* * * * * * *,CC.* NN.* NNPA CD.* NNPA DT.* NN.*
+700127,NN.* NNPA CDB NNPA DTCP NNC CC.*,,[],,NN.* NNPA CDB NNPA DTCP NNC CC.*
+700182,NN.* NNPA CDB NNPA DTCP NNC CC.*,mga halimbawa ng talambuhay (5) mga halimbawa,81.56866214590687,* * * * * * *,NN.* NNPA CDB NNPA DTCP NNC CC.*

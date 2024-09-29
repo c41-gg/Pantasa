@@ -17,11 +17,11 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500016,DT.* NN.* CC.* NN.* CC.*,,[],,DT.* NN.* CC.* NN.* CC.*
 500017,RB.* RB.* VB.* DT.* DT.*,,[],,RB.* RB.* VB.* DT.* DT.*
 500018,RB.* VB.* DT.* DT.* NN.*,,[],,RB.* VB.* DT.* DT.* NN.*
-500273,RB.* VB.* DT.* DT.* NN.*,biglang naglipana ang mga singkit,81.75732006513283,* naglipana ang mga singkit,RB.* naglipana ang mga singkit
+500336,RB.* VB.* DT.* DT.* NN.*,biglang naglipana ang mga singkit,81.75732006513283,* * * * *,RB.* VB.* DT.* DT.* NN.*
 500019,PR.* CC.* NN.* CC.* VB.*,,[],,PR.* CC.* NN.* CC.* VB.*
 500020,CC.* NN.* CC.* VB.* CC.*,,[],,CC.* NN.* CC.* VB.* CC.*
 500021,DT.* CC.* PM.* JJ.* CC.*,,[],,DT.* CC.* PM.* JJ.* CC.*
-500274,DT.* CC.* PM.* JJ.* CC.*,ang pag-kakahiwahiwalay ng mga pulo,82.43091207520123,* pag-kakahiwahiwalay ng mga *,DT.* pag-kakahiwahiwalay ng mga CC.*
+500337,DT.* CC.* PM.* JJ.* CC.*,ang pag-kakahiwahiwalay ng mga pulo,82.43091455872809,* pag-kakahiwahiwalay * * *,DT.* pag-kakahiwahiwalay PM.* JJ.* CC.*
 500022,CC.* PR.* DT.* NN.* JJ.*,,[],,CC.* PR.* DT.* NN.* JJ.*
 500023,JJ.* CC.* NN.* CC.* VB.*,,[],,JJ.* CC.* NN.* CC.* VB.*
 500024,VB.* CC.* CD.* NN.* CC.*,,[],,VB.* CC.* CD.* NN.* CC.*
@@ -34,7 +34,7 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500031,PR.* RB.* RB.* DT.* VB.*,,[],,PR.* RB.* RB.* DT.* VB.*
 500032,RB.* RB.* DT.* VB.* PR.*_PM.*,,[],,RB.* RB.* DT.* VB.* PR.*_PM.*
 500033,JJ.* CC.* NN.* PR.* CC.*,,[],,JJ.* CC.* NN.* PR.* CC.*
-500275,JJ.* CC.* NN.* PR.* CC.*,imahe ko sa entablado (tumawa).,81.5147838886121,* ko sa * (tumawa).,JJ.* ko sa PR.* (tumawa).
+500338,JJ.* CC.* NN.* PR.* CC.*,imahe ko sa entablado (tumawa).,81.51478280489127,* * * * *,JJ.* CC.* NN.* PR.* CC.*
 500034,CC.* NN.* RB.* CC.* NN.*,,[],,CC.* NN.* RB.* CC.* NN.*
 500035,CC.* VB.* PR.* DT.* NN.*,,[],,CC.* VB.* PR.* DT.* NN.*
 500036,VB.* PR.* DT.* NN.* RB.*,,[],,VB.* PR.* DT.* NN.* RB.*
@@ -51,7 +51,7 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500047,CC.* VB.* LM VB.* PR.*,,[],,CC.* VB.* LM VB.* PR.*
 500048,CC.* RB.* VB.* CC.* PR.*_PM.*,,[],,CC.* RB.* VB.* CC.* PR.*_PM.*
 500049,VB.* PR.* CC.* NN.* PR.*_PM.*,,[],,VB.* PR.* CC.* NN.* PR.*_PM.*
-500276,VB.* PR.* CC.* NN.* PR.*_PM.*,nakadama siya ng simpatya rito.,81.76641790333451,* siya ng simpatya rito.,VB.* siya ng simpatya rito.
+500339,VB.* PR.* CC.* NN.* PR.*_PM.*,nakadama siya ng simpatya rito.,81.76641790333449,* * * * *,VB.* PR.* CC.* NN.* PR.*_PM.*
 500050,CC.* PR.* LM VB.* RB.*,,[],,CC.* PR.* LM VB.* RB.*
 500051,RB.* RB.* CC.* VB.* CC.*,,[],,RB.* RB.* CC.* VB.* CC.*
 500052,PR.* LM VB.* CC.* VB.*,,[],,PR.* LM VB.* CC.* VB.*
@@ -99,7 +99,7 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500094,NN.* PM.* NN.* CC.* DT.*,,[],,NN.* PM.* NN.* CC.* DT.*
 500095,PM.* NN.* CC.* DT.* NN.*,,[],,PM.* NN.* CC.* DT.* NN.*
 500096,NN.* CC.* DT.* NN.* CC.*,,[],,NN.* CC.* DT.* NN.* CC.*
-500277,NN.* CC.* DT.* NN.* CC.*,pribilehiyo sa mga tsekwa na,81.76237942109682,* sa mga tsekwa na,NN.* sa mga tsekwa na
+500340,NN.* CC.* DT.* NN.* CC.*,pribilehiyo sa mga tsekwa na,81.76237942109688,* * * * *,NN.* CC.* DT.* NN.* CC.*
 500097,RB.* RB.* CC.* NN.* DT.*,,[],,RB.* RB.* CC.* NN.* DT.*
 500098,RB.* CC.* NN.* DT.* NN.*,,[],,RB.* CC.* NN.* DT.* NN.*
 500099,DT.* NN.* CC.* NN.* NN.*,,[],,DT.* NN.* CC.* NN.* NN.*
@@ -107,14 +107,14 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500101,CC.* NN.* NN.* PM.* NN.*,,[],,CC.* NN.* NN.* PM.* NN.*
 500102,DT.* JJ.* CC.* NN.* CC.*,,[],,DT.* JJ.* CC.* NN.* CC.*
 500103,NN.* CC.* VB.* DT.* NN.*,,[],,NN.* CC.* VB.* DT.* NN.*
-500278,NN.* CC.* VB.* DT.* NN.*,kakayahan na malabanan ang araw-,80.61015606486397,* na malabanan ang araw-,NN.* na malabanan ang araw-
+500341,NN.* CC.* VB.* DT.* NN.*,kakayahan na malabanan ang araw-,80.61015714858478,* * * * *,NN.* CC.* VB.* DT.* NN.*
 500104,DT.* NN.* NN.* PM.* NN.*,,[],,DT.* NN.* NN.* PM.* NN.*
-500279,DT.* NN.* NN.* PM.* NN.*,halamang-singaw sa aking mga paa.,81.71150741023679,* sa aking mga paa.,DT.* sa aking mga paa.
+500342,DT.* NN.* NN.* PM.* NN.*,halamang-singaw sa aking mga paa.,81.71150741023679,* * * * *,DT.* NN.* NN.* PM.* NN.*
 500105,JJ.* CC.* NN.* CC.* CC.*,,[],,JJ.* CC.* NN.* CC.* CC.*
 500106,NN.* PM.* NN.* CC.* NN.*,,[],,NN.* PM.* NN.* CC.* NN.*
 500107,DT.* NN.* CC.* NN.* PR.*,,[],,DT.* NN.* CC.* NN.* PR.*
 500108,NN.* NN.* PM.* NN.* VB.*,,[],,NN.* NN.* PM.* NN.* VB.*
-500280,NN.* NN.* PM.* NN.* VB.*,paa halamang-singaw paggamot Paunang paa,81.23273417253664,* halamang-singaw * Paunang *,NN.* halamang-singaw PM.* Paunang VB.*
+500343,NN.* NN.* PM.* NN.* VB.*,paa halamang-singaw paggamot Paunang paa,81.23273254695543,* * * * *,NN.* NN.* PM.* NN.* VB.*
 500109,NN.* PM.* NN.* VB.* CC.*,,[],,NN.* PM.* NN.* VB.* CC.*
 500110,DT.* VB.* CC.* VB.* PR.*,,[],,DT.* VB.* CC.* VB.* PR.*
 500111,VB.* PR.* PR.* NN.* NN.*,,[],,VB.* PR.* PR.* NN.* NN.*
@@ -148,27 +148,25 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500139,VB.* DT.* JJ.* CC.* VB.*,,[],,VB.* DT.* JJ.* CC.* VB.*
 500140,DT.* JJ.* CC.* VB.* CC.*,,[],,DT.* JJ.* CC.* VB.* CC.*
 500141,JJ.* CC.* VB.* CC.* NN.*_PM.*,,[],,JJ.* CC.* VB.* CC.* NN.*_PM.*
-500281,JJ.* CC.* VB.* CC.* NN.*_PM.*,pinakamataas na magkasanib na densidad,82.70049894714307,"* na * na densidad,","JJ.* na VB.* na densidad,"
-500282,JJ.* CC.* VB.* CC.* NN.*_PM.*,pinakamataas na magkasanib na densidad,80.61427858940289,* na * na densidad,JJ.* na VB.* na densidad
+500344,JJ.* CC.* VB.* CC.* NN.*_PM.*,pinakamataas na magkasanib na densidad,82.70049646361628,* * * * *,JJ.* CC.* VB.* CC.* NN.*_PM.*
 500142,PR.* JJ.* NN.* DT.* VB.*,,[],,PR.* JJ.* NN.* DT.* VB.*
 500143,JJ.* NN.* DT.* VB.* CC.*,,[],,JJ.* NN.* DT.* VB.* CC.*
 500144,RB.* VB.* CC.* PR.* JJ.*,,[],,RB.* VB.* CC.* PR.* JJ.*
-500283,RB.* VB.* CC.* PR.* JJ.*,Huwag pumili ng isang napaka-kumplikado,83.12166880479187,"* * ng isang napaka-kumplikado,","RB.* VB.* ng isang napaka-kumplikado,"
-500284,RB.* VB.* CC.* PR.* JJ.*,Huwag pumili ng isang napaka-kumplikado,81.80159493333548,* * ng isang napaka-kumplikado,RB.* VB.* ng isang napaka-kumplikado
+500345,RB.* VB.* CC.* PR.* JJ.*,Huwag pumili ng isang napaka-kumplikado,83.12166880479191,* * * * *,RB.* VB.* CC.* PR.* JJ.*
 500145,VB.* CC.* DT.* NN.* LM,,[],,VB.* CC.* DT.* NN.* LM
 500146,PR.* DT.* NN.* CC.* VB.*,,[],,PR.* DT.* NN.* CC.* VB.*
 500147,NN.* CC.* JJ.* NN.* CC.*,,[],,NN.* CC.* JJ.* NN.* CC.*
 500148,NN.* LM VB.* CC.* JJ.*,,[],,NN.* LM VB.* CC.* JJ.*
 500149,NN.* CD.* NN.* DT.* NN.*,,[],,NN.* CD.* NN.* DT.* NN.*
-500285,NN.* CD.* NN.* DT.* NN.*,pagsasanay (1) paksa (24) pambansang,80.4206953710746,* (1) * (24) *,NN.* (1) NN.* (24) NN.*
+500346,NN.* CD.* NN.* DT.* NN.*,pagsasanay (1) paksa (24) pambansang,80.42068941061014,* * * * *,NN.* CD.* NN.* DT.* NN.*
 500150,CD.* NN.* DT.* NN.* CC.*,,[],,CD.* NN.* DT.* NN.* CC.*
-500286,CD.* NN.* DT.* NN.* CC.*,(1) paksa (24) pambansang sagisag,80.12960553628744,* * * * *,CD.* NN.* DT.* NN.* CC.*
+500347,CD.* NN.* DT.* NN.* CC.*,(1) paksa (24) pambansang sagisag,80.12960824558948,* * * * *,CD.* NN.* DT.* NN.* CC.*
 500151,NN.* DT.* NN.* CC.* NN.*,,[],,NN.* DT.* NN.* CC.* NN.*
-500287,NN.* DT.* NN.* CC.* NN.*,paksa (24) pambansang sagisag (1.,82.92441766508655,* (24) * * (1.,NN.* (24) NN.* CC.* (1.
+500348,NN.* DT.* NN.* CC.* NN.*,paksa (24) pambansang sagisag (1.,82.9244186584973,* * * * *,NN.* DT.* NN.* CC.* NN.*
 500152,NN.* CC.* NN.* NN.* CD.*,,[],,NN.* CC.* NN.* NN.* CD.*
-500288,NN.* CC.* NN.* NN.* CD.*,sanaysay (5) mga halimbawa ng,81.75540676043738,* (5) mga halimbawa ng,NN.* (5) mga halimbawa ng
+500349,NN.* CC.* NN.* NN.* CD.*,sanaysay (5) mga halimbawa ng,81.75540676043742,* * * * *,NN.* CC.* NN.* NN.* CD.*
 500153,CC.* NN.* NN.* CD.* NN.*,,[],,CC.* NN.* NN.* CD.* NN.*
-500289,CC.* NN.* NN.* CD.* NN.*,tula (8) pagsasanay (1) paksa,80.97187132729515,* (8) * (1) *,CC.* (8) NN.* (1) NN.*
+500350,CC.* NN.* NN.* CD.* NN.*,tula (8) pagsasanay (1) paksa,80.9718643734199,* * * * *,CC.* NN.* NN.* CD.* NN.*
 500154,NN.* NN.* CD.* NN.* DT.*,,[],,NN.* NN.* CD.* NN.* DT.*
 500155,NN.* CC.* NN.* PR.* CC.*,,[],,NN.* CC.* NN.* PR.* CC.*
 500156,DT.* NN.* DT.* NN.* PR.*,,[],,DT.* NN.* DT.* NN.* PR.*
@@ -180,7 +178,7 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500162,DTCP NNC CCT NNC CCB,,[],,DTCP NNC CCT NNC CCB
 500163,RBK RBQ VBW DTC DTCP,,[],,RBK RBQ VBW DTC DTCP
 500164,DTC CCR PMS JJD CCB,,[],,DTC CCR PMS JJD CCB
-500290,DTC CCR PMS JJD CCB,ang pag-kakahiwahiwalay ng mga pulo,82.43091207520123,* pag-kakahiwahiwalay ng mga *,DTC pag-kakahiwahiwalay ng mga CCB
+500351,DTC CCR PMS JJD CCB,ang pag-kakahiwahiwalay ng mga pulo,82.43091455872809,* pag-kakahiwahiwalay * * *,DTC pag-kakahiwahiwalay PMS JJD CCB
 500165,CCR VBS LM VBTF PRP,,[],,CCR VBS LM VBTF PRP
 500166,DTC NNC CCP PRO LM,,[],,DTC NNC CCP PRO LM
 500167,CCR VBTR PRS CCB NNP_PMC,,[],,CCR VBTR PRS CCB NNP_PMC
@@ -204,7 +202,7 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500185,CCT NNC NNC_CCP PMS NNC,,[],,CCT NNC NNC_CCP PMS NNC
 500186,NNC_CCP PMS NNC CCT NNC,,[],,NNC_CCP PMS NNC CCT NNC
 500187,NNC NNC_CCP PMS NNC VBW,,[],,NNC NNC_CCP PMS NNC VBW
-500291,NNC NNC_CCP PMS NNC VBW,paa halamang-singaw paggamot Paunang paa,81.23273417253664,* halamang-singaw * Paunang *,NNC halamang-singaw PMS Paunang VBW
+500352,NNC NNC_CCP PMS NNC VBW,paa halamang-singaw paggamot Paunang paa,81.23273254695543,* * * * *,NNC NNC_CCP PMS NNC VBW
 500188,NNC_CCP PMS NNC VBW CCT,,[],,NNC_CCP PMS NNC VBW CCT
 500189,VBH PRS_CCP PRI_CCP NNC NNC_CCP,,[],,VBH PRS_CCP PRI_CCP NNC NNC_CCP
 500190,PRS_CCP PRI_CCP NNC NNC_CCP PMS,,[],,PRS_CCP PRI_CCP NNC NNC_CCP PMS
@@ -226,79 +224,43 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 500206,VBW DTC JJCS_JJD CCP VBAF,,[],,VBW DTC JJCS_JJD CCP VBAF
 500207,DTC JJCS_JJD CCP VBAF CCP,,[],,DTC JJCS_JJD CCP VBAF CCP
 500208,JJCS_JJD CCP VBAF CCP NNC_PMC,,[],,JJCS_JJD CCP VBAF CCP NNC_PMC
-500292,JJCS_JJD CCP VBAF CCP NNC_PMC,pinakamataas na magkasanib na densidad,82.70049894714307,"* na * na densidad,","JJCS_JJD na VBAF na densidad,"
-500293,JJCS_JJD CCP VBAF CCP NNC_PMC,pinakamataas na magkasanib na densidad,80.61427858940289,* na * na densidad,JJCS_JJD na VBAF na densidad
+500353,JJCS_JJD CCP VBAF CCP NNC_PMC,pinakamataas na magkasanib na densidad,82.70049646361628,* * * * *,JJCS_JJD CCP VBAF CCP NNC_PMC
 500209,VBH PRO_CCP DTCP NNC CCP,,[],,VBH PRO_CCP DTCP NNC CCP
 500210,NNPA CDB NNPA DTCP NNC,,[],,NNPA CDB NNPA DTCP NNC
-500294,NNPA CDB NNPA DTCP NNC,pagsasanay (1) paksa (24) pambansang,80.4206953710746,* (1) * (24) *,NNPA (1) NNPA (24) NNC
+500354,NNPA CDB NNPA DTCP NNC,pagsasanay (1) paksa (24) pambansang,80.42068941061014,* * * * *,NNPA CDB NNPA DTCP NNC
 500211,CDB NNPA DTCP NNC CCB,,[],,CDB NNPA DTCP NNC CCB
-500295,CDB NNPA DTCP NNC CCB,(1) paksa (24) pambansang sagisag,80.12960553628744,* * * * *,CDB NNPA DTCP NNC CCB
+500355,CDB NNPA DTCP NNC CCB,(1) paksa (24) pambansang sagisag,80.12960824558948,* * * * *,CDB NNPA DTCP NNC CCB
 500212,NNPA DTCP NNC CCB NNC,,[],,NNPA DTCP NNC CCB NNC
-500296,NNPA DTCP NNC CCB NNC,paksa (24) pambansang sagisag (1.,82.92441766508655,* (24) * * (1.,NNPA (24) NNC CCB (1.
+500356,NNPA DTCP NNC CCB NNC,paksa (24) pambansang sagisag (1.,82.9244186584973,* * * * *,NNPA DTCP NNC CCB NNC
 500213,DTCP NNC CCB NNC NNPA,,[],,DTCP NNC CCB NNC NNPA
 500214,NNC CCB NNC NNPA CDB,,[],,NNC CCB NNC NNPA CDB
-500297,NNC CCB NNC NNPA CDB,sanaysay (5) mga halimbawa ng,81.75540676043738,* (5) mga halimbawa ng,NNC (5) mga halimbawa ng
+500357,NNC CCB NNC NNPA CDB,sanaysay (5) mga halimbawa ng,81.75540676043742,* * * * *,NNC CCB NNC NNPA CDB
 500215,CCB NNC NNPA CDB NNPA,,[],,CCB NNC NNPA CDB NNPA
-500298,CCB NNC NNPA CDB NNPA,tula (8) pagsasanay (1) paksa,80.97187132729515,* (8) * (1) *,CCB (8) NNPA (1) NNPA
+500358,CCB NNC NNPA CDB NNPA,tula (8) pagsasanay (1) paksa,80.9718643734199,* * * * *,CCB NNC NNPA CDB NNPA
 500216,NNC NNPA CDB NNPA DTCP,,[],,NNC NNPA CDB NNPA DTCP
-500217,CC.* CC.* NNC CCB DTCP,,[],,CC.* CC.* NNC CCB DTCP
-500218,CC.* NN.* CCB DTCP NNC,,[],,CC.* NN.* CCB DTCP NNC
-500219,CC.* DT.* NNC CC.* NNC,,[],,CC.* DT.* NNC CC.* NNC
-500220,DT.* NN.* CCT NNC CCB,,[],,DT.* NN.* CCT NNC CCB
-500221,RB.* RB.* VB.* DTC DTCP,,[],,RB.* RB.* VB.* DTC DTCP
-500222,DT.* CCR PM.* JJD CCB,,[],,DT.* CCR PM.* JJD CCB
-500299,DT.* CCR PM.* JJD CCB,ang pag-kakahiwahiwalay ng mga pulo,82.43091207520123,* pag-kakahiwahiwalay ng mga *,DT.* pag-kakahiwahiwalay ng mga CCB
-500223,CC.* VB.* LM VBTF PRP,,[],,CC.* VB.* LM VBTF PRP
-500224,DT.* NN.* CC.* PRO LM,,[],,DT.* NN.* CC.* PRO LM
-500225,CC.* VBTR PRS CCB NNP_PMC,,[],,CC.* VBTR PRS CCB NNP_PMC
-500226,VB.* PRS_CCP VBAF CCB DTCP,,[],,VB.* PRS_CCP VBAF CCB DTCP
-500227,PR.* VB.* CCB DTCP NNC,,[],,PR.* VB.* CCB DTCP NNC
-500228,VB.* CC.* DTCP NNC CCB,,[],,VB.* CC.* DTCP NNC CCB
-500229,DT.* NN.* CCB NNC CCT,,[],,DT.* NN.* CCB NNC CCT
-500230,NN.* CC.* NNC CCB VBN_CCP,,[],,NN.* CC.* NNC CCB VBN_CCP
-500231,CC.* NN.* CCB VBN_CCP NNC_PMP,,[],,CC.* NN.* CCB VBN_CCP NNC_PMP
-500232,NN.* LM RBM VBAF CCT,,[],,NN.* LM RBM VBAF CCT
-500233,NN.* CC.* NNC CCB DTCP,,[],,NN.* CC.* NNC CCB DTCP
-500234,DT.* NN.* LM VBTR CCB,,[],,DT.* NN.* LM VBTR CCB
-500235,CC.* NN.* PMS NNC LM,,[],,CC.* NN.* PMS NNC LM
-500236,CC.* NN.* RB.* RBQ VBOF,,[],,CC.* NN.* RB.* RBQ VBOF
-500237,DT.* NN.* PMS NNC CCT,,[],,DT.* NN.* PMS NNC CCT
-500238,NN.* PM.* NNC CCT DTCP,,[],,NN.* PM.* NNC CCT DTCP
-500239,PM.* NN.* CCT DTCP NNC,,[],,PM.* NN.* CCT DTCP NNC
-500240,NN.* CC.* DTCP NNC CCB,,[],,NN.* CC.* DTCP NNC CCB
-500241,CC.* DT.* NNC CCB DTCP,,[],,CC.* DT.* NNC CCB DTCP
-500242,NN.* CC.* NNC NNC_CCP PMS,,[],,NN.* CC.* NNC NNC_CCP PMS
-500243,CC.* NN.* NNC_CCP PMS NNC,,[],,CC.* NN.* NNC_CCP PMS NNC
-500244,NN.* PM.* NNC CCT NNC,,[],,NN.* PM.* NNC CCT NNC
-500245,NN.* NN.* PMS NNC VBW,,[],,NN.* NN.* PMS NNC VBW
-500300,NN.* NN.* PMS NNC VBW,paa halamang-singaw paggamot Paunang paa,81.23273417253664,* halamang-singaw * Paunang *,NN.* halamang-singaw PMS Paunang VBW
-500246,NN.* PM.* NNC VBW CCT,,[],,NN.* PM.* NNC VBW CCT
-500247,VB.* PR.* PRI_CCP NNC NNC_CCP,,[],,VB.* PR.* PRI_CCP NNC NNC_CCP
-500248,PR.* PR.* NNC NNC_CCP PMS,,[],,PR.* PR.* NNC NNC_CCP PMS
-500249,PR.* NN.* NNC_CCP PM.* NNC,,[],,PR.* NN.* NNC_CCP PM.* NNC
-500250,NN.* NN.* PMS NNC CCT,,[],,NN.* NN.* PMS NNC CCT
-500251,NN.* PM.* NNC CCT PRSP_CCP,,[],,NN.* PM.* NNC CCT PRSP_CCP
-500252,PM.* NNC CCT PRSP_CCP DTCP,,[],,PM.* NNC CCT PRSP_CCP DTCP
-500253,NN.* CC.* PRSP_CCP DTCP NNC,,[],,NN.* CC.* PRSP_CCP DTCP NNC
-500254,NN.* NN.* PMS NN.* LM,,[],,NN.* NN.* PMS NN.* LM
-500255,NN.* CC.* NNC_CCP PMS NNC,,[],,NN.* CC.* NNC_CCP PMS NNC
-500256,CC.* NN.* PMS NNC CCT,,[],,CC.* NN.* PMS NNC CCT
-500257,DT.* NN.* NNC NNC_CCP PMS,,[],,DT.* NN.* NNC NNC_CCP PMS
-500258,JJ.* CCP NN.* CCT CCT,,[],,JJ.* CCP NN.* CCT CCT
-500259,PM.* NN.* CC.* NNC RBK,,[],,PM.* NN.* CC.* NNC RBK
-500260,NN.* CC.* NN.* RBK RBQ,,[],,NN.* CC.* NN.* RBK RBQ
-500261,RB.* RB.* VB.* DTC NNC,,[],,RB.* RB.* VB.* DTC NNC
-500262,VB.* CC.* CCT DTCP NNC_PMP,,[],,VB.* CC.* CCT DTCP NNC_PMP
-500263,CCB VB.* DTC JJCS_JJD CCP,,[],,CCB VB.* DTC JJCS_JJD CCP
-500264,VB.* PR.* DTCP NNC CCP,,[],,VB.* PR.* DTCP NNC CCP
-500265,NN.* CD.* NN.* DTCP NNC,,[],,NN.* CD.* NN.* DTCP NNC
-500301,NN.* CD.* NN.* DTCP NNC,pagsasanay (1) paksa (24) pambansang,80.4206953710746,* (1) * (24) *,NN.* (1) NN.* (24) NNC
-500266,CD.* NN.* DTCP NNC CCB,,[],,CD.* NN.* DTCP NNC CCB
-500302,CD.* NN.* DTCP NNC CCB,(1) paksa (24) pambansang sagisag,80.12960553628744,* * * * *,CD.* NN.* DTCP NNC CCB
-500267,NN.* DT.* NNC CCB NNC,,[],,NN.* DT.* NNC CCB NNC
-500303,NN.* DT.* NNC CCB NNC,paksa (24) pambansang sagisag (1.,82.92441766508655,* (24) * * (1.,NN.* (24) NNC CCB (1.
-500268,DT.* NN.* CCB NNC NNPA,,[],,DT.* NN.* CCB NNC NNPA
-500269,NN.* CC.* NNC NNPA CDB,,[],,NN.* CC.* NNC NNPA CDB
-500270,CC.* NN.* NN.* CDB NNPA,,[],,CC.* NN.* NN.* CDB NNPA
-500304,CC.* NN.* NN.* CDB NNPA,tula (8) pagsasanay (1) paksa,80.97187132729515,* (8) * (1) *,CC.* (8) NN.* (1) NNPA
-500271,NN.* NN.* CD.* NNPA DTCP,,[],,NN.* NN.* CD.* NNPA DTCP
+500314,RB.* RBQ VB.* DT.* DT.*,,[],,RB.* RBQ VB.* DT.* DT.*
+500315,DT.* CCR PMS JJD CC.*,,[],,DT.* CCR PMS JJD CC.*
+500359,DT.* CCR PMS JJD CC.*,ang pag-kakahiwahiwalay ng mga pulo,82.43091455872809,* pag-kakahiwahiwalay * * *,DT.* pag-kakahiwahiwalay PMS JJD CC.*
+500316,DT.* NNC CC.* PR.* LM,,[],,DT.* NNC CC.* PR.* LM
+500317,VBAF CC.* DT.* NN.* CC.*,,[],,VBAF CC.* DT.* NN.* CC.*
+500318,NN.* LM RBM VB.* CC.*,,[],,NN.* LM RBM VB.* CC.*
+500319,DT.* NNC LM VBTR CC.*,,[],,DT.* NNC LM VBTR CC.*
+500320,NNC_CCP PM.* NN.* CC.* DT.*,,[],,NNC_CCP PM.* NN.* CC.* DT.*
+500321,NNC_CCP PM.* NN.* CC.* NN.*,,[],,NNC_CCP PM.* NN.* CC.* NN.*
+500322,NNC_CCP PM.* NN.* VB.* CC.*,,[],,NNC_CCP PM.* NN.* VB.* CC.*
+500323,VBH PR.* PR.* NN.* NN.*,,[],,VBH PR.* PR.* NN.* NN.*
+500324,NNC_CCP PM.* NN.* CC.* PR.*,,[],,NNC_CCP PM.* NN.* CC.* PR.*
+500325,JJD CC.* NN.* CC.* CC.*,,[],,JJD CC.* NN.* CC.* CC.*
+500326,RB.* RBQ VB.* DT.* NN.*,,[],,RB.* RBQ VB.* DT.* NN.*
+500327,VBW CC.* CC.* DT.* NN.*_PM.*,,[],,VBW CC.* CC.* DT.* NN.*_PM.*
+500328,VBW DTC JJ.* CC.* VB.*,,[],,VBW DTC JJ.* CC.* VB.*
+500329,JJCS_JJD CC.* VB.* CC.* NN.*_PM.*,,[],,JJCS_JJD CC.* VB.* CC.* NN.*_PM.*
+500360,JJCS_JJD CC.* VB.* CC.* NN.*_PM.*,pinakamataas na magkasanib na densidad,82.70049646361628,* * * * *,JJCS_JJD CC.* VB.* CC.* NN.*_PM.*
+500330,VBH PRO_CCP DTCP NNC CC.*,,[],,VBH PRO_CCP DTCP NNC CC.*
+500331,NN.* CDB NNPA DTCP NNC,,[],,NN.* CDB NNPA DTCP NNC
+500361,NN.* CDB NNPA DTCP NNC,pagsasanay (1) paksa (24) pambansang,80.42068941061014,* * * * *,NN.* CDB NNPA DTCP NNC
+500332,CDB NNPA DT.* NN.* CC.*,,[],,CDB NNPA DT.* NN.* CC.*
+500362,CDB NNPA DT.* NN.* CC.*,(1) paksa (24) pambansang sagisag,80.12960824558948,* * * * *,CDB NNPA DT.* NN.* CC.*
+500333,CC.* NN.* NNPA CD.* NNPA,,[],,CC.* NN.* NNPA CD.* NNPA
+500363,CC.* NN.* NNPA CD.* NNPA,tula (8) pagsasanay (1) paksa,80.9718643734199,* * * * *,CC.* NN.* NNPA CD.* NNPA
+500334,NN.* NNPA CDB NNPA DTCP,,[],,NN.* NNPA CDB NNPA DTCP

@@ -1,8 +1,4 @@
 Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Final_Hybrid_N-Gram
-200001,DT.* JJ.*,,[],,DT.* JJ.*
-200002,JJ.* NN.*,,[],,JJ.* NN.*
-200003,DTC JJCS_JJD_CCP,,[],,DTC JJCS_JJD_CCP
-200004,JJCS_JJD_CCP NNC,,[],,JJCS_JJD_CCP NNC
 200001,PR.* NN.*_PM.*,,[],,PR.* NN.*_PM.*
 200002,JJ.* NN.*_PM.*,,[],,JJ.* NN.*_PM.*
 200003,NN.* PR.*_PM.*,,[],,NN.* PR.*_PM.*
@@ -19,5 +15,7 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 200014,VBN_CCP NNC_PMP,,[],,VBN_CCP NNC_PMP
 200015,JJCS_JJD_CCP NNC,,[],,JJCS_JJD_CCP NNC
 200016,JJD_CCP NNC_PMP,,[],,JJD_CCP NNC_PMP
-200017,JJ.* NNC_PMC,,[],,JJ.* NNC_PMC
-200018,JJ.* NNC_PMP,,[],,JJ.* NNC_PMP
+200033,JJD_CCP NN.*_PM.*,,[],,JJD_CCP NN.*_PM.*
+200034,NNC_CCP PR.*_PM.*,,[],,NNC_CCP PR.*_PM.*
+200035,VBTS_CCP NN.*_PM.*,,[],,VBTS_CCP NN.*_PM.*
+200036,JJCS_JJD_CCP NN.*,,[],,JJCS_JJD_CCP NN.*

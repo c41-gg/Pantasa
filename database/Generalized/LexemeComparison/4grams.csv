@@ -38,9 +38,9 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400037,RB.* RB.* CC.* PR.*,,[],,RB.* RB.* CC.* PR.*
 400038,RB.* CC.* PR.* NN.*_PM.*,,[],,RB.* CC.* PR.* NN.*_PM.*
 400039,DT.* CC.* PM.* JJ.*,,[],,DT.* CC.* PM.* JJ.*
-400416,DT.* CC.* PM.* JJ.*,ang pag-kakahiwahiwalay ng mga,81.75379310980875,* pag-kakahiwahiwalay ng mga,DT.* pag-kakahiwahiwalay ng mga
+400524,DT.* CC.* PM.* JJ.*,ang pag-kakahiwahiwalay ng mga,81.75379310980877,* pag-kakahiwahiwalay * *,DT.* pag-kakahiwahiwalay PM.* JJ.*
 400040,CC.* PM.* JJ.* CC.*,,[],,CC.* PM.* JJ.* CC.*
-400417,CC.* PM.* JJ.* CC.*,pag-kakahiwahiwalay ng mga pulo,80.92996535003049,pag-kakahiwahiwalay ng mga *,pag-kakahiwahiwalay ng mga CC.*
+400525,CC.* PM.* JJ.* CC.*,pag-kakahiwahiwalay ng mga pulo,80.92996643375123,pag-kakahiwahiwalay * * *,pag-kakahiwahiwalay PM.* JJ.* CC.*
 400041,CC.* DT.* NN.* LM,,[],,CC.* DT.* NN.* LM
 400042,CC.* VB.* RB.* DT.*,,[],,CC.* VB.* RB.* DT.*
 400043,CC.* VB.* PR.* PR.*,,[],,CC.* VB.* PR.* PR.*
@@ -214,13 +214,11 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400211,DT.* JJ.* PM.* JJ.*,,[],,DT.* JJ.* PM.* JJ.*
 400212,JJ.* NN.* CC.* NN.*,,[],,JJ.* NN.* CC.* NN.*
 400213,JJ.* NN.* CC.* NN.*_PM.*,,[],,JJ.* NN.* CC.* NN.*_PM.*
-400418,JJ.* NN.* CC.* NN.*_PM.*,sariwang pananaw sa histograpiya,83.18362286571893,"* * sa histograpiya,","JJ.* NN.* sa histograpiya,"
-400419,JJ.* NN.* CC.* NN.*_PM.*,sariwang pananaw sa histograpiya,81.6380603799806,* * sa histograpiya,JJ.* NN.* sa histograpiya
+400526,JJ.* NN.* CC.* NN.*_PM.*,sariwang pananaw sa histograpiya,83.18362286571896,* * * *,JJ.* NN.* CC.* NN.*_PM.*
 400214,VB.* DT.* NN.* PM.*,,[],,VB.* DT.* NN.* PM.*
 400215,CC.* VB.* CC.* PR.*,,[],,CC.* VB.* CC.* PR.*
 400216,VB.* CC.* PR.* JJ.*,,[],,VB.* CC.* PR.* JJ.*
-400420,VB.* CC.* PR.* JJ.*,pumili ng isang napaka-kumplikado,84.46270413629722,"* ng isang napaka-kumplikado,","VB.* ng isang napaka-kumplikado,"
-400421,VB.* CC.* PR.* JJ.*,pumili ng isang napaka-kumplikado,83.28854693411819,* ng isang napaka-kumplikado,VB.* ng isang napaka-kumplikado
+400527,VB.* CC.* PR.* JJ.*,pumili ng isang napaka-kumplikado,84.46270413629719,* * * *,VB.* CC.* PR.* JJ.*
 400217,RB.* PR.* VB.* DT.*,,[],,RB.* PR.* VB.* DT.*
 400218,DT.* NN.* VB.* CC.*,,[],,DT.* NN.* VB.* CC.*
 400219,VB.* DT.* NN.* VB.*,,[],,VB.* DT.* NN.* VB.*
@@ -244,7 +242,7 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400237,PR.* DT.* NN.* LM,,[],,PR.* DT.* NN.* LM
 400238,RB.* VB.* CC.* PR.*,,[],,RB.* VB.* CC.* PR.*
 400239,VB.* CC.* DT.* JJ.*,,[],,VB.* CC.* DT.* JJ.*
-400422,VB.* CC.* DT.* JJ.*,gumawa ng mga pinaka-magkakaibang,81.76324909537108,* ng mga pinaka-magkakaibang,VB.* ng mga pinaka-magkakaibang
+400528,VB.* CC.* DT.* JJ.*,gumawa ng mga pinaka-magkakaibang,81.76324801165026,* * * *,VB.* CC.* DT.* JJ.*
 400240,CC.* NN.* CC.* JJ.*,,[],,CC.* NN.* CC.* JJ.*
 400241,CC.* CC.* VB.* DT.*,,[],,CC.* CC.* VB.* DT.*
 400242,DT.* NN.* LM CC.*,,[],,DT.* NN.* LM CC.*
@@ -264,9 +262,9 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400256,RBQ VBW DTC DTCP,,[],,RBQ VBW DTC DTCP
 400257,NNC CCB DTCP NNC_PMC,,[],,NNC CCB DTCP NNC_PMC
 400258,DTC CCR PMS JJD,,[],,DTC CCR PMS JJD
-400423,DTC CCR PMS JJD,ang pag-kakahiwahiwalay ng mga,81.75379310980875,* pag-kakahiwahiwalay ng mga,DTC pag-kakahiwahiwalay ng mga
+400529,DTC CCR PMS JJD,ang pag-kakahiwahiwalay ng mga,81.75379310980877,* pag-kakahiwahiwalay * *,DTC pag-kakahiwahiwalay PMS JJD
 400259,CCR PMS JJD CCB,,[],,CCR PMS JJD CCB
-400424,CCR PMS JJD CCB,pag-kakahiwahiwalay ng mga pulo,80.92996535003049,pag-kakahiwahiwalay ng mga *,pag-kakahiwahiwalay ng mga CCB
+400530,CCR PMS JJD CCB,pag-kakahiwahiwalay ng mga pulo,80.92996643375123,pag-kakahiwahiwalay * * *,pag-kakahiwahiwalay PMS JJD CCB
 400260,VBAF CCT CDB NNC,,[],,VBAF CCT CDB NNC
 400261,VBW DTC NNC CCB,,[],,VBW DTC NNC CCB
 400262,RBK RBQ DTC VBTR,,[],,RBK RBQ DTC VBTR
@@ -346,77 +344,39 @@ Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Fin
 400336,CDB NNPA DTCP NNC,,[],,CDB NNPA DTCP NNC
 400337,NNPA DTCP NNC CCB,,[],,NNPA DTCP NNC CCB
 400338,CCB NNC NNPA CDB,,[],,CCB NNC NNPA CDB
-400339,CC.* NN.* CCB DTCP,,[],,CC.* NN.* CCB DTCP
-400340,VB.* DT.* DTCP NNC,,[],,VB.* DT.* DTCP NNC
-400341,DT.* DT.* NNC CCT,,[],,DT.* DT.* NNC CCT
-400342,CC.* DT.* NNC CCT,,[],,CC.* DT.* NNC CCT
-400343,RB.* RB.* VB.* DTC,,[],,RB.* RB.* VB.* DTC
-400344,RB.* VB.* DTC DTCP,,[],,RB.* VB.* DTC DTCP
-400345,NN.* CC.* DTCP NNC_PMC,,[],,NN.* CC.* DTCP NNC_PMC
-400346,DT.* CCR PM.* JJD,,[],,DT.* CCR PM.* JJD
-400347,CC.* PMS JJD CCB,,[],,CC.* PMS JJD CCB
-400348,VB.* CC.* CDB NNC,,[],,VB.* CC.* CDB NNC
-400349,VB.* DT.* NNC CCB,,[],,VB.* DT.* NNC CCB
-400350,RB.* RB.* DT.* VBTR,,[],,RB.* RB.* DT.* VBTR
-400351,CC.* NN.* PRO CCT,,[],,CC.* NN.* PRO CCT
-400352,PR.* PR.* NN.* CCP,,[],,PR.* PR.* NN.* CCP
-400353,JJ.* CCP VB.* DTC,,[],,JJ.* CCP VB.* DTC
-400354,DT.* PRI CCT DTCP,,[],,DT.* PRI CCT DTCP
-400355,VB.* PR.* CCB NNC,,[],,VB.* PR.* CCB NNC
-400356,DT.* NN.* CC.* PRO,,[],,DT.* NN.* CC.* PRO
-400357,CC.* VB.* LM VBTF,,[],,CC.* VB.* LM VBTF
-400358,VB.* LM VB.* PRP,,[],,VB.* LM VB.* PRP
-400359,CC.* PMS NNC CCB,,[],,CC.* PMS NNC CCB
-400360,LM RBF RB.* PRS,,[],,LM RBF RB.* PRS
-400361,VB.* RB.* DT.* NNP,,[],,VB.* RB.* DT.* NNP
-400362,CC.* VB.* PR.* CCB,,[],,CC.* VB.* PR.* CCB
-400363,VB.* PR.* CCB NNP_PMC,,[],,VB.* PR.* CCB NNP_PMC
-400364,VB.* PR.* VBAF CCB,,[],,VB.* PR.* VBAF CCB
-400365,PR.* VBAF CCB DTCP,,[],,PR.* VBAF CCB DTCP
-400366,VB.* CC.* DTCP NNC,,[],,VB.* CC.* DTCP NNC
-400367,CC.* NN.* CCB VBN_CCP,,[],,CC.* NN.* CCB VBN_CCP
-400368,NN.* CC.* VBN_CCP NNC_PMP,,[],,NN.* CC.* VBN_CCP NNC_PMP
-400369,DT.* NN.* CC.* VBOF,,[],,DT.* NN.* CC.* VBOF
-400370,DT.* DT.* NNC LM,,[],,DT.* DT.* NNC LM
-400371,DT.* NNC LM RBM,,[],,DT.* NNC LM RBM
-400372,NN.* LM RBM VBAF,,[],,NN.* LM RBM VBAF
-400373,VB.* DTC PRI_CCP NNC,,[],,VB.* DTC PRI_CCP NNC
-400374,CC.* DT.* NNC CCB,,[],,CC.* DT.* NNC CCB
-400375,DT.* NNC LM VBTR,,[],,DT.* NNC LM VBTR
-400376,NN.* LM VBTR CCB,,[],,NN.* LM VBTR CCB
-400377,CC.* NN.* PMS NNC,,[],,CC.* NN.* PMS NNC
-400378,NN.* PM.* NNC LM,,[],,NN.* PM.* NNC LM
-400380,CC.* NN.* RB.* RBQ,,[],,CC.* NN.* RB.* RBQ
-400381,NN.* RB.* RB.* VBOF,,[],,NN.* RB.* RB.* VBOF
-400382,DT.* DTCP NNC_CCP PMS,,[],,DT.* DTCP NNC_CCP PMS
-400383,DT.* NN.* PMS NNC,,[],,DT.* NN.* PMS NNC
-400384,NN.* PM.* NNC CCT,,[],,NN.* PM.* NNC CCT
-400385,PM.* NN.* CC.* DTCP,,[],,PM.* NN.* CC.* DTCP
-400386,CC.* NN.* NNC_CCP PMS,,[],,CC.* NN.* NNC_CCP PMS
-400387,JJ.* CC.* NNC CCB,,[],,JJ.* CC.* NNC CCB
-400388,CC.* VB.* DTC NNC,,[],,CC.* VB.* DTC NNC
-400389,DT.* NNC NNC_CCP PMS,,[],,DT.* NNC NNC_CCP PMS
-400390,NN.* PM.* NNC VBW,,[],,NN.* PM.* NNC VBW
-400391,PM.* NN.* VB.* CCT,,[],,PM.* NN.* VB.* CCT
-400392,VB.* PRS_CCP PRI_CCP NNC,,[],,VB.* PRS_CCP PRI_CCP NNC
-400393,PR.* PR.* NNC NNC_CCP,,[],,PR.* PR.* NNC NNC_CCP
-400394,PR.* NN.* NNC_CCP PMS,,[],,PR.* NN.* NNC_CCP PMS
-400395,PM.* NNC CC.* PRSP_CCP,,[],,PM.* NNC CC.* PRSP_CCP
-400396,NN.* CC.* PRSP_CCP DTCP,,[],,NN.* CC.* PRSP_CCP DTCP
-400397,CC.* PR.* DTCP NNC,,[],,CC.* PR.* DTCP NNC
-400398,NN.* CC.* NNC_CCP PMS,,[],,NN.* CC.* NNC_CCP PMS
-400399,JJ.* CCP NN.* CCT,,[],,JJ.* CCP NN.* CCT
-400400,DT.* JJCS PMS JJD_CCP,,[],,DT.* JJCS PMS JJD_CCP
-400401,JJ.* NN.* CCB NNC_PMC,,[],,JJ.* NN.* CCB NNC_PMC
-400402,CC.* CC.* DTCP NNC_PMP,,[],,CC.* CC.* DTCP NNC_PMP
-400403,NN.* RB.* RB.* DTC,,[],,NN.* RB.* RB.* DTC
-400404,CC.* PR.* NNC CCP,,[],,CC.* PR.* NNC CCP
-400405,CCB VB.* DTC JJCS_JJD,,[],,CCB VB.* DTC JJCS_JJD
-400406,CC.* VB.* CCP NNC_PMC,,[],,CC.* VB.* CCP NNC_PMC
-400407,DT.* NN.* CC.* NNC_PMP,,[],,DT.* NN.* CC.* NNC_PMP
-400408,PR.* JJD_CCP NNC DTC,,[],,PR.* JJD_CCP NNC DTC
-400410,VB.* PR.* DTCP NNC,,[],,VB.* PR.* DTCP NNC
-400411,PR.* DT.* NN.* CCP,,[],,PR.* DT.* NN.* CCP
-400412,CD.* NN.* DT.* NNC,,[],,CD.* NN.* DT.* NNC
-400413,NN.* DT.* NNC CCB,,[],,NN.* DT.* NNC CCB
-400414,CC.* NN.* NN.* CDB,,[],,CC.* NN.* NN.* CDB
+400487,VB.* DTC DT.* NN.*,,[],,VB.* DTC DT.* NN.*
+400488,RB.* RBQ VB.* DT.*,,[],,RB.* RBQ VB.* DT.*
+400489,DT.* CCR PMS JJD,,[],,DT.* CCR PMS JJD
+400531,DT.* CCR PMS JJD,ang pag-kakahiwahiwalay ng mga,81.75379310980877,* pag-kakahiwahiwalay * *,DT.* pag-kakahiwahiwalay PMS JJD
+400490,VBAF CC.* CD.* NN.*,,[],,VBAF CC.* CD.* NN.*
+400491,VBW DTC NN.* CC.*,,[],,VBW DTC NN.* CC.*
+400492,RB.* RBQ DTC VB.*,,[],,RB.* RBQ DTC VB.*
+400493,PR.* PR.* NNC CC.*,,[],,PR.* PR.* NNC CC.*
+400494,JJD CC.* VB.* DT.*,,[],,JJD CC.* VB.* DT.*
+400495,DT.* PRI CCT DT.*,,[],,DT.* PRI CCT DT.*
+400496,VBTS PR.* CC.* NN.*,,[],,VBTS PR.* CC.* NN.*
+400497,DT.* NNC CC.* PR.*,,[],,DT.* NNC CC.* PR.*
+400498,VB.* LM VBTF PR.*,,[],,VB.* LM VBTF PR.*
+400499,LM RBF RBI PR.*,,[],,LM RBF RBI PR.*
+400500,VB.* RBI DTP NNP,,[],,VB.* RBI DTP NNP
+400501,VBTR PR.* CC.* NN.*_PM.*,,[],,VBTR PR.* CC.* NN.*_PM.*
+400502,VBAF CC.* DT.* NN.*,,[],,VBAF CC.* DT.* NN.*
+400503,DT.* NN.* LM RBM,,[],,DT.* NN.* LM RBM
+400504,NN.* LM RBM VB.*,,[],,NN.* LM RBM VB.*
+400505,VB.* DTC PRI_CCP NNC,,[],,VB.* DTC PRI_CCP NNC
+400506,DT.* NNC LM VBTR,,[],,DT.* NNC LM VBTR
+400507,NN.* LM VBTR CC.*,,[],,NN.* LM VBTR CC.*
+400508,NNC_CCP PM.* NN.* LM,,[],,NNC_CCP PM.* NN.* LM
+400510,NNC_CCP PM.* NN.* CC.*,,[],,NNC_CCP PM.* NN.* CC.*
+400511,JJCS_JJD CC.* NN.* CC.*,,[],,JJCS_JJD CC.* NN.* CC.*
+400512,DT.* NNC NNC_CCP PMS,,[],,DT.* NNC NNC_CCP PMS
+400513,NNC_CCP PM.* NN.* VB.*,,[],,NNC_CCP PM.* NN.* VB.*
+400514,VBH PR.* PR.* NN.*,,[],,VBH PR.* PR.* NN.*
+400515,JJD CC.* NN.* CC.*,,[],,JJD CC.* NN.* CC.*
+400516,JJCS_JJD_CCP NN.* CC.* NN.*_PM.*,,[],,JJCS_JJD_CCP NN.* CC.* NN.*_PM.*
+400517,CC.* PRI_CCP NNC CC.*,,[],,CC.* PRI_CCP NNC CC.*
+400518,VBW DTC JJ.* CC.*,,[],,VBW DTC JJ.* CC.*
+400519,CCP VBAF CC.* NN.*_PM.*,,[],,CCP VBAF CC.* NN.*_PM.*
+400520,DT.* NNC CCT NN.*_PM.*,,[],,DT.* NNC CCT NN.*_PM.*
+400521,CDB NNPA DT.* NN.*,,[],,CDB NNPA DT.* NN.*
+400522,CC.* NN.* NNPA CD.*,,[],,CC.* NN.* NNPA CD.*
