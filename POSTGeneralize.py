@@ -10,17 +10,28 @@ roberta_model = AutoModelForMaskedLM.from_pretrained(tagalog_roberta_model)
 comparison_dict_file = "database/PostComparisonDictionary.txt"
 
 def load_csv(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        reader = csv.DictReader(file)
-        data = [row for row in reader]
-    return data
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            data = [row for row in reader]
+            if not data:
+                raise ValueError(f"No data found in {file_path}. Check if file is empty.")
+        return data
+    except FileNotFoundError:
+        print(f"Error: File not found - {file_path}")
+        return []
+    except ValueError as ve:
+        print(ve)
+        return []
+    except Exception as e:
+        print(f"An error occurred while loading {file_path}: {e}")
+        return []
 
 def load_comparison_dictionary_txt(file_path):
     comparisons = {}
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             for line in file:
-                # Skip empty or malformed lines
                 parts = line.strip().split("::")
                 if len(parts) == 3:
                     rough_pos, detailed_pos_instance, pattern_id = parts
@@ -28,7 +39,7 @@ def load_comparison_dictionary_txt(file_path):
                 else:
                     print(f"Skipping malformed line: {line.strip()}")
     except FileNotFoundError:
-        pass  # If the file doesn't exist, return an empty dictionary
+        print(f"Comparison dictionary file not found: {file_path}")
     return comparisons
 
 
@@ -97,11 +108,9 @@ def compare_pos_sequences(rough_pos, detailed_pos, model, tokenizer, threshold=0
     detailed_scores = []
     
     # Compute cumulative scores for each token
-    for i in range(len(rough_tokens)):
-        rough_score = compute_mposm_scores(' '.join(rough_tokens), model, tokenizer, i)
-        detailed_score = compute_mposm_scores(' '.join(detailed_tokens), model, tokenizer, i)
-        rough_scores.append(rough_score)
-        detailed_scores.append(detailed_score)
+    rough_scores = compute_mposm_scores(' '.join(rough_tokens), model, tokenizer)
+    detailed_scores = compute_mposm_scores(' '.join(detailed_tokens), model, tokenizer)
+
 
     comparison_matrix = []
     for i in range(len(detailed_tokens)):
@@ -307,7 +316,6 @@ def process_pos_patterns(pos_patterns_file, generated_ngrams_file, pattern_file,
         for new_pattern in new_patterns:
             writer.writerow(new_pattern)
 
-# Example usage
 for n in range(2, 8):
     ngram_csv = 'database/ngrams.csv'
     pattern_csv = f'database/POS/{n}grams.csv'

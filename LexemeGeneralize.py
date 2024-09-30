@@ -21,6 +21,30 @@ def load_csv(file_path):
     print(f"Data loaded from {file_path}. Number of rows: {len(data)}")
     return data
 
+def load_lexeme_comparison_dictionary(file_path):
+    comparisons = {}
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            for line in file:
+                parts = line.strip().split("::")
+                if len(parts) == 3:
+                    rough_pos, lexeme_ngram, pattern_id = parts
+                    comparisons[(rough_pos, lexeme_ngram)] = pattern_id
+                else:
+                    print(f"Skipping malformed line: {line.strip()}")
+    except FileNotFoundError:
+        print(f"Lexeme comparison dictionary file not found: {file_path}")
+    return comparisons
+
+def save_lexeme_comparison_dictionary(file_path, dictionary):
+    try:
+        with open(file_path, 'w', encoding='utf-8') as file:
+            for key, value in dictionary.items():
+                rough_pos, lexeme_ngram = key
+                file.write(f"{rough_pos}::{lexeme_ngram}::{value}\n")
+    except Exception as e:
+        print(f"Error writing lexeme comparison dictionary: {e}")
+
 def convert_id_array(id_array_str):
     if id_array_str is None:
         return []  # Return an empty list or handle it accordingly
@@ -29,137 +53,66 @@ def convert_id_array(id_array_str):
 def load_and_convert_csv(file_path):
     data = load_csv(file_path)
     for entry in data:
-        # Debugging print statement
         print(f"Processing entry: {entry}")
         entry['ID_Array'] = convert_id_array(entry.get('ID_Array', ''))
     return data
-def print_tokenization(sentence, tokenizer):
-    tokens = tokenizer.tokenize(sentence)
-    print(f"Sentence: {sentence}")
-    print(f"Tokens: {tokens}")
-    return tokens
 
-def print_model_outputs(sentence, model, tokenizer):
-    inputs = tokenizer(sentence, return_tensors="pt")
-    with torch.no_grad():
-        outputs = model(**inputs)
-    logits = outputs.logits
-    probs = torch.softmax(logits, dim=-1)
-    print(f"Logits: {logits}")
-    print(f"Probabilities: {probs}")
-
-def compute_mlm_scores_ngram(sentence, model, tokenizer):
-    # Tokenize the input sentence
-    words = sentence.split()
-    
+def compute_mlm_score(sentence, model, tokenizer):
+    tokens = tokenizer(sentence, return_tensors="pt")
+    input_ids = tokens['input_ids'][0]  # Get the input IDs
     scores = []
-    min_score = float('inf')
-    max_score = float('-inf')
+    
+    for i in range(1, input_ids.size(0) - 1):  # Skip [CLS] and [SEP] tokens
+        masked_input_ids = input_ids.clone()
+        masked_input_ids[i] = tokenizer.mask_token_id  # Mask the current token
 
-    # Iterate through each word in the sentence to create subsentences and mask the word at the current index
-    for index in range(len(words)):
-        # Create a sub-sentence up to the current word
-        sub_sentence = ' '.join(words[:index + 1])
-        
-        # Tokenize the sub-sentence and replace the word at the current index with [MASK]
-        tokens = tokenizer(sub_sentence, return_tensors="pt")
-        masked_input_ids = tokens['input_ids'].clone()
-        
-        # Find the token ID corresponding to the word at the current index
-        word_token_index = tokens['input_ids'][0].size(0) - 2  # Get the second-to-last token (ignores [SEP] and [CLS])
-        masked_input_ids[0, word_token_index] = tokenizer.mask_token_id  # Mask the indexed word
-
-        # Get model output for masked sub-sentence
         with torch.no_grad():
-            outputs = model(masked_input_ids)
+            outputs = model(masked_input_ids.unsqueeze(0))  # Add batch dimension
+
+        logits = outputs.logits[0, i]
+        probs = torch.softmax(logits, dim=-1)
+
+        original_token_id = input_ids[i]
+        score = probs[original_token_id].item()  # Probability of the original word when masked
         
-        # Extract the logits for the masked word and calculate its probability
-        logits = outputs.logits
-        word_token_id = tokens['input_ids'][0, word_token_index]  # The original token ID of the indexed word
-        probs = torch.softmax(logits[0, word_token_index], dim=-1)
-        score = probs[word_token_id].item()  # Probability of the original word when masked
-        
-        # Append the score and track the min/max scores
         scores.append(score)
-        if score > max_score:
-            max_score = score
-        if score < min_score:
-            min_score = score
 
-    # Compute the average score
-    average_score = sum(scores) / len(scores)
+    average_score = sum(scores) / len(scores) * 100  # Convert to percentage
+    return average_score, scores
 
-    # Return the scores along with min, max, and average scores
-    return {
-        'average_score': average_score * 100,  # Return as percentage
-        'min_score': min_score,
-        'max_score': max_score,
-        'scores': scores  # List of scores for each word
-    } 
+def compute_word_score(word, sentence, model, tokenizer):
+    # Split the sentence into words
+    words = sentence.split()
 
-def compute_word_scores(word, sentence, model, tokenizer):
-    # Tokenize the full sentence
-    inputs = tokenizer(sentence, return_tensors="pt")
+    # Check if the word is in the sentence
+    if word not in words:
+        raise ValueError(f"The word '{word}' is not found in the sentence.")
+
+    # Find the index of the word in the sentence
+    index = words.index(word)
+
+    # Create a sub-sentence up to the current word
+    sub_sentence = ' '.join(words[:index + 1])
     
+    # Tokenize the sub-sentence and mask the word at the current index
+    tokens = tokenizer(sub_sentence, return_tensors="pt")
+    masked_input_ids = tokens['input_ids'].clone()
+
+    # Find the token ID corresponding to the word at the current index
+    word_token_index = tokens['input_ids'][0].size(0) - 2  # Get second-to-last token (ignores [SEP] and [CLS])
+    masked_input_ids[0, word_token_index] = tokenizer.mask_token_id  # Mask the indexed word
+
+    # Get model output for masked sub-sentence
     with torch.no_grad():
-        outputs = model(**inputs)
+        outputs = model(masked_input_ids)
     
+    # Extract the logits for the masked word and calculate its probability
     logits = outputs.logits
-    input_ids = inputs['input_ids'].squeeze()
-    probs = torch.softmax(logits, dim=-1).squeeze()
+    word_token_id = tokens['input_ids'][0, word_token_index]  # The original token ID of the indexed word
+    probs = torch.softmax(logits[0, word_token_index], dim=-1)
+    score = probs[word_token_id].item()  # Probability of the original word when masked
 
-    # Tokenize the word separately
-    word_tokens = tokenizer.tokenize(word)
-    word_token_ids = tokenizer.convert_tokens_to_ids(word_tokens)
-
-    # Tokenize the full sentence and get token IDs
-    sentence_tokens = tokenizer.tokenize(sentence)
-    sentence_token_ids = tokenizer.convert_tokens_to_ids(sentence_tokens)
-    
-    # Compute MLM score for the sentence and get the score array
-    sentence_mlm_score, min_score, max_score, score_array = compute_mlm_score(sentence, model, tokenizer)
-    
-    # Map token IDs to their MLM scores
-    token_id_to_prob = {token_id: score_array[i] for i, token_id in enumerate(sentence_token_ids)}
-
-    # Compute contextual probability for each token in the word
-    word_scores = []
-    for token in word_tokens:
-        # Convert token to ID
-        token_id = tokenizer.convert_tokens_to_ids(token)
-        if token_id in token_id_to_prob:
-            token_prob = token_id_to_prob[token_id]
-            word_scores.append(token_prob)
-        else:
-            # Handle tokens with the "Ġ" prefix
-            token_with_prefix = f"Ġ{token}"
-            token_id_with_prefix = tokenizer.convert_tokens_to_ids(token_with_prefix)
-            if token_id_with_prefix in token_id_to_prob:
-                token_prob = token_id_to_prob[token_id_with_prefix]
-                word_scores.append(token_prob)
-            else:
-                print(f"Token ID {token_id} or {token_id_with_prefix} for '{token}' not found in token_id_to_prob.")
-
-    # Print debugging information
-    print(f"Word tokens: {word_tokens}")
-    print(f"Word token IDs: {word_token_ids}")
-    print(f"Sentence tokens: {sentence_tokens}")
-    print(f"Sentence token IDs: {sentence_token_ids}")
-    print(f"Token ID to Probability Mapping: {token_id_to_prob}")
-    print(f"Word Scores: {word_scores}")
-
-    # Normalize the scores
-    if word_scores:
-        if max_score > min_score:
-            normalized_scores = [(score - min_score) / (max_score - min_score) for score in word_scores]
-        else:
-            normalized_scores = [0.5] * len(word_scores)
-        
-        average_normalized_score = sum(normalized_scores) / len(normalized_scores) * 100  # Convert to percentage
-    else:
-        average_normalized_score = 0
-
-    return average_normalized_score
+    return score * 100  # Return as a percentage
 
 def load_existing_results(output_file):
     if not os.path.exists(output_file):
@@ -170,9 +123,6 @@ def load_existing_results(output_file):
         existing_ngrams = {row['Final_Hybrid_N-Gram'] for row in reader}
     return existing_ngrams
 
-def pattern_exists(pos_ngram, pos_comparison_results, key):
-    return any(result[key] == pos_ngram for result in pos_comparison_results)
-
 def get_latest_pattern_id(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -181,11 +131,11 @@ def get_latest_pattern_id(file_path):
             return max(pattern_ids, default=0)
     except FileNotFoundError:
         return 0
-    
+
 def generate_pattern_id(counter):
     return f"{counter:06d}"
 
-def generalize_patterns(ngram_list_file, pos_patterns_file, id_array_file, output_file, model, tokenizer, threshold=80.0):
+def generalize_patterns(ngram_list_file, pos_patterns_file, id_array_file, output_file, lexeme_comparison_dict_file, model, tokenizer, threshold=80.0):
     print("Loading ngram list...")
     ngram_list = load_csv(ngram_list_file)
     print("Loading POS patterns...")
@@ -193,14 +143,22 @@ def generalize_patterns(ngram_list_file, pos_patterns_file, id_array_file, outpu
     print("Loading ID array data...")
     id_array_data = load_and_convert_csv(id_array_file)
     
+    seen_lexeme_comparisons = load_lexeme_comparison_dictionary(lexeme_comparison_dict_file)
+
     latest_pattern_id_input = get_latest_pattern_id(pos_patterns_file)
     latest_pattern_id_output = get_latest_pattern_id(output_file)
     latest_pattern_id = max(latest_pattern_id_input, latest_pattern_id_output)
     pattern_counter = latest_pattern_id + 1
 
-    
-    pos_comparison_results = []
     existing_hybrid_ngrams = load_existing_results(output_file)
+
+    try:
+        with open(output_file, 'r', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            pos_comparison_results = [row for row in reader]
+    except FileNotFoundError:
+        pos_comparison_results = []  # If file doesn't exist, initialize with an empty list
+
     pos_patterns_dict = {entry['Pattern_ID']: entry['POS_N-Gram'] for entry in pos_patterns}
 
     for id_array_index, id_array_entry in enumerate(id_array_data):
@@ -211,15 +169,8 @@ def generalize_patterns(ngram_list_file, pos_patterns_file, id_array_file, outpu
             print(f"No POS pattern found for Pattern_ID {pattern_id}. Skipping...")
             continue
 
-        if not pattern_exists(rough_pos, pos_comparison_results, 'POS_N-Gram'):
-            pos_comparison_results.append({
-                'Pattern_ID': pattern_id,
-                'POS_N-Gram': rough_pos,
-                'Lexeme_N-Gram': '',
-                'MLM_Scores': [],
-                'Comparison_Replacement_Matrix': '',
-                'Final_Hybrid_N-Gram': rough_pos
-            })
+        # Initialize a flag to track if we have successful comparisons
+        successful_comparisons = False
 
         for instance_index, instance_id in enumerate(id_array_entry['ID_Array']):
             instance_id = instance_id.zfill(6)
@@ -230,24 +181,24 @@ def generalize_patterns(ngram_list_file, pos_patterns_file, id_array_file, outpu
                 print(f"No instance found for ID {instance_id}.")
                 continue
 
-            word_ngram_sentence = instance['N-Gram']
-            lemma_ngram_sentence = instance['Lemma_N-Gram']
+            lemma_ngram_sentence = instance.get('Lemma_N-Gram')  # Use `.get()` to avoid KeyError
+            if not lemma_ngram_sentence:
+                print(f"No lemma ngram sentence found for instance ID {instance_id}. Skipping...")
+                continue
 
-            for ngram_sentence, ngram_type in [(word_ngram_sentence, 'word'), (lemma_ngram_sentence, 'lemma')]:
-                if not ngram_sentence:
-                    print(f"No {ngram_type} ngram sentence found for instance ID {instance_id}. Skipping...")
-                    continue
-
-                print(f"Computing MLM score for {ngram_type} ngram sentence: {ngram_sentence}...")
-                initial_mlm_score = compute_mlm_score(ngram_sentence, model, tokenizer)
+            comparison_key = (rough_pos, lemma_ngram_sentence)
+            if comparison_key not in seen_lexeme_comparisons:
+                print(f"Computing MLM score for lemma ngram sentence: {lemma_ngram_sentence}...")
+                initial_mlm_score = compute_mlm_score(lemma_ngram_sentence, model, tokenizer)
                 sequence_mlm_score = initial_mlm_score[0]
                 print(f"Sequence MLM score: {sequence_mlm_score}")
 
                 if sequence_mlm_score >= threshold:
+                    successful_comparisons = True  # Flagging that a successful comparison was made
                     print(f"Sequence MLM score {sequence_mlm_score} meets the threshold {threshold}. Computing individual word scores...")
-                    comparison_matrix = ['*'] * len(ngram_sentence.split())
+                    comparison_matrix = ['*'] * len(lemma_ngram_sentence.split())
                     new_pattern = rough_pos.split()
-                    words = ngram_sentence.split()
+                    words = lemma_ngram_sentence.split()
                     rough_pos_tokens = rough_pos.split()
 
                     if len(words) != len(rough_pos_tokens):
@@ -255,7 +206,7 @@ def generalize_patterns(ngram_list_file, pos_patterns_file, id_array_file, outpu
                         continue
 
                     for i, (pos_tag, word) in enumerate(zip(rough_pos_tokens, words)):
-                        word_score = compute_word_scores(word, ngram_sentence, model, tokenizer)
+                        word_score = compute_word_score(word, lemma_ngram_sentence, model, tokenizer)
                         print(f"Word '{word}' average score: {word_score}")
                         if word_score >= threshold:
                             new_pattern[i] = word
@@ -277,33 +228,42 @@ def generalize_patterns(ngram_list_file, pos_patterns_file, id_array_file, outpu
                             'Comparison_Replacement_Matrix': ' '.join(comparison_matrix),
                             'Final_Hybrid_N-Gram': final_hybrid_ngram
                         })
+                        seen_lexeme_comparisons[comparison_key] = new_pattern_id  # Update the comparison dictionary
                     else:
                         print(f"Hybrid ngram '{final_hybrid_ngram}' already exists. Skipping...")
+                else:
+                    print(f"Sequence MLM score {sequence_mlm_score} does not meet the threshold {threshold}. Skipping...")
+            else:
+                print(f"Comparison already done for rough POS - {rough_pos} and lexeme N-Gram - {lemma_ngram_sentence}")
 
-    # Read existing output data to preserve old patterns
-    try:
-        with open(output_file, 'r', encoding='utf-8') as file:
-            reader = csv.DictReader(file)
-            existing_output_data = [row for row in reader]
-    except FileNotFoundError:
-        existing_output_data = []
+        # If no successful comparison was made, still append the POS pattern without any final hybrid n-gram
+        if not successful_comparisons:
+            pos_comparison_results.append({
+                'Pattern_ID': pattern_id,
+                'POS_N-Gram': rough_pos,
+                'Lexeme_N-Gram': '',  # No lexeme comparison succeeded
+                'MLM_Scores': '',
+                'Comparison_Replacement_Matrix': '',
+                'Final_Hybrid_N-Gram': rough_pos  # Keep the original POS pattern
+            })
 
-    # Write updated results to the output file
+    save_lexeme_comparison_dictionary(lexeme_comparison_dict_file, seen_lexeme_comparisons)
+
     with open(output_file, 'w', newline='', encoding='utf-8') as file:
         fieldnames = ['Pattern_ID', 'POS_N-Gram', 'Lexeme_N-Gram', 'MLM_Scores', 'Comparison_Replacement_Matrix', 'Final_Hybrid_N-Gram']
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerows(existing_output_data + pos_comparison_results)
+        writer.writerows(pos_comparison_results)
 
     print(f"Results saved to {output_file}")
 
-# Example usage
 for n in range(2, 8):
     ngram_list_file = 'database/ngrams.csv'
     pos_patterns_file = f'database/Generalized/POSTComparison/{n}grams.csv'
-    id_array_file =  f'database/POS/{n}grams.csv'
+    id_array_file = f'database/POS/{n}grams.csv'
     output_file = f'database/Generalized/LexemeComparison/{n}grams.csv'
+    comparison_dict_file = 'database/LexComparisonDictionary.txt'
 
     print(f"Starting generalization for {n}-grams...")
-    generalize_patterns(ngram_list_file, pos_patterns_file, id_array_file, output_file, roberta_model, roberta_tokenizer)
+    generalize_patterns(ngram_list_file, pos_patterns_file, id_array_file, output_file, comparison_dict_file, roberta_model, roberta_tokenizer)
     print(f"Finished generalization for {n}-grams.")
