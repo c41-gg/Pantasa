@@ -11,3 +11,4 @@ nlu
 sagemaker
 sagemaker.huggingface
 spacy
+pyspark
