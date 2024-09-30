@@ -3,6 +3,7 @@ _pycache_/
 tl_dedup.txt.gz
 dnnl.lib 
 torch_cpu.dll
-newsph/
+dataset/newsph/
 MPoSM/newsph.txt
 dataset_extract.py
+Modules/_pycache_/
