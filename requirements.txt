@@ -1,0 +1,13 @@
+pandas
+os
+sys
+csv
+transformers
+torch
+collections
+subprocess
+re
+nlu
+sagemaker
+sagemaker.huggingface
+spacy
