@@ -1,7 +1,7 @@
-
+venv/
+_pycache_/
 tl_dedup.txt.gz
 dnnl.lib 
 torch_cpu.dll
 newsph/
-
 MPoSM/newsph.txt
