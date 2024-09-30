@@ -41,21 +41,48 @@ def save_comparison_dictionary_txt(file_path, dictionary):
 
 
 
-def compute_mposm_scores(sentence, model, tokenizer, index):
-    # Get the sub-sentence up to the indexed word
-    sub_sentence = ' '.join(sentence.split()[:index+1])  # Get words up to index
-    inputs = tokenizer(sub_sentence, return_tensors="pt")
-    with torch.no_grad():
-        outputs = model(**inputs, labels=inputs["input_ids"])
-    
-    # MPoSM score for the entire sentence up to the indexed word
-    mposm_scores = torch.exp(outputs.logits).squeeze().tolist()
-    
-    if isinstance(mposm_scores[0], list):
-        mposm_scores = [score for sublist in mposm_scores for score in sublist]
-    
-    # Return the score for the entire sub-sentence (up to the indexed word)
-    return mposm_scores[-1]  # The last score corresponds to the indexed word's score based on the sub-sentence
+def compute_mposm_scores(sentence, model, tokenizer):
+    mposm_scores = []
+
+    # Tokenize the sentence into words
+    words = sentence.split()
+
+    # Iterate over each word index in the sentence
+    for index in range(len(words)):
+        # Get the sub-sentence up to the indexed word
+        sub_sentence = words[:index+1]  # Get words up to the current index
+        
+        # Mask the current indexed word (using [MASK] token)
+        masked_sub_sentence = sub_sentence[:]
+        masked_sub_sentence[-1] = tokenizer.mask_token  # Replace the last word with the mask token
+
+        # Join the sub-sentence back into a string
+        masked_sentence_str = ' '.join(masked_sub_sentence)
+
+        # Tokenize the masked sub-sentence
+        inputs = tokenizer(masked_sentence_str, return_tensors="pt")
+
+        # Get model predictions
+        with torch.no_grad():
+            outputs = model(**inputs)
+
+        # Extract the logits for the masked token position (the last word in the sub-sentence)
+        mask_token_index = (inputs['input_ids'] == tokenizer.mask_token_id).nonzero(as_tuple=True)[1]
+
+        # Get the predicted probabilities for the masked word
+        mask_token_logits = outputs.logits[0, mask_token_index, :]
+
+        # Apply softmax to get probabilities
+        mask_token_probs = torch.softmax(mask_token_logits, dim=-1)
+
+        # Get the probability score for the actual word (before it was masked)
+        actual_word_token_id = tokenizer.convert_tokens_to_ids(words[index])
+        actual_word_prob = mask_token_probs[0, actual_word_token_id].item()
+
+        # Append the MPoSM score for this word
+        mposm_scores.append(actual_word_prob)
+
+    return mposm_scores
 
 
 def compare_pos_sequences(rough_pos, detailed_pos, model, tokenizer, threshold=0.80):

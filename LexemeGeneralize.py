@@ -48,30 +48,54 @@ def print_model_outputs(sentence, model, tokenizer):
     print(f"Logits: {logits}")
     print(f"Probabilities: {probs}")
 
-def compute_mlm_score(sentence, model, tokenizer):
-    inputs = tokenizer(sentence, return_tensors="pt")
-    print_tokenization(sentence, tokenizer)
-    print_model_outputs(sentence, model, tokenizer)
-    with torch.no_grad():
-        outputs = model(**inputs)
-    logits = outputs.logits
-    input_ids = inputs['input_ids'].squeeze()
-    probs = torch.softmax(logits, dim=-1).squeeze()
-
-    # Compute average probability for each token
+def compute_mlm_scores_ngram(sentence, model, tokenizer):
+    # Tokenize the input sentence
+    words = sentence.split()
+    
     scores = []
     min_score = float('inf')
     max_score = float('-inf')
-    for i, token_id in enumerate(input_ids):
-        token_prob = probs[i, token_id].item()
-        scores.append(token_prob)
-        if token_prob > max_score:
-            max_score = token_prob
-        if token_prob < min_score:
-            min_score = token_prob
 
+    # Iterate through each word in the sentence to create subsentences and mask the word at the current index
+    for index in range(len(words)):
+        # Create a sub-sentence up to the current word
+        sub_sentence = ' '.join(words[:index + 1])
+        
+        # Tokenize the sub-sentence and replace the word at the current index with [MASK]
+        tokens = tokenizer(sub_sentence, return_tensors="pt")
+        masked_input_ids = tokens['input_ids'].clone()
+        
+        # Find the token ID corresponding to the word at the current index
+        word_token_index = tokens['input_ids'][0].size(0) - 2  # Get the second-to-last token (ignores [SEP] and [CLS])
+        masked_input_ids[0, word_token_index] = tokenizer.mask_token_id  # Mask the indexed word
+
+        # Get model output for masked sub-sentence
+        with torch.no_grad():
+            outputs = model(masked_input_ids)
+        
+        # Extract the logits for the masked word and calculate its probability
+        logits = outputs.logits
+        word_token_id = tokens['input_ids'][0, word_token_index]  # The original token ID of the indexed word
+        probs = torch.softmax(logits[0, word_token_index], dim=-1)
+        score = probs[word_token_id].item()  # Probability of the original word when masked
+        
+        # Append the score and track the min/max scores
+        scores.append(score)
+        if score > max_score:
+            max_score = score
+        if score < min_score:
+            min_score = score
+
+    # Compute the average score
     average_score = sum(scores) / len(scores)
-    return average_score * 100, min_score, max_score, scores  # Return both average score and scores array
+
+    # Return the scores along with min, max, and average scores
+    return {
+        'average_score': average_score * 100,  # Return as percentage
+        'min_score': min_score,
+        'max_score': max_score,
+        'scores': scores  # List of scores for each word
+    } 
 
 def compute_word_scores(word, sentence, model, tokenizer):
     # Tokenize the full sentence
