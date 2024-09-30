@@ -1,2 +1,5 @@
-
 tl_dedup.txt.gz
+venv/
+_pycache_/
+*.pyc
+
