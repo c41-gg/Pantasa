@@ -1,237 +1,162 @@
 Pattern_ID,POS_N-Gram,Lexeme_N-Gram,MLM_Scores,Comparison_Replacement_Matrix,Final_Hybrid_N-Gram
-600001,CC.* CC.* NN.* CC.* DT.* NN.*,,[],,CC.* CC.* NN.* CC.* DT.* NN.*
-600002,JJ.* CC.* VB.* DT.* DT.* NN.*,,[],,JJ.* CC.* VB.* DT.* DT.* NN.*
-600003,VB.* DT.* DT.* NN.* CC.* PR.*,,[],,VB.* DT.* DT.* NN.* CC.* PR.*
-600164,VB.* DT.* DT.* NN.* CC.* PR.*,naglipana ang mga singkit sa kanilang,80.17753742611049,* ang mga singkit sa kanilang,VB.* ang mga singkit sa kanilang
-600004,DT.* NN.* CC.* PR.* NN.* CC.*,,[],,DT.* NN.* CC.* PR.* NN.* CC.*
-600005,NN.* CC.* VB.* CC.* DT.* NN.*,,[],,NN.* CC.* VB.* CC.* DT.* NN.*
-600006,CC.* VB.* CC.* DT.* NN.* CC.*,,[],,CC.* VB.* CC.* DT.* NN.* CC.*
-600007,VB.* CC.* DT.* NN.* CC.* NN.*,,[],,VB.* CC.* DT.* NN.* CC.* NN.*
-600008,CC.* DT.* NN.* CC.* NN.* CC.*,,[],,CC.* DT.* NN.* CC.* NN.* CC.*
-600009,DT.* NN.* CC.* NN.* CC.* NN.*_PM.*,,[],,DT.* NN.* CC.* NN.* CC.* NN.*_PM.*
-600010,RB.* RB.* VB.* DT.* DT.* NN.*,,[],,RB.* RB.* VB.* DT.* DT.* NN.*
-600165,RB.* RB.* VB.* DT.* DT.* NN.*,mapupuksa ang mga halamang-singaw sa kuko,81.63339049519352,* ang mga halamang-singaw sa *,RB.* ang mga halamang-singaw sa NN.*
-600011,RB.* VB.* DT.* DT.* NN.* CC.*,,[],,RB.* VB.* DT.* DT.* NN.* CC.*
-600166,RB.* VB.* DT.* DT.* NN.* CC.*,biglang naglipana ang mga singkit sa,83.1893881260062,* naglipana ang mga singkit sa,RB.* naglipana ang mga singkit sa
-600012,NN.* CC.* CC.* NN.* CC.* DT.*,,[],,NN.* CC.* CC.* NN.* CC.* DT.*
-600013,JJ.* CC.* NN.* CC.* VB.* CC.*,,[],,JJ.* CC.* NN.* CC.* VB.* CC.*
-600014,PR.* RB.* RB.* DT.* VB.* PR.*_PM.*,,[],,PR.* RB.* RB.* DT.* VB.* PR.*_PM.*
-600015,DT.* PR.* NN.* DT.* VB.* CC.*,,[],,DT.* PR.* NN.* DT.* VB.* CC.*
-600016,CC.* VB.* DT.* PR.* CC.* DT.*,,[],,CC.* VB.* DT.* PR.* CC.* DT.*
-600017,CC.* CC.* VB.* PR.* CC.* NN.*,,[],,CC.* CC.* VB.* PR.* CC.* NN.*
-600018,CC.* PR.* DT.* NN.* CC.* PR.*,,[],,CC.* PR.* DT.* NN.* CC.* PR.*
-600019,PR.* LM VB.* CC.* VB.* JJ.*,,[],,PR.* LM VB.* CC.* VB.* JJ.*
-600020,VB.* CC.* PR.* NN.* CC.* CC.*,,[],,VB.* CC.* PR.* NN.* CC.* CC.*
-600021,PR.* NN.* CC.* CC.* PR.* LM,,[],,PR.* NN.* CC.* CC.* PR.* LM
-600022,VB.* PR.* CC.* RB.* VB.* DT.*,,[],,VB.* PR.* CC.* RB.* VB.* DT.*
-600167,VB.* PR.* CC.* RB.* VB.* DT.*,napansin niya na biglang naglipana ang,81.78660925845999,* * na * naglipana ang,VB.* PR.* na RB.* naglipana ang
-600023,CC.* CC.* PR.* LM RB.* RB.*,,[],,CC.* CC.* PR.* LM RB.* RB.*
-600024,CC.* PR.* LM RB.* RB.* PR.*,,[],,CC.* PR.* LM RB.* RB.* PR.*
-600025,RB.* PR.* VB.* CC.* NN.* CC.*,,[],,RB.* PR.* VB.* CC.* NN.* CC.*
-600026,RB.* RB.* PR.* VB.* CC.* VB.*,,[],,RB.* RB.* PR.* VB.* CC.* VB.*
-600168,RB.* RB.* PR.* VB.* CC.* VB.*,naman siya nagseselos kasi alam naman,81.0040669068714,* siya nagseselos kasi alam *,RB.* siya nagseselos kasi alam VB.*
-600027,NN.* CC.* RB.* RB.* PR.* VB.*,,[],,NN.* CC.* RB.* RB.* PR.* VB.*
-600028,VB.* PR.* VB.* CC.* DT.* NN.*,,[],,VB.* PR.* VB.* CC.* DT.* NN.*
-600029,PR.* VB.* CC.* DT.* NN.* CC.*,,[],,PR.* VB.* CC.* DT.* NN.* CC.*
-600030,DT.* NN.* CC.* NN.* CC.* NN.*,,[],,DT.* NN.* CC.* NN.* CC.* NN.*
-600031,CC.* NN.* CC.* NN.* CC.* VB.*,,[],,CC.* NN.* CC.* NN.* CC.* VB.*
-600032,NN.* CC.* NN.* CC.* VB.* NN.*_PM.*,,[],,NN.* CC.* NN.* CC.* VB.* NN.*_PM.*
-600033,DT.* NN.* CC.* VB.* CC.* DT.*,,[],,DT.* NN.* CC.* VB.* CC.* DT.*
-600034,DT.* NN.* LM RB.* VB.* CC.*,,[],,DT.* NN.* LM RB.* VB.* CC.*
-600035,CC.* DT.* NN.* LM VB.* CC.*,,[],,CC.* DT.* NN.* LM VB.* CC.*
-600036,VB.* CC.* NN.* CC.* NN.* CC.*,,[],,VB.* CC.* NN.* CC.* NN.* CC.*
-600037,CC.* DT.* NN.* CC.* DT.* NN.*,,[],,CC.* DT.* NN.* CC.* DT.* NN.*
-600169,CC.* DT.* NN.* CC.* DT.* NN.*,kuko ng mga kamay kuko halamang-singaw,80.84410862961462,* ng mga kamay * halamang-singaw,CC.* ng mga kamay DT.* halamang-singaw
-600038,DT.* NN.* CC.* DT.* NN.* NN.*_PM.*,,[],,DT.* NN.* CC.* DT.* NN.* NN.*_PM.*
-600039,CC.* NN.* RB.* RB.* VB.* DT.*,,[],,CC.* NN.* RB.* RB.* VB.* DT.*
-600040,NN.* RB.* RB.* VB.* DT.* DT.*,,[],,NN.* RB.* RB.* VB.* DT.* DT.*
-600041,RB.* VB.* DT.* DT.* NN.* PM.*,,[],,RB.* VB.* DT.* DT.* NN.* PM.*
-600170,RB.* VB.* DT.* DT.* NN.* PM.*,ang mga halamang-singaw sa kuko forum,80.63214480198184,"* mga halamang-singaw sa * forum,","RB.* mga halamang-singaw sa NN.* forum,"
-600042,NN.* PM.* NN.* CC.* DT.* NN.*,,[],,NN.* PM.* NN.* CC.* DT.* NN.*
-600171,NN.* PM.* NN.* CC.* DT.* NN.*,halamang-singaw sa mga kamay kuko halamang-singaw,84.5638894639767,* sa mga kamay * *,NN.* sa mga kamay DT.* NN.*
-600043,PM.* NN.* CC.* DT.* NN.* CC.*,,[],,PM.* NN.* CC.* DT.* NN.* CC.*
-600044,NN.* CC.* DT.* NN.* CC.* DT.*,,[],,NN.* CC.* DT.* NN.* CC.* DT.*
-600045,RB.* RB.* CC.* NN.* DT.* NN.*,,[],,RB.* RB.* CC.* NN.* DT.* NN.*
-600046,NN.* DT.* NN.* CC.* NN.* NN.*,,[],,NN.* DT.* NN.* CC.* NN.* NN.*
-600047,NN.* CC.* NN.* NN.* PM.* NN.*,,[],,NN.* CC.* NN.* NN.* PM.* NN.*
-600172,NN.* CC.* NN.* NN.* PM.* NN.*,kuko sa paa halamang-singaw ang pinakamahusay,80.61115471384001,* sa * halamang-singaw ang *,NN.* sa NN.* halamang-singaw ang NN.*
-600173,NN.* CC.* NN.* NN.* PM.* NN.*,paggamot sa kuko halamang-singaw kit para,81.47727035163113,* sa * halamang-singaw kit para,NN.* sa NN.* halamang-singaw kit para
-600048,DT.* JJ.* CC.* NN.* CC.* CC.*,,[],,DT.* JJ.* CC.* NN.* CC.* CC.*
-600049,NN.* PM.* NN.* CC.* NN.* CC.*,,[],,NN.* PM.* NN.* CC.* NN.* CC.*
-600174,NN.* PM.* NN.* CC.* NN.* CC.*,halamang-singaw sa pagitan ng mga daliri,81.78709369997267,* sa * ng mga *,NN.* sa NN.* ng mga CC.*
-600050,CC.* NN.* CC.* DT.* NN.* CC.*,,[],,CC.* NN.* CC.* DT.* NN.* CC.*
-600051,NN.* NN.* PM.* NN.* VB.* CC.*,,[],,NN.* NN.* PM.* NN.* VB.* CC.*
-600175,NN.* NN.* PM.* NN.* VB.* CC.*,kuko halamang-singaw paggamot sa mga bata,81.2055365727326,* halamang-singaw * sa mga bata,NN.* halamang-singaw PM.* sa mga bata
-600176,NN.* NN.* PM.* NN.* VB.* CC.*,kuko halamang-singaw paggamot sa kanyang mga,81.51207946535092,* halamang-singaw * sa kanyang mga,NN.* halamang-singaw PM.* sa kanyang mga
-600052,VB.* PR.* PR.* NN.* NN.* PM.*,,[],,VB.* PR.* PR.* NN.* NN.* PM.*
-600177,VB.* PR.* PR.* NN.* NN.* PM.*,mayroon kang isang kuko halamang-singaw sa,81.44021414004494,* kang isang * halamang-singaw sa,VB.* kang isang NN.* halamang-singaw sa
-600053,PR.* PR.* NN.* NN.* PM.* NN.*,,[],,PR.* PR.* NN.* NN.* PM.* NN.*
-600178,PR.* PR.* NN.* NN.* PM.* NN.*,kuko halamang-singaw ay para lamang sa,81.39177183202936,* halamang-singaw ay para lamang sa,PR.* halamang-singaw ay para lamang sa
-600054,NN.* NN.* PM.* NN.* CC.* PR.*,,[],,NN.* NN.* PM.* NN.* CC.* PR.*
-600179,NN.* NN.* PM.* NN.* CC.* PR.*,kuko halamang-singaw sa aking mga paa,81.46263090699759,* halamang-singaw sa aking mga *,NN.* halamang-singaw sa aking mga PR.*
-600055,NN.* PM.* NN.* CC.* PR.* DT.*,,[],,NN.* PM.* NN.* CC.* PR.* DT.*
-600180,NN.* PM.* NN.* CC.* PR.* DT.*,halamang-singaw sa kanyang mga paa ekzoderil,80.50185554913986,* sa kanyang mga * *,NN.* sa kanyang mga PR.* DT.*
-600056,PM.* NN.* CC.* PR.* DT.* NN.*,,[],,PM.* NN.* CC.* PR.* DT.* NN.*
-600057,NN.* CC.* NN.* PM.* NN.* CC.*,,[],,NN.* CC.* NN.* PM.* NN.* CC.*
-600181,NN.* CC.* NN.* PM.* NN.* CC.*,paggamot ng halamang-singaw sa mga kamay,81.81428369235793,* ng halamang-singaw sa mga kamay,NN.* ng halamang-singaw sa mga kamay
-600182,NN.* CC.* NN.* PM.* NN.* CC.*,halamang-singaw sa kuko kung paano gamutin,81.41660258226271,* sa * kung paano *,NN.* sa NN.* kung paano CC.*
-600183,NN.* CC.* NN.* PM.* NN.* CC.*,pakikipag-usap sa kanila ng mga tanong,80.5561255368421,* sa * ng mga tanong,NN.* sa NN.* ng mga tanong
-600058,CC.* NN.* PM.* NN.* CC.* DT.*,,[],,CC.* NN.* PM.* NN.* CC.* DT.*
-600059,NN.* CC.* DT.* NN.* NN.* NN.*,,[],,NN.* CC.* DT.* NN.* NN.* NN.*
-600060,CC.* DT.* NN.* NN.* NN.* PM.*,,[],,CC.* DT.* NN.* NN.* NN.* PM.*
-600061,DT.* NN.* NN.* NN.* PM.* NN.*,,[],,DT.* NN.* NN.* NN.* PM.* NN.*
-600184,DT.* NN.* NN.* NN.* PM.* NN.*,kuko halamang-singaw sa iyong mga paa,81.38200966427856,* halamang-singaw sa iyong mga *,DT.* halamang-singaw sa iyong mga NN.*
-600185,DT.* NN.* NN.* NN.* PM.* NN.*,kuko halamang-singaw litrato paa sintomas Paggamot.,81.92993055160703,* halamang-singaw * * * Paggamot.,DT.* halamang-singaw NN.* NN.* PM.* Paggamot.
-600062,JJ.* CC.* NN.* CC.* CC.* NN.*,,[],,JJ.* CC.* NN.* CC.* CC.* NN.*
-600063,CC.* NN.* CC.* CC.* NN.* CC.*,,[],,CC.* NN.* CC.* CC.* NN.* CC.*
-600064,CC.* NN.* CC.* NN.* PM.* NN.*,,[],,CC.* NN.* CC.* NN.* PM.* NN.*
-600065,CC.* NN.* PM.* NN.* CC.* NN.*,,[],,CC.* NN.* PM.* NN.* CC.* NN.*
-600066,NN.* PM.* NN.* CC.* NN.* RB.*,,[],,NN.* PM.* NN.* CC.* NN.* RB.*
-600186,NN.* PM.* NN.* CC.* NN.* RB.*,halamang-singaw sa tainga kung paano mapupuksa,81.75025583026077,* sa * kung paano *,NN.* sa NN.* kung paano RB.*
-600067,PM.* NN.* CC.* NN.* RB.* RB.*,,[],,PM.* NN.* CC.* NN.* RB.* RB.*
-600068,NN.* CC.* NN.* RB.* RB.* VB.*,,[],,NN.* CC.* NN.* RB.* RB.* VB.*
-600069,VB.* RB.* RB.* VB.* DT.* NN.*,,[],,VB.* RB.* RB.* VB.* DT.* NN.*
-600070,VB.* CC.* DT.* NN.* CC.* VB.*,,[],,VB.* CC.* DT.* NN.* CC.* VB.*
-600071,CC.* DT.* NN.* CC.* VB.* DT.*,,[],,CC.* DT.* NN.* CC.* VB.* DT.*
-600072,DT.* NN.* CC.* VB.* DT.* NN.*,,[],,DT.* NN.* CC.* VB.* DT.* NN.*
-600073,JJ.* CC.* VB.* CC.* DT.* NN.*,,[],,JJ.* CC.* VB.* CC.* DT.* NN.*
-600074,RB.* RB.* VB.* DT.* NN.* CC.*,,[],,RB.* RB.* VB.* DT.* NN.* CC.*
-600075,CC.* VB.* DT.* JJ.* CC.* VB.*,,[],,CC.* VB.* DT.* JJ.* CC.* VB.*
-600076,VB.* DT.* JJ.* CC.* VB.* CC.*,,[],,VB.* DT.* JJ.* CC.* VB.* CC.*
-600077,DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*,,[],,DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*
-600187,DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*,ang pinakamataas na magkasanib na densidad,80.18548328404843,"* * na * na densidad,","DT.* JJ.* na VB.* na densidad,"
-600078,PR.* JJ.* NN.* DT.* VB.* CC.*,,[],,PR.* JJ.* NN.* DT.* VB.* CC.*
-600079,VB.* PR.* DT.* NN.* CC.* VB.*,,[],,VB.* PR.* DT.* NN.* CC.* VB.*
-600080,PR.* DT.* NN.* CC.* VB.* CC.*,,[],,PR.* DT.* NN.* CC.* VB.* CC.*
-600081,NN.* CD.* NN.* DT.* NN.* CC.*,,[],,NN.* CD.* NN.* DT.* NN.* CC.*
-600188,NN.* CD.* NN.* DT.* NN.* CC.*,(5) mga halimbawa ng sanaysay (5),83.24497193212324,* mga halimbawa ng * *,NN.* mga halimbawa ng NN.* CC.*
-600189,NN.* CD.* NN.* DT.* NN.* CC.*,talumpati (5) mga halimbawa ng tula,81.2279999268286,* (5) mga halimbawa ng *,NN.* (5) mga halimbawa ng CC.*
-600190,NN.* CD.* NN.* DT.* NN.* CC.*,pagsasanay (1) paksa (24) pambansang sagisag,84.24890297357963,* (1) * (24) * *,NN.* (1) NN.* (24) NN.* CC.*
-600082,CD.* NN.* DT.* NN.* CC.* NN.*,,[],,CD.* NN.* DT.* NN.* CC.* NN.*
-600191,CD.* NN.* DT.* NN.* CC.* NN.*,(5) mga halimbawa ng tula (8),83.06324035105582,* mga halimbawa ng * *,CD.* mga halimbawa ng CC.* NN.*
-600083,DT.* NN.* CC.* NN.* NN.* CD.*,,[],,DT.* NN.* CC.* NN.* NN.* CD.*
-600192,DT.* NN.* CC.* NN.* NN.* CD.*,(5) mga halimbawa ng talumpati (5),83.01314513109136,* mga halimbawa ng * *,DT.* mga halimbawa ng NN.* CD.*
-600084,NN.* CC.* NN.* NN.* CD.* NN.*,,[],,NN.* CC.* NN.* NN.* CD.* NN.*
-600193,NN.* CC.* NN.* NN.* CD.* NN.*,sanaysay (5) mga halimbawa ng talambuhay,83.03959767434402,* (5) mga halimbawa ng *,NN.* (5) mga halimbawa ng NN.*
-600085,CC.* NN.* NN.* CD.* NN.* DT.*,,[],,CC.* NN.* NN.* CD.* NN.* DT.*
-600194,CC.* NN.* NN.* CD.* NN.* DT.*,(5) mga halimbawa ng talambuhay (5),82.75825580181913,* mga halimbawa ng * *,CC.* mga halimbawa ng NN.* DT.*
-600195,CC.* NN.* NN.* CD.* NN.* DT.*,tula (8) pagsasanay (1) paksa (24),84.03843880642154,* (8) * (1) * (24),CC.* (8) NN.* (1) NN.* (24)
-600086,NN.* NN.* CD.* NN.* DT.* NN.*,,[],,NN.* NN.* CD.* NN.* DT.* NN.*
-600087,VB.* PR.* CC.* PR.* NN.* CC.*,,[],,VB.* PR.* CC.* PR.* NN.* CC.*
-600088,CCT CCT NNC CCB DTCP NNC,,[],,CCT CCT NNC CCB DTCP NNC
-600089,NNC CCT CCT NNC CCB DTCP,,[],,NNC CCT CCT NNC CCB DTCP
-600090,VBS PRS_CCP VBAF CCB DTCP NNC,,[],,VBS PRS_CCP VBAF CCB DTCP NNC
-600091,PRS_CCP VBAF CCB DTCP NNC CCB,,[],,PRS_CCP VBAF CCB DTCP NNC CCB
-600092,VBAF CCB DTCP NNC CCB NNC,,[],,VBAF CCB DTCP NNC CCB NNC
-600093,CCB DTCP NNC CCB NNC CCT,,[],,CCB DTCP NNC CCB NNC CCT
-600094,DTCP NNC CCB NNC CCT NNC,,[],,DTCP NNC CCB NNC CCT NNC
-600095,CCB NNC CCT NNC CCB VBN_CCP,,[],,CCB NNC CCT NNC CCB VBN_CCP
-600096,NNC CCT NNC CCB VBN_CCP NNC_PMP,,[],,NNC CCT NNC CCB VBN_CCP NNC_PMP
-600097,NNC_CCP PMS NNC CCT DTCP NNC,,[],,NNC_CCP PMS NNC CCT DTCP NNC
-600196,NNC_CCP PMS NNC CCT DTCP NNC,halamang-singaw sa mga kamay kuko halamang-singaw,84.5638894639767,* sa mga kamay * *,NNC_CCP sa mga kamay DTCP NNC
-600098,PMS NNC CCT DTCP NNC CCB,,[],,PMS NNC CCT DTCP NNC CCB
-600099,NNC CCT DTCP NNC CCB DTCP,,[],,NNC CCT DTCP NNC CCB DTCP
-600100,CCT DTCP NNC CCB DTCP NNC,,[],,CCT DTCP NNC CCB DTCP NNC
-600197,CCT DTCP NNC CCB DTCP NNC,kuko ng mga kamay kuko halamang-singaw,80.84410862961462,* ng mga kamay * halamang-singaw,CCT ng mga kamay DTCP halamang-singaw
-600101,NNC CCT NNC NNC_CCP PMS NNC,,[],,NNC CCT NNC NNC_CCP PMS NNC
-600198,NNC CCT NNC NNC_CCP PMS NNC,kuko sa paa halamang-singaw ang pinakamahusay,80.61115471384001,* sa * halamang-singaw ang *,NNC sa NNC halamang-singaw ang NNC
-600199,NNC CCT NNC NNC_CCP PMS NNC,paggamot sa kuko halamang-singaw kit para,81.47727035163113,* sa * halamang-singaw kit para,NNC sa NNC halamang-singaw kit para
-600102,NNC NNC_CCP PMS NNC VBW CCT,,[],,NNC NNC_CCP PMS NNC VBW CCT
-600200,NNC NNC_CCP PMS NNC VBW CCT,kuko halamang-singaw paggamot sa mga bata,81.2055365727326,* halamang-singaw * sa mga bata,NNC halamang-singaw PMS sa mga bata
-600201,NNC NNC_CCP PMS NNC VBW CCT,kuko halamang-singaw paggamot sa kanyang mga,81.51207946535092,* halamang-singaw * sa kanyang mga,NNC halamang-singaw PMS sa kanyang mga
-600103,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS,,[],,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS
-600202,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS,mayroon kang isang kuko halamang-singaw sa,81.44021414004494,* kang isang * halamang-singaw sa,VBH kang isang NNC halamang-singaw sa
-600104,PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC,,[],,PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC
-600203,PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC,kuko halamang-singaw ay para lamang sa,81.39177183202936,* halamang-singaw ay para lamang sa,PRS_CCP halamang-singaw ay para lamang sa
-600105,NNC NNC_CCP PMS NNC CCT PRSP_CCP,,[],,NNC NNC_CCP PMS NNC CCT PRSP_CCP
-600204,NNC NNC_CCP PMS NNC CCT PRSP_CCP,kuko halamang-singaw sa aking mga paa,81.46263090699759,* halamang-singaw sa aking mga *,NNC halamang-singaw sa aking mga PRSP_CCP
-600106,NNC_CCP PMS NNC CCT PRSP_CCP DTCP,,[],,NNC_CCP PMS NNC CCT PRSP_CCP DTCP
-600205,NNC_CCP PMS NNC CCT PRSP_CCP DTCP,halamang-singaw sa kanyang mga paa ekzoderil,80.50185554913986,* sa kanyang mga * *,NNC_CCP sa kanyang mga PRSP_CCP DTCP
-600107,PMS NNC CCT PRSP_CCP DTCP NNC,,[],,PMS NNC CCT PRSP_CCP DTCP NNC
-600108,NNC CCB NNC_CCP PMS NNC CCT,,[],,NNC CCB NNC_CCP PMS NNC CCT
-600206,NNC CCB NNC_CCP PMS NNC CCT,paggamot ng halamang-singaw sa mga kamay,81.81428369235793,* ng halamang-singaw sa mga kamay,NNC ng halamang-singaw sa mga kamay
-600207,NNC CCB NNC_CCP PMS NNC CCT,halamang-singaw sa kuko kung paano gamutin,81.41660258226271,* sa * kung paano *,NNC sa NNC_CCP kung paano CCT
-600109,CCB NNC_CCP PMS NNC CCT DTCP,,[],,CCB NNC_CCP PMS NNC CCT DTCP
-600110,DTCP NNC NNC NNC_CCP PMS NNC,,[],,DTCP NNC NNC NNC_CCP PMS NNC
-600208,DTCP NNC NNC NNC_CCP PMS NNC,kuko halamang-singaw sa iyong mga paa,81.38200966427856,* halamang-singaw sa iyong mga *,DTCP halamang-singaw sa iyong mga NNC
-600209,DTCP NNC NNC NNC_CCP PMS NNC,kuko halamang-singaw litrato paa sintomas Paggamot.,81.92993055160703,* halamang-singaw * * * Paggamot.,DTCP halamang-singaw NNC NNC_CCP PMS Paggamot.
-600111,JJD CCP NNC CCT CCT NNC,,[],,JJD CCP NNC CCT CCT NNC
-600112,CCP NNC CCT CCT NNC CCB,,[],,CCP NNC CCT CCT NNC CCB
-600113,CCB NNC_CCP PMS NNC CCT NNC,,[],,CCB NNC_CCP PMS NNC CCT NNC
-600114,NNC_CCP PMS NNC CCT NNC RBK,,[],,NNC_CCP PMS NNC CCT NNC RBK
-600210,NNC_CCP PMS NNC CCT NNC RBK,halamang-singaw sa tainga kung paano mapupuksa,81.75025583026077,* sa * kung paano *,NNC_CCP sa NNC kung paano RBK
-600115,PMS NNC CCT NNC RBK RBQ,,[],,PMS NNC CCT NNC RBK RBQ
-600116,CCB VBW DTC JJCS_JJD CCP VBAF,,[],,CCB VBW DTC JJCS_JJD CCP VBAF
-600117,VBW DTC JJCS_JJD CCP VBAF CCP,,[],,VBW DTC JJCS_JJD CCP VBAF CCP
-600118,DTC JJCS_JJD CCP VBAF CCP NNC_PMC,,[],,DTC JJCS_JJD CCP VBAF CCP NNC_PMC
-600211,DTC JJCS_JJD CCP VBAF CCP NNC_PMC,ang pinakamataas na magkasanib na densidad,80.18548328404843,"* * na * na densidad,","DTC JJCS_JJD na VBAF na densidad,"
-600119,NNPA CDB NNPA DTCP NNC CCB,,[],,NNPA CDB NNPA DTCP NNC CCB
-600212,NNPA CDB NNPA DTCP NNC CCB,(5) mga halimbawa ng sanaysay (5),83.24497193212324,* mga halimbawa ng * *,NNPA mga halimbawa ng NNC CCB
-600213,NNPA CDB NNPA DTCP NNC CCB,talumpati (5) mga halimbawa ng tula,81.2279999268286,* (5) mga halimbawa ng *,NNPA (5) mga halimbawa ng CCB
-600214,NNPA CDB NNPA DTCP NNC CCB,pagsasanay (1) paksa (24) pambansang sagisag,84.24890297357963,* (1) * (24) * *,NNPA (1) NNPA (24) NNC CCB
-600120,CDB NNPA DTCP NNC CCB NNC,,[],,CDB NNPA DTCP NNC CCB NNC
-600215,CDB NNPA DTCP NNC CCB NNC,(5) mga halimbawa ng tula (8),83.06324035105582,* mga halimbawa ng * *,CDB mga halimbawa ng CCB NNC
-600121,NNPA DTCP NNC CCB NNC NNPA,,[],,NNPA DTCP NNC CCB NNC NNPA
-600122,DTCP NNC CCB NNC NNPA CDB,,[],,DTCP NNC CCB NNC NNPA CDB
-600216,DTCP NNC CCB NNC NNPA CDB,(5) mga halimbawa ng talumpati (5),83.01314513109136,* mga halimbawa ng * *,DTCP mga halimbawa ng NNPA CDB
-600123,NNC CCB NNC NNPA CDB NNPA,,[],,NNC CCB NNC NNPA CDB NNPA
-600217,NNC CCB NNC NNPA CDB NNPA,sanaysay (5) mga halimbawa ng talambuhay,83.03959767434402,* (5) mga halimbawa ng *,NNC (5) mga halimbawa ng NNPA
-600124,CCB NNC NNPA CDB NNPA DTCP,,[],,CCB NNC NNPA CDB NNPA DTCP
-600218,CCB NNC NNPA CDB NNPA DTCP,(5) mga halimbawa ng talambuhay (5),82.75825580181913,* mga halimbawa ng * *,CCB mga halimbawa ng NNPA DTCP
-600219,CCB NNC NNPA CDB NNPA DTCP,tula (8) pagsasanay (1) paksa (24),84.03843880642154,* (8) * (1) * (24),CCB (8) NNPA (1) NNPA (24)
-600125,NNC NNPA CDB NNPA DTCP NNC,,[],,NNC NNPA CDB NNPA DTCP NNC
-600126,CC.* CC.* NNC CCB DTCP NN.*,,[],,CC.* CC.* NNC CCB DTCP NN.*
-600127,NN.* CC.* CCT NNC CCB DT.*,,[],,NN.* CC.* CCT NNC CCB DT.*
-600128,VB.* PR.* VBAF CCB DTCP NN.*,,[],,VB.* PR.* VBAF CCB DTCP NN.*
-600129,PR.* VB.* CCB DTCP NNC CC.*,,[],,PR.* VB.* CCB DTCP NNC CC.*
-600130,VB.* CC.* DTCP NNC CCB NN.*,,[],,VB.* CC.* DTCP NNC CCB NN.*
-600131,CC.* DT.* NNC CCB NNC CC.*,,[],,CC.* DT.* NNC CCB NNC CC.*
-600132,DT.* NN.* CCB NNC CCT NN.*,,[],,DT.* NN.* CCB NNC CCT NN.*
-600133,CC.* NN.* CCT NNC CCB VB.*,,[],,CC.* NN.* CCT NNC CCB VB.*
-600134,NN.* CC.* NNC CCB VBN_CCP NN.*_PM.*,,[],,NN.* CC.* NNC CCB VBN_CCP NN.*_PM.*
-600135,NN.* PM.* NNC CCT DTCP NN.*,,[],,NN.* PM.* NNC CCT DTCP NN.*
-600220,NN.* PM.* NNC CCT DTCP NN.*,halamang-singaw sa mga kamay kuko halamang-singaw,84.5638894639767,* sa mga kamay * *,NN.* sa mga kamay DTCP NN.*
-600136,PM.* NN.* CCT DTCP NNC CC.*,,[],,PM.* NN.* CCT DTCP NNC CC.*
-600137,NN.* CC.* DTCP NNC CCB DT.*,,[],,NN.* CC.* DTCP NNC CCB DT.*
-600138,NN.* CC.* NNC NN.* PMS NNC,,[],,NN.* CC.* NNC NN.* PMS NNC
-600221,NN.* CC.* NNC NN.* PMS NNC,kuko sa paa halamang-singaw ang pinakamahusay,80.61115471384001,* sa * halamang-singaw ang *,NN.* sa NNC halamang-singaw ang NNC
-600222,NN.* CC.* NNC NN.* PMS NNC,paggamot sa kuko halamang-singaw kit para,81.47727035163113,* sa * halamang-singaw kit para,NN.* sa NNC halamang-singaw kit para
-600139,NN.* NN.* PMS NNC VBW CCT,,[],,NN.* NN.* PMS NNC VBW CCT
-600223,NN.* NN.* PMS NNC VBW CCT,kuko halamang-singaw paggamot sa mga bata,81.2055365727326,* halamang-singaw * sa mga bata,NN.* halamang-singaw PMS sa mga bata
-600224,NN.* NN.* PMS NNC VBW CCT,kuko halamang-singaw paggamot sa kanyang mga,81.51207946535092,* halamang-singaw * sa kanyang mga,NN.* halamang-singaw PMS sa kanyang mga
-600140,VB.* PR.* PRI_CCP NNC NNC_CCP PM.*,,[],,VB.* PR.* PRI_CCP NNC NNC_CCP PM.*
-600225,VB.* PR.* PRI_CCP NNC NNC_CCP PM.*,mayroon kang isang kuko halamang-singaw sa,81.44021414004494,* kang isang * halamang-singaw sa,VB.* kang isang NNC halamang-singaw sa
-600141,PR.* PR.* NNC NN.* PMS NNC,,[],,PR.* PR.* NNC NN.* PMS NNC
-600142,NN.* NN.* PMS NNC CCT PRSP_CCP,,[],,NN.* NN.* PMS NNC CCT PRSP_CCP
-600226,NN.* NN.* PMS NNC CCT PRSP_CCP,kuko halamang-singaw sa aking mga paa,81.46263090699759,* halamang-singaw sa aking mga *,NN.* halamang-singaw sa aking mga PRSP_CCP
-600143,NN.* PM.* NNC CCT PRSP_CCP DT.*,,[],,NN.* PM.* NNC CCT PRSP_CCP DT.*
-600227,NN.* PM.* NNC CCT PRSP_CCP DT.*,halamang-singaw sa kanyang mga paa ekzoderil,80.50185554913986,* sa kanyang mga * *,NN.* sa kanyang mga PRSP_CCP DT.*
-600144,PM.* NN.* CCT PRSP_CCP DTCP NN.*,,[],,PM.* NN.* CCT PRSP_CCP DTCP NN.*
-600145,NN.* CC.* NNC_CCP PMS NNC CC.*,,[],,NN.* CC.* NNC_CCP PMS NNC CC.*
-600228,NN.* CC.* NNC_CCP PMS NNC CC.*,halamang-singaw sa kuko kung paano gamutin,81.41660258226271,* sa * kung paano *,NN.* sa NNC_CCP kung paano CC.*
-600146,CC.* NN.* PMS NNC CCT DT.*,,[],,CC.* NN.* PMS NNC CCT DT.*
-600147,DT.* NN.* NNC NN.* PMS NNC,,[],,DT.* NN.* NNC NN.* PMS NNC
-600229,DT.* NN.* NNC NN.* PMS NNC,kuko halamang-singaw sa iyong mga paa,81.38200966427856,* halamang-singaw sa iyong mga *,DT.* halamang-singaw sa iyong mga NNC
-600230,DT.* NN.* NNC NN.* PMS NNC,kuko halamang-singaw litrato paa sintomas Paggamot.,81.92993055160703,* halamang-singaw * * * Paggamot.,DT.* halamang-singaw NNC NN.* PMS Paggamot.
-600148,JJ.* CC.* NN.* CCT CCT NN.*,,[],,JJ.* CC.* NN.* CCT CCT NN.*
-600149,CC.* NN.* CCT CCT NNC CC.*,,[],,CC.* NN.* CCT CCT NNC CC.*
-600150,CC.* NN.* PMS NN.* CCT NNC,,[],,CC.* NN.* PMS NN.* CCT NNC
-600151,NN.* PM.* NNC CCT NNC RB.*,,[],,NN.* PM.* NNC CCT NNC RB.*
-600231,NN.* PM.* NNC CCT NNC RB.*,halamang-singaw sa tainga kung paano mapupuksa,81.75025583026077,* sa * kung paano *,NN.* sa NNC kung paano RB.*
-600152,PM.* NN.* CC.* NNC RBK RB.*,,[],,PM.* NN.* CC.* NNC RBK RB.*
-600153,CCB VBW DTC JJCS_JJD CCP VB.*,,[],,CCB VBW DTC JJCS_JJD CCP VB.*
-600154,VBW DTC JJCS_JJD CCP VBAF CC.*,,[],,VBW DTC JJCS_JJD CCP VBAF CC.*
-600155,DTC JJCS_JJD CCP VBAF CCP NN.*_PM.*,,[],,DTC JJCS_JJD CCP VBAF CCP NN.*_PM.*
-600156,NN.* CD.* NNPA DTCP NNC CC.*,,[],,NN.* CD.* NNPA DTCP NNC CC.*
-600232,NN.* CD.* NNPA DTCP NNC CC.*,(5) mga halimbawa ng sanaysay (5),83.24497193212324,* mga halimbawa ng * *,NN.* mga halimbawa ng NNC CC.*
-600233,NN.* CD.* NNPA DTCP NNC CC.*,pagsasanay (1) paksa (24) pambansang sagisag,84.24890297357963,* (1) * (24) * *,NN.* (1) NNPA (24) NNC CC.*
-600157,CD.* NN.* DTCP NNC CCB NN.*,,[],,CD.* NN.* DTCP NNC CCB NN.*
-600234,CD.* NN.* DTCP NNC CCB NN.*,(5) mga halimbawa ng tula (8),83.06324035105582,* mga halimbawa ng * *,CD.* mga halimbawa ng CCB NN.*
-600158,NN.* DT.* NNC CCB NNC NN.*,,[],,NN.* DT.* NNC CCB NNC NN.*
-600159,DT.* NN.* CCB NNC NNPA CD.*,,[],,DT.* NN.* CCB NNC NNPA CD.*
-600235,DT.* NN.* CCB NNC NNPA CD.*,(5) mga halimbawa ng talumpati (5),83.01314513109136,* mga halimbawa ng * *,DT.* mga halimbawa ng NNPA CD.*
-600160,NN.* CC.* NNC NNPA CDB NN.*,,[],,NN.* CC.* NNC NNPA CDB NN.*
-600161,CC.* NN.* NN.* CDB NNPA DT.*,,[],,CC.* NN.* NN.* CDB NNPA DT.*
-600236,CC.* NN.* NN.* CDB NNPA DT.*,(5) mga halimbawa ng talambuhay (5),82.75825580181913,* mga halimbawa ng * *,CC.* mga halimbawa ng NNPA DT.*
-600237,CC.* NN.* NN.* CDB NNPA DT.*,tula (8) pagsasanay (1) paksa (24),84.03843880642154,* (8) * (1) * (24),CC.* (8) NN.* (1) NNPA (24)
-600162,NN.* NN.* CD.* NNPA DTCP NN.*,,[],,NN.* NN.* CD.* NNPA DTCP NN.*
+600001,CC.* CC.* NN.* CC.* DT.* NN.*,,,,CC.* CC.* NN.* CC.* DT.* NN.*
+600002,JJ.* CC.* VB.* DT.* DT.* NN.*,,,,JJ.* CC.* VB.* DT.* DT.* NN.*
+600003,VB.* DT.* DT.* NN.* CC.* PR.*,,,,VB.* DT.* DT.* NN.* CC.* PR.*
+600004,DT.* NN.* CC.* PR.* NN.* CC.*,,,,DT.* NN.* CC.* PR.* NN.* CC.*
+600005,NN.* CC.* VB.* CC.* DT.* NN.*,,,,NN.* CC.* VB.* CC.* DT.* NN.*
+600006,CC.* VB.* CC.* DT.* NN.* CC.*,,,,CC.* VB.* CC.* DT.* NN.* CC.*
+600007,VB.* CC.* DT.* NN.* CC.* NN.*,,,,VB.* CC.* DT.* NN.* CC.* NN.*
+600008,CC.* DT.* NN.* CC.* NN.* CC.*,,,,CC.* DT.* NN.* CC.* NN.* CC.*
+600009,DT.* NN.* CC.* NN.* CC.* NN.*_PM.*,,,,DT.* NN.* CC.* NN.* CC.* NN.*_PM.*
+600236,RB.* RB.* VB.* DT.* DT.* NN.*,mapupuksa ang mga halamang-singaw sa kuko,80.9098080266267,* * * halamang-singaw * *,RB.* RB.* VB.* halamang-singaw DT.* NN.*
+600011,RB.* VB.* DT.* DT.* NN.* CC.*,,,,RB.* VB.* DT.* DT.* NN.* CC.*
+600012,NN.* CC.* CC.* NN.* CC.* DT.*,,,,NN.* CC.* CC.* NN.* CC.* DT.*
+600013,JJ.* CC.* NN.* CC.* VB.* CC.*,,,,JJ.* CC.* NN.* CC.* VB.* CC.*
+600014,PR.* RB.* RB.* DT.* VB.* PR.*_PM.*,,,,PR.* RB.* RB.* DT.* VB.* PR.*_PM.*
+600015,DT.* PR.* NN.* DT.* VB.* CC.*,,,,DT.* PR.* NN.* DT.* VB.* CC.*
+600016,CC.* VB.* DT.* PR.* CC.* DT.*,,,,CC.* VB.* DT.* PR.* CC.* DT.*
+600017,CC.* CC.* VB.* PR.* CC.* NN.*,,,,CC.* CC.* VB.* PR.* CC.* NN.*
+600018,CC.* PR.* DT.* NN.* CC.* PR.*,,,,CC.* PR.* DT.* NN.* CC.* PR.*
+600019,PR.* LM VB.* CC.* VB.* JJ.*,,,,PR.* LM VB.* CC.* VB.* JJ.*
+600020,VB.* CC.* PR.* NN.* CC.* CC.*,,,,VB.* CC.* PR.* NN.* CC.* CC.*
+600021,PR.* NN.* CC.* CC.* PR.* LM,,,,PR.* NN.* CC.* CC.* PR.* LM
+600022,VB.* PR.* CC.* RB.* VB.* DT.*,,,,VB.* PR.* CC.* RB.* VB.* DT.*
+600023,CC.* CC.* PR.* LM RB.* RB.*,,,,CC.* CC.* PR.* LM RB.* RB.*
+600024,CC.* PR.* LM RB.* RB.* PR.*,,,,CC.* PR.* LM RB.* RB.* PR.*
+600025,RB.* PR.* VB.* CC.* NN.* CC.*,,,,RB.* PR.* VB.* CC.* NN.* CC.*
+600026,RB.* RB.* PR.* VB.* CC.* VB.*,,,,RB.* RB.* PR.* VB.* CC.* VB.*
+600027,NN.* CC.* RB.* RB.* PR.* VB.*,,,,NN.* CC.* RB.* RB.* PR.* VB.*
+600028,VB.* PR.* VB.* CC.* DT.* NN.*,,,,VB.* PR.* VB.* CC.* DT.* NN.*
+600029,PR.* VB.* CC.* DT.* NN.* CC.*,,,,PR.* VB.* CC.* DT.* NN.* CC.*
+600030,DT.* NN.* CC.* NN.* CC.* NN.*,,,,DT.* NN.* CC.* NN.* CC.* NN.*
+600031,CC.* NN.* CC.* NN.* CC.* VB.*,,,,CC.* NN.* CC.* NN.* CC.* VB.*
+600032,NN.* CC.* NN.* CC.* VB.* NN.*_PM.*,,,,NN.* CC.* NN.* CC.* VB.* NN.*_PM.*
+600033,DT.* NN.* CC.* VB.* CC.* DT.*,,,,DT.* NN.* CC.* VB.* CC.* DT.*
+600034,DT.* NN.* LM RB.* VB.* CC.*,,,,DT.* NN.* LM RB.* VB.* CC.*
+600035,CC.* DT.* NN.* LM VB.* CC.*,,,,CC.* DT.* NN.* LM VB.* CC.*
+600036,VB.* CC.* NN.* CC.* NN.* CC.*,,,,VB.* CC.* NN.* CC.* NN.* CC.*
+600037,CC.* DT.* NN.* CC.* DT.* NN.*,,,,CC.* DT.* NN.* CC.* DT.* NN.*
+600038,DT.* NN.* CC.* DT.* NN.* NN.*_PM.*,,,,DT.* NN.* CC.* DT.* NN.* NN.*_PM.*
+600039,CC.* NN.* RB.* RB.* VB.* DT.*,,,,CC.* NN.* RB.* RB.* VB.* DT.*
+600040,NN.* RB.* RB.* VB.* DT.* DT.*,,,,NN.* RB.* RB.* VB.* DT.* DT.*
+600041,RB.* VB.* DT.* DT.* NN.* PM.*,,,,RB.* VB.* DT.* DT.* NN.* PM.*
+600042,NN.* PM.* NN.* CC.* DT.* NN.*,,,,NN.* PM.* NN.* CC.* DT.* NN.*
+600043,PM.* NN.* CC.* DT.* NN.* CC.*,,,,PM.* NN.* CC.* DT.* NN.* CC.*
+600044,NN.* CC.* DT.* NN.* CC.* DT.*,,,,NN.* CC.* DT.* NN.* CC.* DT.*
+600045,RB.* RB.* CC.* NN.* DT.* NN.*,,,,RB.* RB.* CC.* NN.* DT.* NN.*
+600046,NN.* DT.* NN.* CC.* NN.* NN.*,,,,NN.* DT.* NN.* CC.* NN.* NN.*
+600047,NN.* CC.* NN.* NN.* PM.* NN.*,,,,NN.* CC.* NN.* NN.* PM.* NN.*
+600048,DT.* JJ.* CC.* NN.* CC.* CC.*,,,,DT.* JJ.* CC.* NN.* CC.* CC.*
+600237,NN.* PM.* NN.* CC.* NN.* CC.*,halamang-singaw sa pagitan ng mga daliri,82.04810818036398,* * * * * *,NN.* PM.* NN.* CC.* NN.* CC.*
+600050,CC.* NN.* CC.* DT.* NN.* CC.*,,,,CC.* NN.* CC.* DT.* NN.* CC.*
+600051,NN.* NN.* PM.* NN.* VB.* CC.*,,,,NN.* NN.* PM.* NN.* VB.* CC.*
+600052,VB.* PR.* PR.* NN.* NN.* PM.*,,,,VB.* PR.* PR.* NN.* NN.* PM.*
+600053,PR.* PR.* NN.* NN.* PM.* NN.*,,,,PR.* PR.* NN.* NN.* PM.* NN.*
+600054,NN.* NN.* PM.* NN.* CC.* PR.*,,,,NN.* NN.* PM.* NN.* CC.* PR.*
+600055,NN.* PM.* NN.* CC.* PR.* DT.*,,,,NN.* PM.* NN.* CC.* PR.* DT.*
+600056,PM.* NN.* CC.* PR.* DT.* NN.*,,,,PM.* NN.* CC.* PR.* DT.* NN.*
+600057,NN.* CC.* NN.* PM.* NN.* CC.*,,,,NN.* CC.* NN.* PM.* NN.* CC.*
+600058,CC.* NN.* PM.* NN.* CC.* DT.*,,,,CC.* NN.* PM.* NN.* CC.* DT.*
+600059,NN.* CC.* DT.* NN.* NN.* NN.*,,,,NN.* CC.* DT.* NN.* NN.* NN.*
+600060,CC.* DT.* NN.* NN.* NN.* PM.*,,,,CC.* DT.* NN.* NN.* NN.* PM.*
+600061,DT.* NN.* NN.* NN.* PM.* NN.*,,,,DT.* NN.* NN.* NN.* PM.* NN.*
+600062,JJ.* CC.* NN.* CC.* CC.* NN.*,,,,JJ.* CC.* NN.* CC.* CC.* NN.*
+600063,CC.* NN.* CC.* CC.* NN.* CC.*,,,,CC.* NN.* CC.* CC.* NN.* CC.*
+600064,CC.* NN.* CC.* NN.* PM.* NN.*,,,,CC.* NN.* CC.* NN.* PM.* NN.*
+600065,CC.* NN.* PM.* NN.* CC.* NN.*,,,,CC.* NN.* PM.* NN.* CC.* NN.*
+600066,NN.* PM.* NN.* CC.* NN.* RB.*,,,,NN.* PM.* NN.* CC.* NN.* RB.*
+600067,PM.* NN.* CC.* NN.* RB.* RB.*,,,,PM.* NN.* CC.* NN.* RB.* RB.*
+600068,NN.* CC.* NN.* RB.* RB.* VB.*,,,,NN.* CC.* NN.* RB.* RB.* VB.*
+600069,VB.* RB.* RB.* VB.* DT.* NN.*,,,,VB.* RB.* RB.* VB.* DT.* NN.*
+600070,VB.* CC.* DT.* NN.* CC.* VB.*,,,,VB.* CC.* DT.* NN.* CC.* VB.*
+600071,CC.* DT.* NN.* CC.* VB.* DT.*,,,,CC.* DT.* NN.* CC.* VB.* DT.*
+600072,DT.* NN.* CC.* VB.* DT.* NN.*,,,,DT.* NN.* CC.* VB.* DT.* NN.*
+600073,JJ.* CC.* VB.* CC.* DT.* NN.*,,,,JJ.* CC.* VB.* CC.* DT.* NN.*
+600074,RB.* RB.* VB.* DT.* NN.* CC.*,,,,RB.* RB.* VB.* DT.* NN.* CC.*
+600075,CC.* VB.* DT.* JJ.* CC.* VB.*,,,,CC.* VB.* DT.* JJ.* CC.* VB.*
+600076,VB.* DT.* JJ.* CC.* VB.* CC.*,,,,VB.* DT.* JJ.* CC.* VB.* CC.*
+600077,DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*,,,,DT.* JJ.* CC.* VB.* CC.* NN.*_PM.*
+600078,PR.* JJ.* NN.* DT.* VB.* CC.*,,,,PR.* JJ.* NN.* DT.* VB.* CC.*
+600079,VB.* PR.* DT.* NN.* CC.* VB.*,,,,VB.* PR.* DT.* NN.* CC.* VB.*
+600080,PR.* DT.* NN.* CC.* VB.* CC.*,,,,PR.* DT.* NN.* CC.* VB.* CC.*
+600081,NN.* CD.* NN.* DT.* NN.* CC.*,,,,NN.* CD.* NN.* DT.* NN.* CC.*
+600082,CD.* NN.* DT.* NN.* CC.* NN.*,,,,CD.* NN.* DT.* NN.* CC.* NN.*
+600083,DT.* NN.* CC.* NN.* NN.* CD.*,,,,DT.* NN.* CC.* NN.* NN.* CD.*
+600084,NN.* CC.* NN.* NN.* CD.* NN.*,,,,NN.* CC.* NN.* NN.* CD.* NN.*
+600085,CC.* NN.* NN.* CD.* NN.* DT.*,,,,CC.* NN.* NN.* CD.* NN.* DT.*
+600086,NN.* NN.* CD.* NN.* DT.* NN.*,,,,NN.* NN.* CD.* NN.* DT.* NN.*
+600087,VB.* PR.* CC.* PR.* NN.* CC.*,,,,VB.* PR.* CC.* PR.* NN.* CC.*
+600088,CCT CCT NNC CCB DTCP NNC,,,,CCT CCT NNC CCB DTCP NNC
+600089,NNC CCT CCT NNC CCB DTCP,,,,NNC CCT CCT NNC CCB DTCP
+600090,VBS PRS_CCP VBAF CCB DTCP NNC,,,,VBS PRS_CCP VBAF CCB DTCP NNC
+600091,PRS_CCP VBAF CCB DTCP NNC CCB,,,,PRS_CCP VBAF CCB DTCP NNC CCB
+600092,VBAF CCB DTCP NNC CCB NNC,,,,VBAF CCB DTCP NNC CCB NNC
+600093,CCB DTCP NNC CCB NNC CCT,,,,CCB DTCP NNC CCB NNC CCT
+600094,DTCP NNC CCB NNC CCT NNC,,,,DTCP NNC CCB NNC CCT NNC
+600095,CCB NNC CCT NNC CCB VBN_CCP,,,,CCB NNC CCT NNC CCB VBN_CCP
+600096,NNC CCT NNC CCB VBN_CCP NNC_PMP,,,,NNC CCT NNC CCB VBN_CCP NNC_PMP
+600097,NNC_CCP PMS NNC CCT DTCP NNC,,,,NNC_CCP PMS NNC CCT DTCP NNC
+600098,PMS NNC CCT DTCP NNC CCB,,,,PMS NNC CCT DTCP NNC CCB
+600099,NNC CCT DTCP NNC CCB DTCP,,,,NNC CCT DTCP NNC CCB DTCP
+600100,CCT DTCP NNC CCB DTCP NNC,,,,CCT DTCP NNC CCB DTCP NNC
+600101,NNC CCT NNC NNC_CCP PMS NNC,,,,NNC CCT NNC NNC_CCP PMS NNC
+600102,NNC NNC_CCP PMS NNC VBW CCT,,,,NNC NNC_CCP PMS NNC VBW CCT
+600103,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS,,,,VBH PRS_CCP PRI_CCP NNC NNC_CCP PMS
+600104,PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC,,,,PRS_CCP PRI_CCP NNC NNC_CCP PMS NNC
+600105,NNC NNC_CCP PMS NNC CCT PRSP_CCP,,,,NNC NNC_CCP PMS NNC CCT PRSP_CCP
+600106,NNC_CCP PMS NNC CCT PRSP_CCP DTCP,,,,NNC_CCP PMS NNC CCT PRSP_CCP DTCP
+600107,PMS NNC CCT PRSP_CCP DTCP NNC,,,,PMS NNC CCT PRSP_CCP DTCP NNC
+600108,NNC CCB NNC_CCP PMS NNC CCT,,,,NNC CCB NNC_CCP PMS NNC CCT
+600109,CCB NNC_CCP PMS NNC CCT DTCP,,,,CCB NNC_CCP PMS NNC CCT DTCP
+600110,DTCP NNC NNC NNC_CCP PMS NNC,,,,DTCP NNC NNC NNC_CCP PMS NNC
+600111,JJD CCP NNC CCT CCT NNC,,,,JJD CCP NNC CCT CCT NNC
+600112,CCP NNC CCT CCT NNC CCB,,,,CCP NNC CCT CCT NNC CCB
+600113,CCB NNC_CCP PMS NNC CCT NNC,,,,CCB NNC_CCP PMS NNC CCT NNC
+600114,NNC_CCP PMS NNC CCT NNC RBK,,,,NNC_CCP PMS NNC CCT NNC RBK
+600115,PMS NNC CCT NNC RBK RBQ,,,,PMS NNC CCT NNC RBK RBQ
+600116,CCB VBW DTC JJCS_JJD CCP VBAF,,,,CCB VBW DTC JJCS_JJD CCP VBAF
+600117,VBW DTC JJCS_JJD CCP VBAF CCP,,,,VBW DTC JJCS_JJD CCP VBAF CCP
+600118,DTC JJCS_JJD CCP VBAF CCP NNC_PMC,,,,DTC JJCS_JJD CCP VBAF CCP NNC_PMC
+600119,NNPA CDB NNPA DTCP NNC CCB,,,,NNPA CDB NNPA DTCP NNC CCB
+600120,CDB NNPA DTCP NNC CCB NNC,,,,CDB NNPA DTCP NNC CCB NNC
+600121,NNPA DTCP NNC CCB NNC NNPA,,,,NNPA DTCP NNC CCB NNC NNPA
+600122,DTCP NNC CCB NNC NNPA CDB,,,,DTCP NNC CCB NNC NNPA CDB
+600123,NNC CCB NNC NNPA CDB NNPA,,,,NNC CCB NNC NNPA CDB NNPA
+600124,CCB NNC NNPA CDB NNPA DTCP,,,,CCB NNC NNPA CDB NNPA DTCP
+600125,NNC NNPA CDB NNPA DTCP NNC,,,,NNC NNPA CDB NNPA DTCP NNC
+600199,CCT CC.* NN.* CC.* DT.* NN.*,,,,CCT CC.* NN.* CC.* DT.* NN.*
+600200,NNC CCT CC.* NN.* CC.* DT.*,,,,NNC CCT CC.* NN.* CC.* DT.*
+600201,VBS PR.* VB.* CC.* DT.* NN.*,,,,VBS PR.* VB.* CC.* DT.* NN.*
+600202,PRS_CCP VB.* CC.* DT.* NN.* CC.*,,,,PRS_CCP VB.* CC.* DT.* NN.* CC.*
+600203,VBAF CC.* DT.* NN.* CC.* NN.*,,,,VBAF CC.* DT.* NN.* CC.* NN.*
+600204,CCB DT.* NN.* CC.* NN.* CC.*,,,,CCB DT.* NN.* CC.* NN.* CC.*
+600205,DTCP NN.* CC.* NN.* CC.* NN.*,,,,DTCP NN.* CC.* NN.* CC.* NN.*
+600206,CCB NN.* CC.* NN.* CC.* VB.*,,,,CCB NN.* CC.* NN.* CC.* VB.*
+600207,NNC CCT NN.* CC.* VB.* NN.*_PM.*,,,,NNC CCT NN.* CC.* VB.* NN.*_PM.*
+600208,NNC_CCP PM.* NN.* CC.* DT.* NN.*,,,,NNC_CCP PM.* NN.* CC.* DT.* NN.*
+600209,PMS NN.* CCT DT.* NN.* CC.*,,,,PMS NN.* CCT DT.* NN.* CC.*
+600210,NNC CCT DT.* NN.* CC.* DT.*,,,,NNC CCT DT.* NN.* CC.* DT.*
+600211,NNC CCT NN.* NN.* PM.* NN.*,,,,NNC CCT NN.* NN.* PM.* NN.*
+600212,NNC NNC_CCP PM.* NN.* VB.* CC.*,,,,NNC NNC_CCP PM.* NN.* VB.* CC.*
+600213,VBH PRS_CCP PR.* NN.* NN.* PM.*,,,,VBH PRS_CCP PR.* NN.* NN.* PM.*
+600214,PRS_CCP PR.* NN.* NN.* PM.* NN.*,,,,PRS_CCP PR.* NN.* NN.* PM.* NN.*
+600215,NNC NNC_CCP PM.* NN.* CC.* PR.*,,,,NNC NNC_CCP PM.* NN.* CC.* PR.*
+600216,NNC_CCP PM.* NN.* CC.* PR.* DT.*,,,,NNC_CCP PM.* NN.* CC.* PR.* DT.*
+600217,PMS NN.* CCT PR.* DT.* NN.*,,,,PMS NN.* CCT PR.* DT.* NN.*
+600218,NNC CCB NN.* PM.* NN.* CC.*,,,,NNC CCB NN.* PM.* NN.* CC.*
+600219,CCB NN.* PM.* NN.* CC.* DT.*,,,,CCB NN.* PM.* NN.* CC.* DT.*
+600220,DTCP NN.* NN.* NNC_CCP PMS NN.*,,,,DTCP NN.* NN.* NNC_CCP PMS NN.*
+600221,JJD CC.* NN.* CC.* CC.* NN.*,,,,JJD CC.* NN.* CC.* CC.* NN.*
+600222,CCP NN.* CC.* CC.* NN.* CC.*,,,,CCP NN.* CC.* CC.* NN.* CC.*
+600223,CCB NN.* PM.* NN.* CC.* NN.*,,,,CCB NN.* PM.* NN.* CC.* NN.*
+600224,NNC_CCP PM.* NN.* CC.* NN.* RB.*,,,,NNC_CCP PM.* NN.* CC.* NN.* RB.*
+600225,PMS NN.* CCT NN.* RB.* RB.*,,,,PMS NN.* CCT NN.* RB.* RB.*
+600226,CCB VB.* DT.* JJCS_JJD CC.* VB.*,,,,CCB VB.* DT.* JJCS_JJD CC.* VB.*
+600227,VBW DT.* JJCS_JJD CC.* VB.* CC.*,,,,VBW DT.* JJCS_JJD CC.* VB.* CC.*
+600228,DTC JJCS_JJD CC.* VBAF CCP NN.*_PM.*,,,,DTC JJCS_JJD CC.* VBAF CCP NN.*_PM.*
+600229,NNPA CDB NN.* DTCP NNC CC.*,,,,NNPA CDB NN.* DTCP NNC CC.*
+600230,CDB NN.* DTCP NNC CCB NN.*,,,,CDB NN.* DTCP NNC CCB NN.*
+600231,NNPA DTCP NN.* CCB NN.* NN.*,,,,NNPA DTCP NN.* CCB NN.* NN.*
+600232,DTCP NN.* CC.* NN.* NN.* CD.*,,,,DTCP NN.* CC.* NN.* NN.* CD.*
+600233,NNC CCB NN.* NN.* CD.* NN.*,,,,NNC CCB NN.* NN.* CD.* NN.*
+600234,CCB NN.* NN.* CDB NNPA DTCP,,,,CCB NN.* NN.* CDB NNPA DTCP
