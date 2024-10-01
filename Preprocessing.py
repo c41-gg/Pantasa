@@ -1,5 +1,8 @@
 import pandas as pd
-from Modules import tokenize, pos_dtag, pos_rtag, lemmatize_sentence  # Import your lemmatizer function
+from Modules.Tokenizer import tokenize
+from Modules.OSDTagger import pos_tag as pos_dtag
+from Modules.POSRTagger import pos_tag as pos_rtag
+from Modules.Lemmatizer import lemmatize_sentence 
 import os
 import sys
 
