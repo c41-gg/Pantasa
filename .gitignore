@@ -8,3 +8,4 @@ dataset/newsph/
 MPoSM/newsph.txt
 dataset_extract.py
 Modules/_pycache_/
+.venv
