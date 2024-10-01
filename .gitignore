@@ -2,6 +2,7 @@ venv/
 .venv/
 env/
 _pycache_/
+__pycache__/
 tl_dedup.txt.gz
 dnnl.lib 
 torch_cpu.dll
