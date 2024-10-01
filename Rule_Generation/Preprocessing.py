@@ -1,8 +1,8 @@
 import pandas as pd
-from ..Modules.Tokenizer import tokenize
-from ..Modules.OSDTagger import pos_tag as pos_dtag
-from ..Modules.POSRTagger import pos_tag as pos_rtag
-from ..Modules.Lemmatizer import lemmatize_sentence 
+from Modules.Tokenizer import tokenize
+from Modules.OSDTagger import pos_tag as pos_dtag
+from Modules.POSRTagger import pos_tag as pos_rtag
+from Modules.Lemmatizer import lemmatize_sentence 
 import os
 import sys
 
