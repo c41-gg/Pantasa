@@ -10,3 +10,4 @@ MPoSM/newsph.txt
 dataset_extract.py
 Modules/_pycache_/
 .venv
+Modules/preprocessing/__pycache__

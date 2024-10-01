@@ -1,3 +1,4 @@
+import pyspark
 import nlu
 
 def lemmatize_sentence(sentence):

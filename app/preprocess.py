@@ -1,11 +1,11 @@
-from ..Modules.Tokenizer import tokenize
-from ..Modules.POSDTagger import pos_tag
-from ..Modules.Lemmatizer import lemmatize_sentence
+from Modules.preprocessing.Tokenizer import tokenize
+from Modules.preprocessing.POSDTagger import pos_tag
+from Modules.preprocessing.Lemmatizer import lemmatize_sentence
 
 def preprocess_text(text, batch_size=700):
     # Tokenize the paragraph into individual sentences
     tokenized_sentences = tokenize(text)
-
+    
     pos_tagged_sentences = []
     lemmatized_sentences = []
 
