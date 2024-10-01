@@ -1,6 +1,6 @@
-from ..Modules.preprocessing.Tokenizer import tokenize
-from ..Modules.preprocessing.POSDTagger import pos_tag as pos_dtag
-from ..Modules.preprocessing.POSRTagger import pos_tag as pos_rtag
+from Modules.preprocessing.Tokenizer import tokenize
+from Modules.preprocessing.POSDTagger import pos_tag as pos_dtag
+from Modules.preprocessing.POSRTagger import pos_tag as pos_rtag
 
 def load_dataset(file_path):
     # Read the file as a plain text file, one sentence per line
