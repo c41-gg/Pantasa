@@ -21,7 +21,7 @@ def load_dataset(file_path):
     logging.info(f"Loaded {len(sentences)} sentences from the dataset.")
     return sentences
 
-def preprocess_text(input_file, output_file, batch_size=5000, log_every=500):
+def preprocess_text(input_file, output_file, batch_size=5000, log_every=50):
     """
     Process the input dataset by tokenizing and performing POS tagging, 
     writing the output in batches to avoid memory overload.
