@@ -7,7 +7,6 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-
 from Modules.preprocessing.Tokenizer import tokenize
 from Modules.preprocessing.POSDTagger import pos_tag as pos_dtag
 from Modules.preprocessing.POSRTagger import pos_tag as pos_rtag
@@ -22,8 +21,7 @@ def load_dataset(file_path):
     logging.info(f"Loaded {len(sentences)} sentences from the dataset.")
     return sentences
 
-
-def preprocess_text(input_file, output_file, batch_size=5000):
+def preprocess_text(input_file, output_file, batch_size=5000, log_every=500):
     """
     Process the input dataset by tokenizing and performing POS tagging, 
     writing the output in batches to avoid memory overload.
@@ -33,11 +31,11 @@ def preprocess_text(input_file, output_file, batch_size=5000):
         sentence_identifiers = []
         
         # Load the dataset by passing the input_file to load_dataset
-        sentences = load_dataset(input_file)  # Pass input_file here
+        sentences = load_dataset(input_file)
         total_sentences = len(sentences)
         
-        batch_counter = 0
         total_tagged_sentences = 0
+        log_counter = 0  # To track the number of sentences tagged for logging
         
         # Stream the dataset
         for sentence in sentences:
@@ -48,50 +46,28 @@ def preprocess_text(input_file, output_file, batch_size=5000):
             
             # Process in batches
             if len(tokenized_sentences) >= batch_size:
-                total_tagged_sentences += len(tokenized_sentences)
                 process_batch(sentence_identifiers, tokenized_sentences, output)
+                total_tagged_sentences += len(tokenized_sentences)
                 tokenized_sentences = []  # Clear the list after processing
                 sentence_identifiers = []  # Clear the identifier list after processing
+            
+            # Log every time 500 sentences are tagged
+            if total_tagged_sentences >= log_counter + log_every:
+                log_counter += log_every
+                logging.info(f"Tagged {log_counter} sentences so far.")
 
         # If there are any remaining sentences in the last incomplete batch
         if tokenized_sentences:
-            total_tagged_sentences += len(tokenized_sentences)
             process_batch(sentence_identifiers, tokenized_sentences, output)
+            total_tagged_sentences += len(tokenized_sentences)
     
     logging.info(f"Preprocessed data saved to {output_file}")
     logging.info(f"Total sentences processed: {total_sentences}")
     logging.info(f"Total sentences tagged and saved: {total_tagged_sentences}")
-    logging.info(f"Total batches tagged and saved: {batch_counter}")
 
 def process_batch(sentence_identifiers, tokenized_sentences, output_file):
     """
-    Helper function to process a batch of tokenized sentences and write to output file.
-    Each sentence is written along with its identifier.
-    """
-    general_pos_tagged_batch = []
-    detailed_pos_tagged_batch = []
-    
-    # Perform POS tagging for each sentence
-    for sentence in tokenized_sentences:
-        if sentence:
-            general_pos_tagged_batch.append(pos_rtag(sentence))  # Rough POS tagging
-            detailed_pos_tagged_batch.append(pos_dtag(sentence))  # Detailed POS tagging
-        else:
-            general_pos_tagged_batch.append('')
-            detailed_pos_tagged_batch.append('')
-
-    # Write tokenized sentences and their POS tags to the output file
-    for identifier, tok_sentence, gen_pos, det_pos in zip(sentence_identifiers, tokenized_sentences, general_pos_tagged_batch, detailed_pos_tagged_batch):
-        # Add quotes around sentences that contain commas to handle CSV format properly
-        if ',' in tok_sentence:
-            tok_sentence = f'"{tok_sentence}"'
-        output_file.write(f"{identifier},{tok_sentence},{gen_pos},{det_pos}\n")
-
-    # Clear lists after processing to save memory
-    general_pos_tagged_batch.clear()
-    detailed_pos_tagged_batch.clear()
-    """
-    Helper function to process a batch of tokenized sentences and write to output file.
+    Helper function to process a batch of tokenized sentences and write to the output file.
     Each sentence is written along with its identifier.
     """
     general_pos_tagged_batch = []
