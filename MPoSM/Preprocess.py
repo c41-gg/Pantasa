@@ -11,58 +11,64 @@ from Modules.preprocessing.Tokenizer import tokenize
 from Modules.preprocessing.POSDTagger import pos_tag as pos_dtag
 from Modules.preprocessing.POSRTagger import pos_tag as pos_rtag
 
-def load_dataset(file_path):
-    logging.info(f"Loading dataset from {file_path}")
-    # Read the file as a plain text file, one sentence per line
+def load_dataset(file_path, batch_size=5000):
+    """
+    Load the dataset in batches of sentences.
+    Yields a batch of sentences from the dataset.
+    """
+    logging.info(f"Loading dataset from {file_path} in batches of {batch_size}")
     with open(file_path, 'r', encoding='utf-8') as file:
-        lines = file.readlines()
-    # Strip leading/trailing spaces from each line and return as a list
-    sentences = [line.strip() for line in lines if line.strip()]
-    logging.info(f"Loaded {len(sentences)} sentences from the dataset.")
-    return sentences
+        batch = []
+        for line in file:
+            sentence = line.strip()
+            if sentence:
+                batch.append(sentence)
+            # If the batch size is reached, yield the batch
+            if len(batch) == batch_size:
+                logging.info(f"Loaded a batch of {len(batch)} sentences.")
+                yield batch
+                batch = []  # Clear the batch after yielding
 
-def preprocess_text(input_file, output_file, batch_size=5000, log_every=50):
+        # Yield any remaining sentences in the last batch
+        if batch:
+            logging.info(f"Loaded the last batch of {len(batch)} sentences.")
+            yield batch
+
+def preprocess_text_in_batches(input_file, output_file, batch_size=5000, log_every=500):
     """
-    Process the input dataset by tokenizing and performing POS tagging, 
-    writing the output in batches to avoid memory overload.
+    Process the input dataset in batches by tokenizing and performing POS tagging,
+    writing the output batch by batch.
     """
-    with open(output_file, 'a', encoding='utf-8') as output:
-        tokenized_sentences = []
-        sentence_identifiers = []
-        
-        # Load the dataset by passing the input_file to load_dataset
-        sentences = load_dataset(input_file)
-        total_sentences = len(sentences)
-        
-        total_tagged_sentences = 0
-        log_counter = 0  # To track the number of sentences tagged for logging
-        
-        # Stream the dataset
-        for sentence in sentences:
-            identifier = sentence[:10]  # Example of a basic identifier (first 10 characters)
-            sentences_batch = tokenize(sentence)
-            tokenized_sentences.extend(sentences_batch)
-            sentence_identifiers.extend([identifier] * len(sentences_batch))
+    total_tagged_sentences = 0
+    log_counter = 0  # To track logging after every 500 sentences
+    
+    with open(output_file, 'a', encoding='utf-8') as output:  # Changed to 'w' mode for fresh start
+        # Load the dataset in batches
+        for batch in load_dataset(input_file, batch_size):
+            tokenized_sentences = []
+            sentence_identifiers = []
+
+            # Process each sentence in the current batch
+            for sentence in batch:
+                identifier = sentence[:10]  # Use the first 10 characters as an identifier
+                sentences_batch = tokenize(sentence)
+                tokenized_sentences.extend(sentences_batch)
+                sentence_identifiers.extend([identifier] * len(sentences_batch))
             
-            # Process in batches
-            if len(tokenized_sentences) >= batch_size:
-                process_batch(sentence_identifiers, tokenized_sentences, output)
-                total_tagged_sentences += len(tokenized_sentences)
-                tokenized_sentences = []  # Clear the list after processing
-                sentence_identifiers = []  # Clear the identifier list after processing
-            
-            # Log every time 500 sentences are tagged
-            if total_tagged_sentences >= log_counter + log_every:
+            # Process the batch once loaded
+            process_batch(sentence_identifiers, tokenized_sentences, output)
+
+            # Update total tagged sentences and log after every 500 sentences
+            total_tagged_sentences += len(tokenized_sentences)
+            while total_tagged_sentences >= log_counter + log_every:
                 log_counter += log_every
                 logging.info(f"Tagged {log_counter} sentences so far.")
 
-        # If there are any remaining sentences in the last incomplete batch
-        if tokenized_sentences:
-            process_batch(sentence_identifiers, tokenized_sentences, output)
-            total_tagged_sentences += len(tokenized_sentences)
-    
+        # Final log for any remaining sentences
+        if total_tagged_sentences % log_every != 0:
+            logging.info(f"Final batch: tagged {total_tagged_sentences} sentences total.")
+
     logging.info(f"Preprocessed data saved to {output_file}")
-    logging.info(f"Total sentences processed: {total_sentences}")
     logging.info(f"Total sentences tagged and saved: {total_tagged_sentences}")
 
 def process_batch(sentence_identifiers, tokenized_sentences, output_file):
@@ -100,7 +106,7 @@ def main():
     input_file = 'dataset/ALT-Parallel-Corpus-20191206/data_fil.txt'   # Input file with raw text
     output_file = 'MPoSM/preprocessed_output.csv'  # Output file to save processed data
 
-    preprocess_text(input_file, output_file)  # Apply preprocessing and POS tagging
+    preprocess_text_in_batches(input_file, output_file)  # Apply preprocessing and POS tagging
 
 if __name__ == "__main__":
     main()
