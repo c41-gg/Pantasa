@@ -89,7 +89,7 @@ def main(input_csv, tokenized_txt, output_csv):
     preprocess_text(input_csv, tokenized_txt, output_csv)
 
 if __name__ == "__main__":
-    input_csv = 
+    input_csv = sys.argv[1]
     tokenized_txt = sys.argv[2]
     output_csv = sys.argv[3]
 
