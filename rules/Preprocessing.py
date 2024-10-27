@@ -1,158 +1,107 @@
-import csv
+import sys
 import os
-from collections import defaultdict
-import re
+import logging
+import csv
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, as_completed
 
-# Define the regular expression for tokenizing word sequences including punctuation
-regex = r"[^.!?,;:—\s][^.!?,;:—]*[.!?,;:—]?['\"]?(?=\s|$)"
+# Setup logging configuration
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def escape_unwrapped_quotes(sentence):
-    """Escape double quotes if they are not at the start and end of the sentence."""
-    if '"' in sentence and not (sentence.startswith('"') and sentence.endswith('"')):
-        sentence = sentence.replace('"', '""')
-    return sentence
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-def wrap_sentence_with_commas(sentence):
-    """Wrap sentence with double quotes if it contains a comma and isn't already wrapped."""
-    if ',' in sentence and not (sentence.startswith('"') and sentence.endswith('"')):
-        sentence = f'"{sentence}"'
-    return sentence
+from rules.Modules.Tokenizer import tokenize
+from rules.Modules.POSRTagger import pos_tag  # Use POSRTagger for both detailed and general POS tags
 
-def undo_escape_and_wrap(sentence):
-    """Revert double quotes and wrapping for processing."""
-    if sentence.startswith('"') and sentence.endswith('"'):
-        sentence = sentence[1:-1]
-    return sentence.replace('""', '"')
+def load_dataset(file_path, batch_size=5000, max_lines=None):
+    logging.info(f"Loading dataset from {file_path} in batches of {batch_size}")
+    with open(file_path, 'r', encoding='utf-8') as file:
+        batch = []
+        line_count = 0
+        for line in tqdm(file, desc="Loading dataset", total=max_lines):
+            if max_lines is not None and line_count >= max_lines:
+                break
+            line = line.strip()
+            if line:
+                parts = line.split('\t')
+                if len(parts) > 1:
+                    sentence = parts[1]
+                    batch.append(sentence)
+                    line_count += 1
 
-def redo_escape_and_wrap(sentence):
-    """Reapply double quotes and wrapping rules if conditions are met, avoiding redundant escapes."""
-    # First, escape unwrapped quotes
-    sentence = escape_unwrapped_quotes(sentence)
-    # Then, wrap the sentence if it contains a comma
-    return wrap_sentence_with_commas(sentence)
+            if len(batch) == batch_size:
+                logging.info(f"Loaded a batch of {len(batch)} sentences.")
+                yield batch
+                batch = []
 
-def separate_punctuation(sequence):
-    """Separate punctuation attached at the beginning or end of words."""
-    tokens = []
-    for word in sequence.split():
-        if re.match(r'^[^\w\s]', word):  # Leading punctuation
-            tokens.append(word[0])  # Add punctuation as a separate token
-            tokens.append(word[1:])  # Add the remaining word
-        elif re.match(r'[^\w\s]$', word):  # Trailing punctuation
-            tokens.append(word[:-1])  # Add word without punctuation
-            tokens.append(word[-1])  # Add punctuation as a separate token
-        else:
-            tokens.append(word)
-    return tokens
+        if batch:
+            logging.info(f"Loaded the last batch of {len(batch)} sentences.")
+            yield batch
 
-def custom_ngrams(sequence, n):
-    """Generate n-grams from a sequence."""
-    return [tuple(sequence[i:i + n]) for i in range(len(sequence) - n + 1)]
-
-def generate_ngrams(word_sequence, rough_pos_sequence, detailed_pos_sequence, lemma_sequence, ngram_range=(1, 7), add_newline=False, start_id=0):
-    ngram_sequences = defaultdict(list)
-    
-    words = separate_punctuation(word_sequence)
-    rough_pos_tags = rough_pos_sequence.split()
-    detailed_pos_tags = detailed_pos_sequence.split()
-    lemmas = separate_punctuation(lemma_sequence)
-    
-    # Check length matching
-    if len(words) != len(lemmas):
-        raise ValueError("Words and Lemmas sequence lengths do not match")
-    if len(rough_pos_tags) != len(detailed_pos_tags):
-        raise ValueError("Rough POS and Detailed POS sequence lengths do not match")
-    
-    current_id = start_id
-    
-    for n in range(ngram_range[0], ngram_range[1] + 1):
-        word_n_grams = custom_ngrams(words, n)
-        rough_pos_n_grams = custom_ngrams(rough_pos_tags, n)
-        detailed_pos_n_grams = custom_ngrams(detailed_pos_tags, n)
-        lemma_n_grams = custom_ngrams(lemmas, n)
+def parallel_pos_tagging(sentences):
+    """
+    Apply POS tagging in parallel using ProcessPoolExecutor.
+    Returns tuples of (general_pos_tags, detailed_pos_tags).
+    """
+    with ProcessPoolExecutor(max_workers=os.cpu_count()) as executor:
+        futures = {executor.submit(pos_tag, sentence): sentence for sentence in sentences}
+        general_pos_tags = []
+        detailed_pos_tags = []
         
-        for word_gram, rough_pos_gram, detailed_pos_gram, lemma_gram in zip(word_n_grams, rough_pos_n_grams, detailed_pos_n_grams, lemma_n_grams):
-            unique_detailed_tags = set(tag for detailed_tag in detailed_pos_gram for tag in detailed_tag.split('_'))
+        for future in as_completed(futures):
+            sentence = futures[future]
+            try:
+                detailed_tag, general_tag = future.result()  # Get both detailed and general tags
+                general_pos_tags.append(general_tag)
+                detailed_pos_tags.append(detailed_tag)
+            except Exception as e:
+                logging.error(f"Error tagging sentence: {sentence}. Error: {e}")
+                general_pos_tags.append('')
+                detailed_pos_tags.append('')
+        
+        return general_pos_tags, detailed_pos_tags
+
+def preprocess_text_in_batches(input_file, pos_output_file, tokenized_output_file, batch_size=500, log_every=50, max_lines=None):
+    total_tagged_sentences = 0
+    log_counter = 0
+
+    with open(pos_output_file, 'a', encoding='utf-8', newline='') as csvfile, open(tokenized_output_file, 'a', encoding='utf-8') as txtfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['General POS', 'Detailed POS'])
+
+        for batch in load_dataset(input_file, batch_size, max_lines):
+            tokenized_sentences = []
             
-            if len(unique_detailed_tags) >= 4:
-                ngram_str = ' '.join(word_gram)
-                lemma_str = ' '.join(lemma_gram)
-                rough_pos_str = ' '.join(rough_pos_gram)
-                detailed_pos_str = ' '.join(detailed_pos_gram)
-                
-                if add_newline:
-                    ngram_str += '\n'
-                    lemma_str += '\n'
-                    rough_pos_str += '\n'
-                    detailed_pos_str += '\n'
-                
-                ngram_id = f"{current_id:06d}"
-                ngram_sequences[n].append((ngram_id, n, rough_pos_str, detailed_pos_str, ngram_str, lemma_str))
-                current_id += 1
-    
-    return ngram_sequences, current_id
+            for sentence in batch:
+                sentences_batch = tokenize(sentence)
+                tokenized_sentences.extend(sentences_batch)
+                txtfile.write("\n".join(sentences_batch) + "\n")
 
-def process_row(row, start_id):
-    """Process a single row and generate n-grams from it."""
-    sentence = undo_escape_and_wrap(row['Sentence'])
-    rough_pos = row['Rough_POS']
-    detailed_pos = row['Detailed_POS']
-    lemmatized = undo_escape_and_wrap(row['Lemmatized_Sentence'])
-    
-    ngram_data, updated_start_id = generate_ngrams(sentence, rough_pos, detailed_pos, lemmatized, start_id=start_id)
-    
-    results = []
-    for ngram_size, ngrams_list in ngram_data.items():
-        for ngram_tuple in ngrams_list:
-            ngram_id, ngram_size, rough_pos_str, detailed_pos_str, ngram_str, lemma_str = ngram_tuple
-            
-            # Reapply escape and wrap before saving
-            ngram_str = redo_escape_and_wrap(ngram_str)
-            lemma_str = redo_escape_and_wrap(lemma_str)
-            
-            results.append({
-                'N-Gram_ID': ngram_id,
-                'N-Gram_Size': ngram_size,
-                'RoughPOS_N-Gram': rough_pos_str,
-                'DetailedPOS_N-Gram': detailed_pos_str,
-                'N-Gram': ngram_str,
-                'Lemma_N-Gram': lemma_str
-            })
-    return results, updated_start_id
+            general_pos, detailed_pos = parallel_pos_tagging(tokenized_sentences)
 
-def process_csv(input_file, output_file):
-    results = []
-    start_id = 0
-    max_workers = os.cpu_count()
+            for gen_pos, det_pos in zip(general_pos, detailed_pos):
+                writer.writerow([gen_pos, det_pos])
 
-    with open(input_file, 'r', encoding='utf-8') as csv_file:
-        reader = list(csv.DictReader(csv_file))
+            total_tagged_sentences += len(tokenized_sentences)
+            while total_tagged_sentences >= log_counter + log_every:
+                log_counter += log_every
+                logging.info(f"Tagged {log_counter} sentences so far.")
 
-        # Progress bar for processing rows with parallel execution
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            futures = {executor.submit(process_row, row, start_id): row for row in reader}
-            with tqdm(total=len(futures), desc="Processing Rows") as pbar:
-                for future in as_completed(futures):
-                    try:
-                        row_results, start_id = future.result()
-                        results.extend(row_results)
-                    except ValueError as e:
-                        print(f"Skipping row due to error: {e}")
-                    pbar.update(1)
+        if total_tagged_sentences % log_every != 0:
+            logging.info(f"Final batch: tagged {total_tagged_sentences} sentences total.")
 
-    # Write results to output CSV
-    with open(output_file, 'a', newline='', encoding='utf-8') as out_file:
-        fieldnames = ['N-Gram_ID', 'N-Gram_Size', 'RoughPOS_N-Gram', 'DetailedPOS_N-Gram', 'N-Gram', 'Lemma_N-Gram']
-        writer = csv.DictWriter(out_file, fieldnames=fieldnames)
-        if os.stat(output_file).st_size == 0:
-            writer.writeheader()
-        writer.writerows(results)
+    logging.info(f"Preprocessed data saved to {pos_output_file}")
+    logging.info(f"Total sentences tagged and saved: {total_tagged_sentences}")
 
-    print(f"Processed data saved to {output_file}")
+# Main function to execute the preprocessing
+def main():
+    input_file = 'rules/dataset/ALT-Parallel-Corpus-20191206/data_fil.txt'
+    pos_output_file = 'rules/MPoSM/pos_tags_output.csv'
+    tokenized_output_file = 'rules/MPoSM/tokenized_sentences.txt'
 
-# Example usage
-input_csv = 'rules/database/preprocessed.csv'
-output_csv = 'rules/database/ngram.csv'
-process_csv(input_csv, output_csv)
+    max_lines = 5000  # Adjust to None for processing the entire dataset
+
+    preprocess_text_in_batches(input_file, pos_output_file, tokenized_output_file, max_lines=max_lines)
+
+if __name__ == "__main__":
+    main()
