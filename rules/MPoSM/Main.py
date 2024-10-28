@@ -5,6 +5,9 @@ from Training import train_model_with_pos_tags  # Import your training function
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+import os
+os.environ["WANDB_DISABLED"] = "true"
+
 if __name__ == "__main__":
     logging.info("Starting the process...")
 
