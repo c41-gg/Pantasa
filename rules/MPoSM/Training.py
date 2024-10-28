@@ -29,9 +29,9 @@ def tokenize_and_save_to_csv(train_file, tokenizer, output_csv, vocab_size):
     for example in dataset:
         logging.info("Tokenizing POS sequences...")
 
-        # Use general and detailed POS tags directly if they are lists
-        general_tokens = example['General POS']  # Ensure these are lists
-        detailed_tokens = example['Detailed POS']  # Ensure these are lists
+        # Ensure general and detailed POS tags are lists of tokens
+        general_tokens = example['General POS'].split() if isinstance(example['General POS'], str) else example['General POS']
+        detailed_tokens = example['Detailed POS'].split() if isinstance(example['Detailed POS'], str) else example['Detailed POS']
 
         # Tokenize general and detailed POS sequences with truncation and padding
         tokenized_general = tokenizer(
@@ -39,7 +39,7 @@ def tokenize_and_save_to_csv(train_file, tokenizer, output_csv, vocab_size):
             truncation=True,
             padding='max_length',  # Ensure consistent padding
             max_length=514,        # Set max_length to 514 to match Roberta's architecture
-            is_split_into_words=True,  # Essential for pre-tokenized input
+            is_split_into_words=True,
             return_tensors='pt'    # Return PyTorch tensors
         )
         tokenized_detailed = tokenizer(
@@ -47,7 +47,7 @@ def tokenize_and_save_to_csv(train_file, tokenizer, output_csv, vocab_size):
             truncation=True,
             padding='max_length',  # Ensure consistent padding
             max_length=514,        # Set max_length to 514 to match Roberta's architecture
-            is_split_into_words=True,  # Essential for pre-tokenized input
+            is_split_into_words=True,
             return_tensors='pt'    # Return PyTorch tensors
         )
 
@@ -74,6 +74,7 @@ def tokenize_and_save_to_csv(train_file, tokenizer, output_csv, vocab_size):
     # Write tokenized data to CSV
     df_tokenized.to_csv(output_csv, index=False)
     logging.info(f"Tokenized data saved to {output_csv}")
+
 
 # Load tokenized data from CSV and convert to lists
 def load_tokenized_data_from_csv(csv_file):
