@@ -5,6 +5,8 @@ from transformers import Trainer, TrainingArguments, RobertaTokenizerFast
 from datasets import load_dataset, Dataset
 from ast import literal_eval
 from DataCollector import CustomDataCollatorForPOS  # Import your custom data collator
+import wandb
+wandb.init(project="Pantasa", name="MPoSM")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
