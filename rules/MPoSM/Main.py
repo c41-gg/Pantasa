@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # Load custom tokenizer (with the POS tag vocabulary added)
     logging.info("Loading the custom tokenizer...")
     pos_tokenizer = RobertaTokenizerFast.from_pretrained(
-        "/content/Pantasa/model/pos_tokenizer",  # Path to your custom tokenizer with POS tags
+        "/kaggle/input/masked-pos-model/model/pos_tokenizer",  # Path to your custom tokenizer with POS tags
         truncation=True,
         padding="max_length",
         max_length=1000,
@@ -19,9 +19,9 @@ if __name__ == "__main__":
     )
     logging.info("Tokenizer loaded successfully.")
 
-    # Load the model
+    # Load the pre-trained model
     logging.info("Loading the pre-trained model...")
-    model = RobertaForMaskedLM.from_pretrained("jcblaise/roberta-tagalog-base")  # Load the base model
+    model = RobertaForMaskedLM.from_pretrained("/kaggle/input/roberta-tagalog-base/pytorch/default/1/roberta_tagalog_base")
     logging.info("Model loaded successfully.")
 
     # Resize the model's token embeddings to match the tokenizer's vocabulary size
@@ -31,10 +31,10 @@ if __name__ == "__main__":
     logging.info("Model loaded and resized successfully with custom tokens.")
 
     # Path to the CSV input file
-    csv_input = "rules/MPoSM/pos_tags_output.csv"
+    csv_input = "/kaggle/input/masked-pos-model/rules/MPoSM/pos_tags_output.csv"
 
     # Path to the output CSV where tokenized data will be saved
-    output_csv = "rules/MPoSM/tokenized_output.csv"
+    output_csv = "/kaggle/working/tokenized_output.csv"
 
     logging.info("Starting training with file: %s", csv_input)
 

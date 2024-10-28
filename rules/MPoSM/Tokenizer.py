@@ -1,15 +1,15 @@
 import logging
-from transformers import RobertaTokenizerFast, RobertaForMaskedLM
+from transformers import AutoTokenizer, RobertaForMaskedLM
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Initialize a tokenizer from a pre-trained model
-pos_tokenizer = RobertaTokenizerFast.from_pretrained("jcblaise/roberta-tagalog-base")
+pos_tokenizer = AutoTokenizer.from_pretrained('/kaggle/input/masked-pos-model/model/pos_tokenizer', add_prefix_space=True)
 logging.info("Initializing Roberta Tokenizer...")
 
 # Initialize the model
-model = RobertaForMaskedLM.from_pretrained("jcblaise/roberta-tagalog-base")
+model = RobertaForMaskedLM.from_pretrained("/kaggle/input/roberta-tagalog-base/pytorch/default/1/roberta_tagalog_base")
 logging.info("Initializing Roberta Model...")
 
 # Vocabulary for POS tags (both general and detailed)
