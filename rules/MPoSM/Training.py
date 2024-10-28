@@ -30,8 +30,8 @@ def tokenize_and_save_to_csv(train_file, tokenizer, output_csv, vocab_size):
         logging.info("Tokenizing POS sequences...")
 
         # Use general and detailed POS tags directly if they are lists
-        general_tokens = example['general']  # Ensure these are lists
-        detailed_tokens = example['detailed']  # Ensure these are lists
+        general_tokens = example['General POS']  # Ensure these are lists
+        detailed_tokens = example['Detailed POS']  # Ensure these are lists
 
         # Tokenize general and detailed POS sequences with truncation and padding
         tokenized_general = tokenizer(
