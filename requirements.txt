@@ -2,8 +2,7 @@ flask
 transformers 
 torch
 pandas
-nl
-lingua-language-detector     
+nl   
 nltk 
 spacy
 pandas 
