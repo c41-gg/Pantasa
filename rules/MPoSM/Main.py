@@ -16,7 +16,8 @@ if __name__ == "__main__":
         truncation=True,
         padding="max_length",
         max_length=1000,
-        add_prefix_space=True  # Ensures the tokenizer works with pretokenized inputs
+        add_prefix_space=True,  # Ensures the tokenizer works with pretokenized inputs
+        use_cache= False
     )
     logging.info("Tokenizer loaded successfully.")
 
@@ -37,9 +38,20 @@ if __name__ == "__main__":
     # Path to the output CSV where tokenized data will be saved
     output_csv = "/content/Pantasa/rules/MPoSM/tokenized_output.csv"
 
+        # Define the directory for saving checkpoints
+    checkpoint_dir = "./results"
+
+    # Check if a checkpoint exists in the output directory
+    checkpoint_path = None
+    if os.path.exists(checkpoint_dir):
+        checkpoints = [ckpt for ckpt in os.listdir(checkpoint_dir) if ckpt.startswith("checkpoint")]
+        if checkpoints:
+            checkpoint_path = os.path.join(checkpoint_dir, sorted(checkpoints)[-1])
+            logging.info(f"Resuming from checkpoint: {checkpoint_path}") 
+
     logging.info("Starting training with file: %s", csv_input)
 
-    # Call to the training function, passing the output CSV path
-    train_model_with_pos_tags(csv_input, pos_tokenizer, model, output_csv)
+    # Start training and pass the checkpoint path
+    train_model_with_pos_tags(csv_input, pos_tokenizer, model, output_csv, checkpoint_path)
 
     logging.info("Training completed.")

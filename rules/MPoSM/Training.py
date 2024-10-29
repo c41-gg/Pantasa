@@ -102,7 +102,7 @@ def convert_lists_to_tensors(dataset):
     return dataset
 
 # Main function for training
-def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
+def train_model_with_pos_tags(train_file, tokenizer, model, output_csv, resume_from_checkpoint=None):
     vocab_size = model.config.vocab_size
     logging.info(f"Model's vocabulary size before resizing: {vocab_size}")
 
@@ -135,19 +135,19 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
     logging.info("Setting up training arguments...")
     training_args = TrainingArguments(
         output_dir="./results",
-        logging_dir="./results/logs",      # Local directory for TensorBoard logs
-        evaluation_strategy="epoch",  
-        save_strategy="epoch",             # Save checkpoint after each epoch
-        logging_steps=50,                  # Log every 50 steps
+        logging_dir="./results/logs",
+        evaluation_strategy="epoch",
+        save_strategy="epoch",
+        logging_steps=50,
         learning_rate=2e-5,
         per_device_train_batch_size=8,
         num_train_epochs=3,
         weight_decay=0.01,
-        remove_unused_columns=False,       # Prevent column removal
-        save_total_limit=2                 # Keep only the last 2 checkpoints
+        remove_unused_columns=False,
+        save_total_limit=2
     )
 
-    # Initialize Trainer
+    # Initialize Trainer with checkpoint resumption
     logging.info("Initializing Trainer...")
     trainer = Trainer(
         model=model,
@@ -156,9 +156,9 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
         data_collator=data_collator
     )
 
-    # Train the model with custom logging
+    # Train the model with checkpoint resumption
     logging.info("Starting model training...")
-    trainer.train()
+    trainer.train(resume_from_checkpoint=resume_from_checkpoint)
     logging.info("Training completed successfully.")
 
     # Save final model and tokenizer
