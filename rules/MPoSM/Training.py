@@ -132,20 +132,22 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
     )
 
     # Define training arguments with logging and checkpointing settings
-    logging.info("Setting up training arguments...")
+    logging.info("Setting up training arguments with checkpoint saving...")
     training_args = TrainingArguments(
         output_dir="./results",
-        logging_dir="./results/logs",      # Local directory for TensorBoard logs
-        evaluation_strategy="epoch",  
-        save_strategy="epoch",             # Save checkpoint after each epoch
-        logging_steps=50,                  # Log every 50 steps
+        logging_dir="./results/logs",        # Directory for TensorBoard logs
+        evaluation_strategy="epoch",         # Evaluation at the end of each epoch
+        save_strategy="steps",               # Save checkpoints every fixed number of steps
+        save_steps=500,                      # Save a checkpoint every 500 steps
+        logging_steps=50,                    # Log every 50 steps
         learning_rate=2e-5,
         per_device_train_batch_size=8,
         num_train_epochs=3,
         weight_decay=0.01,
-        remove_unused_columns=False,       # Prevent column removal
-        save_total_limit=2                 # Keep only the last 2 checkpoints
+        remove_unused_columns=False,         # Keep all columns
+        save_total_limit=3                   # Keep only the last 3 checkpoints
     )
+
 
     # Initialize Trainer
     logging.info("Initializing Trainer...")
