@@ -5,11 +5,16 @@ from transformers import Trainer, TrainingArguments, RobertaTokenizerFast
 from datasets import load_dataset, Dataset
 from ast import literal_eval
 from DataCollector import CustomDataCollatorForPOS  # Import your custom data collator
-import wandb
-wandb.init(project="Pantasa", name="MPoSM")
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Configure logging to save to a file and print to stdout
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("training.log"),  # Logs to file
+        logging.StreamHandler()               # Prints to stdout
+    ]
+)
 
 # Tokenization and saving to CSV per sentence
 def tokenize_and_save_to_csv(train_file, tokenizer, output_csv, vocab_size):
@@ -39,25 +44,19 @@ def tokenize_and_save_to_csv(train_file, tokenizer, output_csv, vocab_size):
         tokenized_general = tokenizer(
             general_tokens,
             truncation=True,
-            padding='max_length',  # Ensure consistent padding
-            max_length=514,        # Set max_length to 514 to match Roberta's architecture
+            padding='max_length',
+            max_length=514,
             is_split_into_words=True,
-            return_tensors='pt'    # Return PyTorch tensors
+            return_tensors='pt'
         )
         tokenized_detailed = tokenizer(
             detailed_tokens,
             truncation=True,
-            padding='max_length',  # Ensure consistent padding
-            max_length=514,        # Set max_length to 514 to match Roberta's architecture
+            padding='max_length',
+            max_length=514,
             is_split_into_words=True,
-            return_tensors='pt'    # Return PyTorch tensors
+            return_tensors='pt'
         )
-
-        # Check if token IDs are within the valid range of the model's vocabulary
-        for ids in tokenized_general['input_ids']:
-            if torch.any(ids >= vocab_size):
-                logging.error(f"Found out-of-range token ID: {ids}")
-                raise ValueError(f"Token ID out of range for model vocabulary: {ids.tolist()}")
 
         # Convert tensors to lists to store in CSV-compatible format
         tokenized_data["input_ids"].append(tokenized_general["input_ids"].tolist()[0])
@@ -76,7 +75,6 @@ def tokenize_and_save_to_csv(train_file, tokenizer, output_csv, vocab_size):
     # Write tokenized data to CSV
     df_tokenized.to_csv(output_csv, index=False)
     logging.info(f"Tokenized data saved to {output_csv}")
-
 
 # Load tokenized data from CSV and convert to lists
 def load_tokenized_data_from_csv(csv_file):
@@ -133,16 +131,20 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
         mlm_probability=0.15
     )
 
-    # Define training arguments
+    # Define training arguments with logging and checkpointing settings
     logging.info("Setting up training arguments...")
     training_args = TrainingArguments(
         output_dir="./results",
+        logging_dir="./results/logs",      # Local directory for TensorBoard logs
         evaluation_strategy="epoch",  
+        save_strategy="epoch",             # Save checkpoint after each epoch
+        logging_steps=50,                  # Log every 50 steps
         learning_rate=2e-5,
         per_device_train_batch_size=8,
         num_train_epochs=3,
         weight_decay=0.01,
-        remove_unused_columns=False  # Prevent column removal
+        remove_unused_columns=False,       # Prevent column removal
+        save_total_limit=2                 # Keep only the last 2 checkpoints
     )
 
     # Initialize Trainer
@@ -154,7 +156,12 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
         data_collator=data_collator
     )
 
-    # Train the model
+    # Train the model with custom logging
     logging.info("Starting model training...")
     trainer.train()
     logging.info("Training completed successfully.")
+
+    # Save final model and tokenizer
+    model.save_pretrained("./results/final_model")
+    tokenizer.save_pretrained("./results/final_tokenizer")
+    logging.info("Model and tokenizer saved to ./results.")
