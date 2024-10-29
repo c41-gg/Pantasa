@@ -16,7 +16,8 @@ if __name__ == "__main__":
         truncation=True,
         padding="max_length",
         max_length=1000,
-        add_prefix_space=True
+        add_prefix_space=True,
+        use_cache=False
     )
     logging.info("Tokenizer loaded successfully.")
 
