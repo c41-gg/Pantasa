@@ -12,7 +12,7 @@ if __name__ == "__main__":
     # Load custom tokenizer (with the POS tag vocabulary added)
     logging.info("Loading the custom tokenizer...")
     pos_tokenizer = RobertaTokenizerFast.from_pretrained(
-        "/kaggle/input/masked-pos-model/model/pos_tokenizer",  # Path to your custom tokenizer with POS tags
+        "/content/Pantasa/model/pos_tokenizer",  # Path to your custom tokenizer with POS tags
         truncation=True,
         padding="max_length",
         max_length=1000,
