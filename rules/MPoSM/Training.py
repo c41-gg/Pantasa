@@ -138,7 +138,7 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
         logging_dir="./results/logs",        # Directory for TensorBoard logs
         evaluation_strategy="epoch",         # Evaluation at the end of each epoch
         save_strategy="steps",               # Save checkpoints every fixed number of steps
-        save_steps=500,                      # Save a checkpoint every 500 steps
+        save_steps=100,                      # Save a checkpoint every 100 steps
         logging_steps=50,                    # Log every 50 steps
         learning_rate=2e-5,
         per_device_train_batch_size=8,
