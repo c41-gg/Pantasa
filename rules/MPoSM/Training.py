@@ -1,7 +1,8 @@
+import os
 import logging
 import pandas as pd
 import torch
-from transformers import Trainer, TrainingArguments, RobertaTokenizerFast
+from transformers import Trainer, TrainingArguments
 from datasets import load_dataset, Dataset
 from ast import literal_eval
 from DataCollector import CustomDataCollatorForPOS  # Import your custom data collator
@@ -102,7 +103,7 @@ def convert_lists_to_tensors(dataset):
     return dataset
 
 # Main function for training
-def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
+def train_model_with_pos_tags(train_file, tokenizer, model, output_csv, checkpoint_dir):
     vocab_size = model.config.vocab_size
     logging.info(f"Model's vocabulary size before resizing: {vocab_size}")
 
@@ -131,11 +132,11 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
         mlm_probability=0.15
     )
 
-    # Define training arguments with logging and checkpointing settings
-    logging.info("Setting up training arguments with checkpoint saving...")
+    # Define training arguments with checkpoint saving in Google Drive
+    logging.info("Setting up training arguments with checkpoint saving to Google Drive...")
     training_args = TrainingArguments(
-        output_dir="./results",
-        logging_dir="./results/logs",        # Directory for TensorBoard logs
+        output_dir=checkpoint_dir,           # Google Drive directory for checkpoints
+        logging_dir=os.path.join(checkpoint_dir, "logs"),  # Logs directory in Google Drive
         evaluation_strategy="epoch",         # Evaluation at the end of each epoch
         save_strategy="steps",               # Save checkpoints every fixed number of steps
         save_steps=100,                      # Save a checkpoint every 100 steps
@@ -147,7 +148,6 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
         remove_unused_columns=False,         # Keep all columns
         save_total_limit=3                   # Keep only the last 3 checkpoints
     )
-
 
     # Initialize Trainer
     logging.info("Initializing Trainer...")
@@ -163,7 +163,7 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
     trainer.train()
     logging.info("Training completed successfully.")
 
-    # Save final model and tokenizer
-    model.save_pretrained("./results/final_model")
-    tokenizer.save_pretrained("./results/final_tokenizer")
-    logging.info("Model and tokenizer saved to ./results.")
+    # Save final model and tokenizer to Google Drive
+    model.save_pretrained(os.path.join(checkpoint_dir, "final_model"))
+    tokenizer.save_pretrained(os.path.join(checkpoint_dir, "final_tokenizer"))
+    logging.info("Model and tokenizer saved to Google Drive.")

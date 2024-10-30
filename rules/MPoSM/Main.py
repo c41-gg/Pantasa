@@ -5,6 +5,9 @@ from Training import train_model_with_pos_tags  # Import your training function
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Set up checkpoint directory in Google Drive
+checkpoint_dir = "/content/drive/MyDrive/checkpoints"
+os.makedirs(checkpoint_dir, exist_ok=True)
 
 if __name__ == "__main__":
     logging.info("Starting the process...")
@@ -40,7 +43,7 @@ if __name__ == "__main__":
 
     logging.info("Starting training with file: %s", csv_input)
 
-    # Call to the training function, passing the output CSV path
-    train_model_with_pos_tags(csv_input, pos_tokenizer, model, output_csv)
+    # Call the training function, passing the output CSV path and checkpoint directory
+    train_model_with_pos_tags(csv_input, pos_tokenizer, model, output_csv, checkpoint_dir)
 
     logging.info("Training completed.")
