@@ -101,21 +101,6 @@ def convert_lists_to_tensors(dataset):
     }, batched=True)
     return dataset
 
-# Define Git commit and push function
-def commit_and_push_to_github(checkpoint_path):
-    logging.info("Committing and pushing checkpoint to GitHub...")
-    
-    # Run Git commands
-    os.system("git add .")
-    os.system(f'git commit -m "Checkpoint saved at {checkpoint_path}"')
-    os.system("git push origin main")  # Change "main" if your branch is different
-
-# Custom callback to integrate Git commit and push
-class GitCommitCallback(TrainerCallback):
-    def on_save(self, args, state, control, **kwargs):
-        checkpoint_path = f"{args.output_dir}/checkpoint-{state.global_step}"
-        commit_and_push_to_github(checkpoint_path)
-
 # Main function for training
 def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
     vocab_size = model.config.vocab_size
@@ -164,22 +149,21 @@ def train_model_with_pos_tags(train_file, tokenizer, model, output_csv):
     )
 
 
-    # Initialize Trainer with Git commit callback
-    logging.info("Initializing Trainer with Git commit callback...")
+    # Initialize Trainer
+    logging.info("Initializing Trainer...")
     trainer = Trainer(
         model=model,
         args=training_args,
         train_dataset=tokenized_dataset,
-        data_collator=data_collator,
-        callbacks=[GitCommitCallback()]  # Add the custom callback here
+        data_collator=data_collator
     )
 
-    # Start training
+    # Train the model with custom logging
     logging.info("Starting model training...")
     trainer.train()
     logging.info("Training completed successfully.")
 
-    # Save the final model and tokenizer
+    # Save final model and tokenizer
     model.save_pretrained("./results/final_model")
     tokenizer.save_pretrained("./results/final_tokenizer")
     logging.info("Model and tokenizer saved to ./results.")
