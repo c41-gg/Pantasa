@@ -2,7 +2,7 @@ import logging
 import os
 import pandas as pd
 import torch
-from transformers import Trainer, TrainingArguments, RobertaTokenizerFast, TrainerCallback
+from transformers import Trainer, TrainingArguments, RobertaTokenizerFast
 from datasets import load_dataset, Dataset
 from ast import literal_eval
 from DataCollector import CustomDataCollatorForPOS  # Import your custom data collator
