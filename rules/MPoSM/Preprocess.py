@@ -4,15 +4,16 @@ import logging
 import csv
 from tqdm import tqdm
 from concurrent.futures import ProcessPoolExecutor, as_completed
+from rules.Modules.preprocessing.Tokenizer import tokenize
+from rules.Modules.preprocessing.POSDTagger import pos_tag as pos_dtag
+from rules.Modules.preprocessing.POSRTagger import pos_tag as pos_rtag
 
 # Setup logging configuration
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from rules.Modules.preprocessing.Tokenizer import tokenize
-from rules.Modules.preprocessing.POSDTagger import pos_tag as pos_dtag
-from rules.Modules.preprocessing.POSRTagger import pos_tag as pos_rtag
+
 
 def load_dataset(file_path, batch_size=5000, max_lines=None):
     logging.info(f"Loading dataset from {file_path} in batches of {batch_size}")
@@ -95,11 +96,11 @@ def preprocess_text_in_batches(input_file, pos_output_file, tokenized_output_fil
 
 # Main function to execute the preprocessing
 def main():
-    input_file = 'rules/dataset/ALT-Parallel-Corpus-20191206/data_fil.txt'
+    input_file = 'data/raw/casual_tagalog/ngram_feed.txt'
     pos_output_file = 'rules/MPoSM/pos_tags_output.csv'
     tokenized_output_file = 'rules/MPoSM/tokenized_sentences.txt'
 
-    max_lines = 5000  # Adjust to None for processing the entire dataset
+    max_lines = None  # Adjust to None for processing the entire dataset
 
     preprocess_text_in_batches(input_file, pos_output_file, tokenized_output_file, max_lines=max_lines)
 
